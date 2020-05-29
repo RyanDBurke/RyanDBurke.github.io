@@ -10,6 +10,13 @@
     outline-width: 1px;
 }
 
+.projectHr {
+    outline: solid;
+    outline-color: white;
+    outline-width: 1px;
+    size: 10px;
+}
+
 /* ryan burke at top */
 .name {
     font-weight: bold;
@@ -35,6 +42,22 @@
     opacity: 0.05;
 }
 
-.projectDescriptionWrap {
+/* overlay for projects on the left */
+.overlayL {
     position: absolute;
+    opacity: 1.0;
+    height: 300px;
+    width: 400px;
+    background-color: black;
+    /* background-color: rgb(231, 247, 93); */
+}
+
+/* overlay for projects on the right */
+.overlayR {
+    margin-left: 560px;
+    position: absolute;
+    opacity: 1.0;
+    height: 300px;
+    width: 400px;
+    background-color: black;
 }
