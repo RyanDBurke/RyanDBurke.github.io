@@ -38,8 +38,15 @@
 }
 
 .project:hover {
-    height: 300px;
     opacity: 0.05;
+}
+
+.projectname {
+    height: 10px;
+}
+
+.description {
+    height: 270px;
 }
 
 /* overlay for projects on the left */
@@ -47,17 +54,11 @@
     position: absolute;
     opacity: 1.0;
     height: 300px;
-    width: 400px;
-    background-color: black;
-    /* background-color: rgb(231, 247, 93); */
 }
 
 /* overlay for projects on the right */
 .overlayR {
-    margin-left: 560px;
     position: absolute;
     opacity: 1.0;
     height: 300px;
-    width: 400px;
-    background-color: black;
 }
