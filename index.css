@@ -14,7 +14,7 @@
     outline: solid;
     outline-color: white;
     outline-width: 1px;
-    size: 10px;
+    size: 105;
 }
 
 /* ryan burke at top */
@@ -41,19 +41,9 @@
     opacity: 0.05;
 }
 
-.projectname {
-    height: 10px;
-}
-
-.description {
-    height: 270px;
-}
-
 /* overlay for projects on the left */
 .overlayL {
     opacity: 1.0;
-    height: 300px;
-    left: 275px;
 }
 
 /* overlay for projects on the right */
