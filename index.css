@@ -1,0 +1,40 @@
+/* outline for navbar */
+.outline {
+    outline: solid;
+    outline-color: white;
+}
+
+.outlineHr {
+    outline: solid;
+    outline-color: white;
+    outline-width: 1px;
+}
+
+/* ryan burke at top */
+.name {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.hi {
+    color: white;
+}
+
+.about {
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
+.project {
+    height: 300px;
+    /* background-color: #ede4cc; */
+}
+
+.project:hover {
+    height: 300px;
+    opacity: 0.05;
+}
+
+.projectDescriptionWrap {
+    position: absolute;
+}
