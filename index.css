@@ -51,9 +51,9 @@
 
 /* overlay for projects on the left */
 .overlayL {
-    position: absolute;
     opacity: 1.0;
     height: 300px;
+    left: 275px;
 }
 
 /* overlay for projects on the right */
@@ -61,4 +61,5 @@
     position: absolute;
     opacity: 1.0;
     height: 300px;
+    left: 940px;
 }
