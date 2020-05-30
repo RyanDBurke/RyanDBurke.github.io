@@ -53,3 +53,22 @@
     height: 300px;
     left: 940px;
 }
+
+.lang {
+    height: 300px;
+    transition: transform .2s;
+}
+
+.lang:hover {
+    transform: scale(1.05);
+}
+
+.ruby {
+    margin-top: 20px;
+    margin-left: -10px;
+}
+
+.python {
+    margin-top: 55px;
+    margin-left: 55px;
+}
