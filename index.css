@@ -4,6 +4,14 @@
     outline-color: white;
 }
 
+.navbarlinks {
+    transition: transform .2s;
+}
+
+.navbarlinks:hover {
+    transform: scale(1.2);
+}
+
 .outlineHr {
     outline: solid;
     outline-color: white;
@@ -34,11 +42,13 @@
 
 .project {
     height: 300px;
+    transition: transform .2s;
     /* background-color: #ede4cc; */
 }
 
 .project:hover {
     opacity: 0.05;
+    transform: scale(1.05);
 }
 
 /* overlay for projects on the left */
