@@ -1,3 +1,13 @@
+/* allows for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+  }
+
+/* fixes word wraps */
+p {
+    word-break: break-all;
+}
+
 /* outline for navbar */
 .outline {
     outline: solid;
@@ -42,8 +52,6 @@
     /* font-size: 1vw; */
     font-size: calc(7px + (19 - 7) * ((100vw - 300px) / (1600 - 300)));
 }
-
-p { word-break: break-all }
 
 /* project cards */
 .project {
