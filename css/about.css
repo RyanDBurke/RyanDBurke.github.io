@@ -18,7 +18,9 @@
 .outlineHr {
     outline: solid;
     outline-color: white;
+    width: 130px;
     outline-width: 1px;
+    margin-left: 0;
 }
 
 /* ryan burke at top */

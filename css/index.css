@@ -16,7 +16,9 @@
 .outlineHr {
     outline: solid;
     outline-color: white;
+    width: 260px;
     outline-width: 1px;
+    margin-left: 0;
 }
 
 /* ryan burke at top */
@@ -30,27 +32,35 @@
     color: white;
 }
 
+/* responsive text */
+.projectName {
+    font-size: 1.5vw;
+}
+
+/* responsive text */
+.projectDescription {
+    font-size: 1vw;
+}
+
 /* project cards */
 .project {
+    /* height: 300px; */
+    transition: transform .2s;
+}
+
+/* for temporary project cards */
+.projectTemp {
     height: 300px;
     transition: transform .2s;
-    /* background-color: #ede4cc; */
+}
+
+/* for temporary project cards */
+.projectTemp:hover {
+    opacity: 0.05;
+    transform: scale(1.05);
 }
 
 .project:hover {
     opacity: 0.05;
     transform: scale(1.05);
-}
-
-/* overlay for projects on the left */
-.overlayL {
-    opacity: 1.0;
-}
-
-/* overlay for projects on the right */
-.overlayR {
-    position: absolute;
-    opacity: 1.0;
-    height: 300px;
-    left: 940px;
 }
