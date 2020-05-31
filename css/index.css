@@ -34,12 +34,13 @@
 
 /* responsive text */
 .projectName {
-    font-size: 1.5vw;
+    font-size: calc(11px + (22 - 11) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* responsive text */
 .projectDescription {
-    font-size: 1vw;
+    /* font-size: 1vw; */
+    font-size: calc(9px + (20 - 9) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* project cards */
