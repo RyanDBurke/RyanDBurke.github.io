@@ -1,0 +1,89 @@
+/* outline for navbar */
+.outline {
+    outline: solid;
+    outline-color: white;
+}
+
+.navbarlinks {
+    transition: transform .2s;
+}
+
+.navbarlinks:hover {
+    transform: scale(1.2);
+}
+
+.outlineHr {
+    outline: solid;
+    outline-color: white;
+    outline-width: 1px;
+}
+
+.projectHr {
+    outline: solid;
+    outline-color: white;
+    outline-width: 1px;
+    size: 105;
+}
+
+/* ryan burke at top */
+.name {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.hi {
+    color: white;
+}
+
+.about {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.project {
+    height: 300px;
+    transition: transform .2s;
+    /* background-color: #ede4cc; */
+}
+
+.project:hover {
+    opacity: 0.05;
+    transform: scale(1.05);
+}
+
+/* overlay for projects on the left */
+.overlayL {
+    opacity: 1.0;
+}
+
+/* overlay for projects on the right */
+.overlayR {
+    position: absolute;
+    opacity: 1.0;
+    height: 300px;
+    left: 940px;
+}
+
+.lang {
+    height: 300px;
+    transition: transform .2s;
+}
+
+.lang:hover {
+    transform: scale(1.05);
+}
+
+.ruby {
+    margin-top: 20px;
+}
+
+.python {
+    margin-top: 100px;
+}
+
+
+/* for bringing up resume
+#resume:target {
+    opacity: 0.2;
+}
+*/
