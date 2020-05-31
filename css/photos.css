@@ -1,0 +1,60 @@
+/* outline for navbar */
+.outline {
+    outline: solid;
+    outline-color: white;
+}
+
+/* animation for navbar links */
+.navbarlinks {
+    transition: transform .2s;
+}
+
+.navbarlinks:hover {
+    transform: scale(1.2);
+}
+
+
+/* hr below "pics" */
+.outlineHr {
+    outline: solid;
+    outline-color: white;
+    outline-width: 1px;
+}
+
+/* ryan burke at top */
+.name {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* enlarge */
+.enlarge {
+    transition: transform .2s;
+}
+
+.enlarge:hover {
+    transform: scale(1.05);
+}
+
+.monument {
+    height: 720px;
+}
+
+.painter {
+    height: 453.33px;
+}
+
+.crabs {
+    height: 453.33px;
+}
+
+.blankCol1 {
+    margin-top: -240px;
+    margin-left: 585px;
+    margin-bottom: 0px;
+}
+
+.fall {
+    height: 250px;
+    width: 500px;
+}
