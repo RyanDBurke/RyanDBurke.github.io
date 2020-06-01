@@ -59,6 +59,11 @@ p {
     transition: transform .2s;
 }
 
+.project:hover {
+    opacity: 0.05;
+    transform: scale(1.05);
+}
+
 /* for temporary project cards */
 .projectTemp {
     height: 300px;
@@ -67,11 +72,6 @@ p {
 
 /* for temporary project cards */
 .projectTemp:hover {
-    opacity: 0.05;
-    transform: scale(1.05);
-}
-
-.project:hover {
     opacity: 0.05;
     transform: scale(1.05);
 }
