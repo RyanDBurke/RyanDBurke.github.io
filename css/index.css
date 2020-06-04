@@ -3,12 +3,6 @@ html {
     scroll-behavior: smooth;
   }
 
-/* fixes word wraps
-p {
-    word-break: break-all;
-}
-*/
-
 /* outline for navbar */
 .outline {
     outline: solid;
