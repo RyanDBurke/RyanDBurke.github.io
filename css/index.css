@@ -3,10 +3,11 @@ html {
     scroll-behavior: smooth;
   }
 
-/* fixes word wraps */
+/* fixes word wraps
 p {
     word-break: break-all;
 }
+*/
 
 /* outline for navbar */
 .outline {
