@@ -125,11 +125,14 @@
             var width = window.screen.width * window.devicePixelRatio;
             var height = window.screen.height * window.devicePixelRatio;
             var modal = document.getElementById("modal");
+            var img = document.getElementById("projectImage");
 
             if (width == 1920) {
                 modal.style.left = '20%';
                 modal.style.right = '20%';
                 modal.style.top = '20%';
+            } else {
+                img.src = "./image/painter-circle-mobile.png";
             }
         }
 
