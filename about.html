@@ -73,7 +73,7 @@
     <!-- modal container -->
     <div id="modal" class="projectModalContainer bg-dark outline ml-5 mr-5 mb-5 mt-1">
         <div class="modalContentTop bg-white">
-            <img src="./images/painter-circle.png" id="projectImage" class="mx-auto m-5 d-block img-fluid">
+                <img src="./images/painter-circle-mobile.png" id="projectImage" class="mx-auto m-5 d-block img-fluid">
         </div>
 
         <div class="modalContentBottom">
@@ -133,18 +133,6 @@
                 modal.style.top = '20%';
             } else {
                 img.src = "./image/painter-circle-mobile.png";
-            }
-        }
-
-        function setImg() {
-            var width = window.screen.width * window.devicePixelRatio;
-            var img = document.getElementById("projectImage");
-
-            if (width == 1920) {
-                img.src = "./image/painter-circle.png";
-            } else {
-                img.src = "./image/painter-circle-mobile.png";
-                alert("mobile image set");
             }
         }
 
