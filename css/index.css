@@ -76,7 +76,7 @@ html {
 /* responsive text */
 .projectDescription {
     /* font-size: 1vw; */
-    font-size: calc(7px + (19 - 7) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(9px + (19 - 9) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* project cards */
