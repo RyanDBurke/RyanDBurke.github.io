@@ -93,7 +93,7 @@
                     in December 2020 with a B.S in Computer Science. I primarily
                     code in <em>Java, C, Ruby, and Python</em>,
                     but programming aside, I love playing basketball, photography,
-                    and watching films with the subtitles on.
+                    and watching movies and stuff.
                 </p>
 
                 <i  onclick="github()"
@@ -130,11 +130,15 @@
             var width = window.screen.width * window.devicePixelRatio;
             var height = window.screen.height * window.devicePixelRatio;
             var modal = document.getElementById("modal");
-            alert(width + " x " + height);
 
             if (width == 1920) {
                 modal.style.left = '20%';
                 modal.style.right = '20%';
+                modal.style.bottom = '10%';
+            } else {
+                modal.style.left = '0%';
+                modal.style.right = '0%';
+                modal.style.bottom = '10%';
             }
         }
 
