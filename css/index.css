@@ -9,7 +9,7 @@ html {
     outline-color: white;
 }
 
-/* animation for navbar links */
+/* animation for navbar links
 .navbarlinks {
     transition: transform .2s;
 }
@@ -17,6 +17,7 @@ html {
 .navbarlinks:hover {
     transform: scale(1.2);
 }
+*/
 
 .outlineHr {
     outline: solid;
@@ -43,10 +44,7 @@ html {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    /*width: 50%; /* Full width */
-    /* height: 70%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    /* top: 30%; */
 }
 
 .modalContentTop {
@@ -70,18 +68,15 @@ html {
 /* responsive text */
 .projectName {
     font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
-    /* text-align: center; */
 }
 
 /* responsive text */
 .projectDescription {
-    /* font-size: 1vw; */
     font-size: calc(9px + (19 - 9) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* project cards */
 .project {
-    /* height: 300px; */
     transition: transform .2s;
 }
 

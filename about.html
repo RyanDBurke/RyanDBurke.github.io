@@ -9,6 +9,9 @@
     <!-- website icon -->
     <link rel="icon" href="./images/terminal.png">
 
+     <!-- font-awesome icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -72,71 +75,42 @@
     <br>
     <br>
 
-    <!-- about -->
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <h1 class="text-white" style="font: 2vw;">[about]</h1>
-                <!-- <hr class="bg-white outlineHr"> -->
+        <!-- modal container -->
+        <div id="modal" class="projectModalContainer bg-dark outline ml-5 mr-5 mb-5 mt-1">
+            <div class="modalContentTop bg-white">
+                <img id="projectImage" class="mx-auto m-5 d-block img-fluid" src="./images/profilepic-circle.png">
             </div>
-            <div class="col-6">
-            </div>
-            <div class="col">
-            </div>
-        </div>
-
-        <br>
-
-        <div class="row">
-            <div class="col-10">
-                <p class="about text-left">
-                    I'm a software engineer based in Washington, DC.
-                    I graduate from University of Maryland, College Park
-                    in December 2020 with a B.S in Computer Science. I primarily
-                    code in <em>Java, C, Ruby, and Python</em>,
-                    but programming aside, I love playing basketball, photography,
-                    and watching films with the subtitles on.
-                </p>
-            </div>
-        </div>
-
-        <br id="lang">
-        <br>
-        <br>
-        <br>
-
-        <!--
-        <div class="row">
-            <div class="col">
-                <h4>languages i like</h4>
-            </div>
-            <div class="col-6">
-            </div>
-            <div class="col">
+    
+            <div class="modalContentBottom">
+                <div class="col-10">
+                    <h4 id="projectName" class="mt-3 ml-3 font-weight-bold projectNameModal">
+                        Ryan Burke
+                    </h4>
+    
+                    <p id="projectDescription" class="mt-3 ml-3 projectDescription">
+                        I'm a software engineer based in Washington, DC.
+                        I graduate from University of Maryland, College Park
+                        in December 2020 with a B.S in Computer Science. I primarily
+                        code in <em>Java, C, Ruby, and Python</em>,
+                        but programming aside, I love playing basketball, photography,
+                        and watching films with the subtitles on.
+                    </p>
+    
+                    <i  onclick="github()"
+                        target="_blank" 
+                        class="fa fa-github mt-3 ml-3 mb-4"
+                        style="font-size: 2.4rem; cursor: pointer;" 
+                        id="github-icon">
+                    </i>
+                    <i  onclick="linkedin()"
+                        target="_blank" 
+                        class="fa fa-linkedin mt-3 ml-3 mb-4"
+                        style="font-size: 2.4rem; cursor: pointer;" 
+                        id="linkedin-icon">
+                    </i>
+                </div>
             </div>
         </div>
-        -->
-
-        <!-- Languages
-        <div class="row">
-            <div class="col-5 mt-3 mr-3 bg-white lang">
-                <img class="mx-auto d-block img-fluid" src="./images/java.png">
-            </div>
-            <div class="col-5 mt-3 bg-white lang">
-                <img class="mx-auto d-block img-fluid" src="./images/C.png">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-5 mt-3 mr-3 bg-white lang">
-                <img class="ruby img-fluid d-block" src="./images/ruby.png">
-            </div>
-            <div class="col-5 mt-3 bg-white lang">
-                <img class="mx-auto python img-fluid d-block" src="./images/python.jpg">
-            </div>
-        </div>
-        -->
-    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -149,6 +123,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <script>
+
+        function github() {
+            window.open("https://github.com/RyanDBurke");
+        }
+
+        function linkedin() {
+            window.open("https://www.linkedin.com/in/ryanburke96/");
+        }
+    </script>
 </body>
 
 </html>

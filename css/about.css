@@ -4,7 +4,7 @@
     outline-color: white;
 }
 
-/* animation for navbar links */
+/* animation for navbar links 
 .navbarlinks {
     transition: transform .2s;
 }
@@ -12,6 +12,8 @@
 .navbarlinks:hover {
     transform: scale(1.2);
 }
+
+*/
 
 
 /* hr below "about" */
@@ -21,6 +23,22 @@
     width: 130px;
     outline-width: 1px;
     margin-left: 0;
+}
+
+/* all stuff for modal */
+.projectModalContainer {
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modalContentTop {
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modalContentBottom {
+    overflow: auto; /* Enable scroll if needed */
 }
 
 /* ryan burke at top */

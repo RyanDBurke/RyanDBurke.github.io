@@ -32,11 +32,6 @@
                 <li class="nav-item active">
                     <a class="nav-link navbarlinks" href="https://github.com/ryandburke" target="_blank">github</a>
                 </li>
-                <!--
-                <li class="nav-item active">
-                    <a class="nav-link navbarlinks" href="#projects-jump-link">projects</a>
-                </li>
-                -->
                 <li class="nav-item active">
                     <a class="nav-link navbarlinks" href="https://www.linkedin.com/in/ryanburke96/"
                         target="_blank">linkedin</a>
@@ -90,8 +85,11 @@
                 <p id="projectDescription" class="mt-3 ml-3 projectDescription">
                 </p>
 
-                <i onclick="github()" target="_blank" class="fa fa-github mt-3 ml-3 mb-4"
-                    style="font-size: 2.4rem; cursor: pointer;" id="github-icon">
+                <i onclick="github()" 
+                    target="_blank" 
+                    class="fa fa-github mt-3 ml-3 mb-4"
+                    style="font-size: 2.4rem; cursor: pointer;" 
+                    id="github-icon">
                 </i>
             </div>
         </div>
@@ -173,34 +171,6 @@
         var container = document.getElementById("container");
         var modalState = "closed";
         var githubLink;
-
-        // handle our modal if about is clicked
-        function aboutClick() {
-
-            var name = "Ryan Burke";
-            var desc = "I'm a software engineer based in Washington, DC. \
-                    I graduate from University of Maryland, College Park \
-                    in December 2020 with a B.S in Computer Science. I primarily \
-                    code in <em>Java, C, Ruby, and Python</em>, \
-                    but programming aside, I love playing basketball, photography, \
-                    and watching films with the subtitles on.";
-
-            // fade out container
-            container.style.opacity = 0.1;
-
-            // bring modal to front
-            modal.style.display = "block";
-
-            // adjust modal information and set github link
-            document.getElementById("projectName").innerHTML = name;
-            document.getElementById("projectDescription").innerHTML = desc;
-            document.getElementById("projectImage").src = "./images/profilepic.jpg";
-            document.getElementById("github-icon").style.display = "block";
-            githubLink = "https://github.com/RyanDBurke";
-
-            // set modal state
-            modalState = "open";
-        }
 
 
         // handle our modal if coronavirus project is clicked
