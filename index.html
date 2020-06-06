@@ -191,7 +191,6 @@
 
             // set modal state
             modalState = "open";
-            console.log(modalState);
         }
 
         // handle our modal if RNA Sequence project is clicked
@@ -199,7 +198,8 @@
 
             var name = "RNA Sequence Quantification [Python]";
             var desc = "Implements the EM algorithm for transcript \
-                        quantification from RNA-alignments and returns \
+                        quantification from RNA-alignments, takes in \
+                        a transcript-alignment file, and returns \
                         estimated read-counts for each transcript in the \
                         transcriptome.";
                         
@@ -218,7 +218,6 @@
 
             // set modal state
             modalState = "open";
-            console.log(modalState);
         }
 
         // handle our modal if Abstract Syn Struct project is clicked
@@ -227,7 +226,9 @@
             var name = "Abstract Syntactic Structure [OCaml]";
             var desc = "Designed, built, and debugged a lexer, parser,\
                         and interpreter for small-scale C programs using \
-                        abstract syntactic structure.";
+                        abstract syntactic structure and imperative programming. \
+                        Then, fed the interpreter a C program to evaluate \
+                        and output.";
                         
             // fade out container
             container.style.opacity = 0.1;
@@ -243,7 +244,6 @@
 
             // set modal state
             modalState = "open";
-            console.log(modalState);
         }
 
         // open github link w/ icon

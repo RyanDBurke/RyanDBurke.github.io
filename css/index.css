@@ -41,7 +41,7 @@ html {
 /* all stuff for modal */
 .projectModalContainer {
     display: none; /* Hidden by default */
-    /* position: fixed; /* Stay in place */
+    position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     /*width: 50%; /* Full width */
     /* height: 70%; /* Full height */
