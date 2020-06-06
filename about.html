@@ -126,6 +126,8 @@
             var height = window.screen.height * window.devicePixelRatio;
             var modal = document.getElementById("modal");
             var img = document.getElementById("projectImage");
+            var github = document.getElementById("github-icon");
+            var linkedin = document.getElementById("linkedin-icon");
 
             if (width == 1920) {
                 modal.style.left = '20%';
@@ -133,6 +135,10 @@
             } else {
                 modal.style.left = '0%';
                 modal.style.right = '0%';
+                modal.style.top = '7%';
+                modal.className = "projectModalContainer bg-dark";
+                github.className = "fa fa-github mt-5 ml-3";
+                linkedin.className = "fa fa-linkedin mt-5 ml-3";
             }
         }
 
