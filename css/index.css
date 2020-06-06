@@ -45,6 +45,8 @@ html {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     overflow: auto; /* Enable scroll if needed */
+    left: 10%;
+    right: 10%;
 }
 
 .modalContentTop {
