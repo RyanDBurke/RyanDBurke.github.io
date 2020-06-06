@@ -37,9 +37,40 @@ html {
     color: white;
 }
 
+
+/* all stuff for modal */
+.projectModalContainer {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /*width: 50%; /* Full width */
+    /* height: 70%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /* top: 30%; */
+}
+
+.modalContentTop {
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modalContentBottom {
+    overflow: auto; /* Enable scroll if needed */
+}
+
+#close {
+    cursor: pointer;
+    color: black;
+}
+
+.projectNameModal {
+    font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
 /* responsive text */
 .projectName {
     font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+    /* text-align: center; */
 }
 
 /* responsive text */
@@ -57,6 +88,7 @@ html {
 .project:hover {
     opacity: 0.05;
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 /* for temporary project cards */
