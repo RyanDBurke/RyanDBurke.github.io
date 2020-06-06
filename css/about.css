@@ -37,8 +37,6 @@
     position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
     overflow: auto; /* Enable scroll if needed */
-    /* left: 20%;
-    right: 20%; */
 }
 
 .modalContentTop {
