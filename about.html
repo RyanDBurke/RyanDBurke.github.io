@@ -20,7 +20,7 @@
     <title>Ryan Burke</title>
 </head>
 
-<body class="p-3 mb-2 bg-dark text-white">
+<body class="p-3 mb-2 bg-dark text-white" onload="getResolution()">
 
     <!-- Nav Bar -->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark outline">
@@ -78,7 +78,7 @@
         <!-- modal container -->
         <div id="modal" class="projectModalContainer bg-dark outline ml-5 mr-5 mb-5 mt-1">
             <div class="modalContentTop bg-white">
-                <img id="projectImage" class="mx-auto m-5 d-block img-fluid" src="./images/profilepic-circle.png">
+                <img id="projectImage" class="mx-auto m-5 d-block img-fluid" src="./images/painter-circle.png">
             </div>
     
             <div class="modalContentBottom">
@@ -125,6 +125,17 @@
         crossorigin="anonymous"></script>
 
     <script>
+
+        function getResolution() {
+            var width = window.screen.width * window.devicePixelRatio;
+            var height = window.screen.height * window.devicePixelRatio;
+            var modal = document.getElementById("modal");
+
+            if (width > 1500) {
+                modal.style.left = '20%';
+                modal.style.right = '20%';
+            }
+        }
 
         function github() {
             window.open("https://github.com/RyanDBurke");

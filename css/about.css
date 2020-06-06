@@ -25,12 +25,20 @@
     margin-left: 0;
 }
 
+/* ryan burke at top */
+.name {
+    font-weight: bold;
+    font-size: 30px;
+}
+
 /* all stuff for modal */
 .projectModalContainer {
     display: block; /* Hidden by default */
     position: absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
     overflow: auto; /* Enable scroll if needed */
+    /* left: 20%;
+    right: 20%; */
 }
 
 .modalContentTop {
@@ -39,33 +47,4 @@
 
 .modalContentBottom {
     overflow: auto; /* Enable scroll if needed */
-}
-
-/* ryan burke at top */
-.name {
-    font-weight: bold;
-    font-size: 30px;
-}
-
-/* about paragraph */
-.about {
-    font-family: sans-serif;
-    font-size: 16px;
-}
-
-.lang {
-    height: 300px;
-    transition: transform .2s;
-}
-
-.lang:hover {
-    transform: scale(1.05);
-}
-
-.ruby {
-    margin-top: 20px;
-}
-
-.python {
-    margin-top: 100px;
 }
