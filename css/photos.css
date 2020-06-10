@@ -18,7 +18,7 @@
 .outlineHr {
     outline: solid;
     outline-color: white;
-    outline-width: 1px;
+    outline-width: 10px;
 }
 
 /* ryan burke at top */
@@ -36,25 +36,20 @@
     transform: scale(1.05);
 }
 
-.monument {
-    height: 720px;
+/* all stuff for modal */
+.ModalContainer {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+    margin-left: 35%;
+    margin-right: 35%;
 }
 
-.painter {
-    height: 453.33px;
+.modalContentTop {
+    overflow: auto; /* Enable scroll if needed */
 }
 
-.crabs {
-    height: 453.33px;
-}
-
-.blankCol1 {
-    margin-top: -240px;
-    margin-left: 585px;
-    margin-bottom: 0px;
-}
-
-.fall {
-    height: 250px;
-    width: 500px;
+.modalContentBottom {
+    overflow: auto; /* Enable scroll if needed */
 }
