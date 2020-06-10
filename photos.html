@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- website icon -->
-    <link rel="icon" href="./images/terminal.png">
+    <link rel="icon" href="./images/PNG/terminal.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,7 +17,7 @@
     <title>Ryan Burke</title>
 </head>
 
-<body class="p-3 mb-2 bg-dark text-white" onclick="close()">
+<body class="p-3 mb-2 bg-dark text-white">
 
     <!-- Nav Bar -->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark outline">
@@ -71,10 +71,10 @@
 
 
      <!-- modal container -->
-     <div id="modal" class="ModalContainer bg-dark outline centered">
+     <div id="modal" class="ModalContainer outline centered" >
         <div class="modalContentTop bg-white">
-            <!-- <span id="close" style="font-size: 2rem;" class="close bg-white" onclick="modalClose()">&times;</span> -->
-            <img src="" id="modalImage" class="mx-auto d-block img-fluid">
+            <!--<span id="close" style="font-size: 2rem;" class="close bg-white" onclick="close()">&times;</span> -->
+            <img src="" id="modalImage" class="mx-auto img-fluid d-block">
         </div>
 
         <div class="modalContentBottom">
@@ -90,17 +90,17 @@
 
         <!-- row 1 -->
         <div class="row">
-            <div class="col-4" onclick="openModal('./images/JPG/home.jpg')">
+            <div class="col-4" onclick="openModal('./images/JPG/home')">
                 <img id="home" class="mx-auto img-fluid enlarge" src="./images/PNG/home.png">
                 <h4 id="homeText" class="centered">home</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/monument.jpg')">
+            <div class="col-4" onclick="openModal('./images/JPG/monument')">
                 <img id="monument" class="mx-auto img-fluid enlarge" src="./images/PNG/monument.png">
                 <h4 id="monumentText" class="centered">monument</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/dawn.jpg')">
+            <div class="col-4" onclick="openModal('./images/JPG/dawn')">
                 <img id="dawn" class="mx-auto img-fluid enlarge" src="./images/PNG/kanishk.png">
                 <h4 id="dawnText" class="centered">dawn</h4>
             </div>
@@ -108,17 +108,17 @@
 
          <!-- row 2 -->
         <div class="row mt-5">
-            <div class="col-4" onclick="openModal('./images/JPG/shadow.jpg')">
+            <div class="col-4" onclick="openModal('./images/JPG/shadow')">
                 <img id="brisk" class="mx-auto img-fluid enlarge" src="./images/PNG/shadow.png">
                 <h4 id="briskText" class="centered">brisk</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/cherry blossom.jpg')">
+            <div class="col-4" onclick="openModal('./images/JPG/cherry blossom')">
                 <img id="blossom" class="mx-auto img-fluid enlarge" src="./images/PNG/cherry blossom.png">
                 <h4 id="blossomText" class="centered">cherry blossom</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/dusk.jpg')">
+            <div class="col-4" onclick="openModal('./images/JPG/dusk')">
                 <img id="dusk" class="mx-auto img-fluid enlarge" src="./images/PNG/kanishk-shadow.png">
                 <h4 id="duskText" class="centered">dusk</h4>
             </div>
@@ -126,17 +126,17 @@
 
          <!-- row 3 -->
          <div class="row mt-5">
-            <div class="col-4" onclick="openModal('./images/JPG/crabs.jpg')">
+            <div class="col-4" onclick="openModal('./images/JPG/crabs')">
                 <img id="crabs" class="mx-auto img-fluid enlarge" src="./images/PNG/crabs.png">
                 <h4 id="crabsText" class="centered">crabs</h4>
             </div>
 
-            <div class="col-4" >
+            <div class="col-4" onclick="openModal('./images/JPG/fall')">
                 <img id="autumn" class="mx-auto img-fluid enlarge" src="./images/PNG/fall.png">
                 <h4 id="autumnText" class="centered">autumn</h4>
             </div>
 
-            <div class="col-4" >
+            <div class="col-4" onclick="openModal('./images/JPG/stLucia')">
                 <img id="boat" class="mx-auto img-fluid enlarge" src="./images/PNG/stLucia.png">
                 <h4 id="boatText" class="centered">st. lucia</h4>
             </div>
@@ -149,29 +149,36 @@
 
         function openModal(src) {
             
+            // IDs
             var containerID = document.getElementById("container");
             var modalID = document.getElementById("modal");
             var setModalImage = document.getElementById("modalImage");
             var width = window.screen.width * window.devicePixelRatio;
 
+            /* format for mobile or desktop */
+            if (width < 1400) {
+                setModalImage.className = "mx-auto d-block";    // change img-fluid
+                setModalImage.src = src + '-mobile.jpg';        // add mobile image
+            } else {
+                setModalImage.src = src + '.jpg';               // desktop image
+            }
+
+            // always do this
             containerID.style.opacity = 0.2;
             modalID.style.display = "block";
-            setModalImage.src = src;
             modalState = true;
         }
 
+        // close modal
         function close() {
 
-            console.log(modalState);
-            if (modalState == true) {
+            console.log("CLICK");
 
                 var containerID = document.getElementById("container");
                 var modalID = document.getElementById("modal");
 
                 containerID.style.opacity = 1.0;
                 modalID.style.display = "none";
-                modalState = false;
-            }
         }
 
     </script>
