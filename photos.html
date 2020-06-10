@@ -17,7 +17,7 @@
     <title>Ryan Burke</title>
 </head>
 
-<body class="p-3 mb-2 bg-dark text-white">
+<body class="p-3 mb-2 bg-dark text-white" onclick="close()">
 
     <!-- Nav Bar -->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark outline">
@@ -69,58 +69,75 @@
     <br>
     <br>
 
-    <div class="container">
+
+     <!-- modal container -->
+     <div id="modal" class="ModalContainer bg-dark outline centered">
+        <div class="modalContentTop bg-white">
+            <!-- <span id="close" style="font-size: 2rem;" class="close bg-white" onclick="modalClose()">&times;</span> -->
+            <img src="" id="modalImage" class="mx-auto d-block img-fluid">
+        </div>
+
+        <div class="modalContentBottom">
+            <div class="col-10">
+                <h4 id="picName" class="mt-3 ml-3 font-weight-bold NameModal">
+                    
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <div id="container" class="container">
 
         <!-- row 1 -->
         <div class="row">
-            <div class="col-4" onmouseover="opacity('home', 'homeText')" onmouseout="reset('home', 'homeText')" onclick="opacity('home', 'homeText')">
-                <img id="home" class="mx-auto img-fluid enlarge" src="./images/home.png">
+            <div class="col-4" onclick="openModal('./images/JPG/home.jpg')">
+                <img id="home" class="mx-auto img-fluid enlarge" src="./images/PNG/home.png">
                 <h4 id="homeText" class="centered">home</h4>
             </div>
 
-            <div class="col-4" onmouseover="opacity('monument', 'monumentText')" onmouseout="reset('monument', 'monumentText')" onclick="opacity('monument', 'monumentText')">
-                <img id="monument" class="mx-auto img-fluid enlarge" src="./images/monument.png">
+            <div class="col-4" onclick="openModal('./images/JPG/monument.jpg')">
+                <img id="monument" class="mx-auto img-fluid enlarge" src="./images/PNG/monument.png">
                 <h4 id="monumentText" class="centered">monument</h4>
             </div>
 
-            <div class="col-4" onmouseover="opacity('dawn', 'dawnText')" onmouseout="reset('dawn', 'dawnText')" onclick="opacity('dawn', 'dawnText')">
-                <img id="dawn" class="mx-auto img-fluid enlarge" src="./images/kanishk.png">
+            <div class="col-4" onclick="openModal('./images/JPG/dawn.jpg')">
+                <img id="dawn" class="mx-auto img-fluid enlarge" src="./images/PNG/kanishk.png">
                 <h4 id="dawnText" class="centered">dawn</h4>
             </div>
         </div>
 
          <!-- row 2 -->
         <div class="row mt-5">
-            <div class="col-4" onmouseover="opacity('brisk', 'briskText')" onmouseout="reset('brisk', 'briskText')" onclick="opacity('brisk', 'briskText')">
-                <img id="brisk" class="mx-auto img-fluid enlarge" src="./images/shadow.png">
+            <div class="col-4" onclick="openModal('./images/JPG/shadow.jpg')">
+                <img id="brisk" class="mx-auto img-fluid enlarge" src="./images/PNG/shadow.png">
                 <h4 id="briskText" class="centered">brisk</h4>
             </div>
 
-            <div class="col-4" onmouseover="opacity('blossom', 'blossomText')" onmouseout="reset('blossom', 'blossomText')" onclick="opacity('blossom', 'blossomText')">
-                <img id="blossom" class="mx-auto img-fluid enlarge" src="./images/cherry blossom.png">
+            <div class="col-4" onclick="openModal('./images/JPG/cherry blossom.jpg')">
+                <img id="blossom" class="mx-auto img-fluid enlarge" src="./images/PNG/cherry blossom.png">
                 <h4 id="blossomText" class="centered">cherry blossom</h4>
             </div>
 
-            <div class="col-4" onmouseover="opacity('dusk', 'duskText')" onmouseout="reset('dusk', 'duskText')" onclick="opacity('dusk', 'duskText')">
-                <img id="dusk" class="mx-auto img-fluid enlarge" src="./images/kanishk-shadow.png">
+            <div class="col-4" onclick="openModal('./images/JPG/dusk.jpg')">
+                <img id="dusk" class="mx-auto img-fluid enlarge" src="./images/PNG/kanishk-shadow.png">
                 <h4 id="duskText" class="centered">dusk</h4>
             </div>
         </div>
 
          <!-- row 3 -->
          <div class="row mt-5">
-            <div class="col-4" onmouseover="opacity('crabs', 'crabsText')" onmouseout="reset('crabs', 'crabsText')" onclick="opacity('crabs', 'crabsText')">
-                <img id="crabs" class="mx-auto img-fluid enlarge" src="./images/crabs.png">
+            <div class="col-4" onclick="openModal('./images/JPG/crabs.jpg')">
+                <img id="crabs" class="mx-auto img-fluid enlarge" src="./images/PNG/crabs.png">
                 <h4 id="crabsText" class="centered">crabs</h4>
             </div>
 
-            <div class="col-4" onmouseover="opacity('autumn', 'autumnText')" onmouseout="reset('autumn', 'autumnText')" onclick="opacity('autumn', 'autumnText')">
-                <img id="autumn" class="mx-auto img-fluid enlarge" src="./images/fall.png">
+            <div class="col-4" >
+                <img id="autumn" class="mx-auto img-fluid enlarge" src="./images/PNG/fall.png">
                 <h4 id="autumnText" class="centered">autumn</h4>
             </div>
 
-            <div class="col-4" onmouseover="opacity('boat', 'boatText')" onmouseout="reset('boat', 'boatText')" onclick="opacity('boat', 'boatText')">
-                <img id="boat" class="mx-auto img-fluid enlarge" src="./images/stLucia.png">
+            <div class="col-4" >
+                <img id="boat" class="mx-auto img-fluid enlarge" src="./images/PNG/stLucia.png">
                 <h4 id="boatText" class="centered">st. lucia</h4>
             </div>
         </div>
@@ -128,21 +145,32 @@
 
     <script>
 
-        function opacity(IDimage, IDtext) {
-            var imageID = document.getElementById(IDimage);
-            var textID = document.getElementById(IDtext);
+        var modalState = false;
 
-            imageID.style.opacity = 0.1;
-            textID.style.display = "block";
+        function openModal(src) {
+            
+            var containerID = document.getElementById("container");
+            var modalID = document.getElementById("modal");
+            var setModalImage = document.getElementById("modalImage");
 
+            containerID.style.opacity = 0.2;
+            modalID.style.display = "block";
+            setModalImage.src = src;
+            modalState = true;
         }
 
-        function reset(IDimage, IDtext) {
-            var imageID = document.getElementById(IDimage);
-            var textID = document.getElementById(IDtext);
+        function close() {
 
-            imageID.style.opacity = 1.0;
-            textID.style.display = "none";
+            console.log(modalState);
+            if (modalState == true) {
+
+                var containerID = document.getElementById("container");
+                var modalID = document.getElementById("modal");
+
+                containerID.style.opacity = 1.0;
+                modalID.style.display = "none";
+                modalState = false;
+            }
         }
 
     </script>

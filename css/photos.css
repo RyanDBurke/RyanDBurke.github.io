@@ -27,7 +27,7 @@
     font-size: 30px;
 }
 
-/* enlarge
+
 .enlarge {
     transition: transform .2s;
 }
@@ -35,8 +35,42 @@
 .enlarge:hover {
     transform: scale(1.05);
 }
-*/
 
+
+/* all stuff for modal */
+.ModalContainer {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modalContentTop {
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modalContentBottom {
+    overflow: auto; /* Enable scroll if needed */
+}
+
+#close {
+    cursor: pointer;
+    color: black;
+}
+
+.NameModal {
+    font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
+/* responsive text */
+.picName {
+    font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+img {
+    cursor: pointer;
+}
 
 .centered {
     position: absolute;
