@@ -53,9 +53,15 @@
     overflow: auto; /* Enable scroll if needed */
 }
 
-#close {
+.close {
     cursor: pointer;
     color: black;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+    height: 100px;
+    width: 100px;
 }
 
 .NameModal {
@@ -75,6 +81,12 @@ img {
 .centered {
     position: absolute;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centeredTop {
+    position: fixed;
     left: 50%;
     transform: translate(-50%, -50%);
 }
