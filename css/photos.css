@@ -44,7 +44,7 @@
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    overflow: auto; /* Enable scroll if needed */
+    /*overflow: auto; /* Enable scroll if needed */
 }
 
 .modalContentTop {
@@ -62,6 +62,7 @@
 .closeModal {
     border: none;
     color: black;
+    left: -15%;
 }
 
 
@@ -97,13 +98,12 @@ h4 {
     cursor: pointer;
 }
 
-  
 .previous {
     display: none;
     position: fixed;
     background-color: white;
     color: black;
-    left: 20%;
+    left: -15%;
     top: 50%;
     z-index: 1; /* Sit on top */
   }
@@ -113,7 +113,7 @@ h4 {
     position: fixed;
     background-color: white;
     color: black;
-    right: 20%;
+    right: -15%;
     top: 50%;
     z-index: 1; /* Sit on top */
   }

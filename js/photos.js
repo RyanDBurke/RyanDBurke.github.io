@@ -91,3 +91,13 @@ function prevPhoto() {
     currentImg = prev;
     openModal(currentImg);
 }
+
+// if viewing for mobile, deny request.
+function ifMobile() {
+    var width = window.screen.width * window.devicePixelRatio;
+
+    if (width < 1920) {
+        window.location.href = "./index.html";
+        alert("pics page not available for mobile.");
+    }
+}

@@ -17,7 +17,7 @@
     <title>Ryan Burke</title>
 </head>
 
-<body class="p-3 mb-2 bg-dark text-white">
+<body class="p-3 mb-2 bg-dark text-white" onload="ifMobile()">
 
     <!-- Nav Bar -->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark outline">
@@ -70,19 +70,25 @@
     <br>
     <br>
 
-    <!-- next/prev arrows for pics -->
-    <div onclick="prevPhoto()" id="prev" class="previous round arrow">&#8249;</div>
-    <div onclick="nextPhoto()" id="next" class="next round arrow">&#8250;</div>
 
     <!-- modal container -->
     <div id="modal" class="ModalContainer outline centered">
+
+        <!-- next/prev arrows for pics -->
+        <div onclick="prevPhoto()" id="prev" class="previous round arrow">&#8249;</div>
+        <div onclick="nextPhoto()" id="next" class="next round arrow">&#8250;</div>
+
+        <!-- modal top -->
         <div class="modalContentTop bg-white">
             <img src="" id="modalImage" class="mx-auto img-fluid d-block">
         </div>
 
+        <!-- modal bottom -->
         <div class="modalContentBottom bg-dark">
             <div class="col-10 mt-3 fixed-top">
-                <button onclick="modalClose()" class="bg-light closeModal">
+
+                <!-- Close Modal -->
+                <button onclick="modalClose()" class="bg-light closeModal" style="font-size: 1.2rem;">
                     X
                 </button>
             </div>
