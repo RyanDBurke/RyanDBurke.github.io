@@ -9,8 +9,8 @@
     <!-- website icon -->
     <link rel="icon" href="./images/PNG/terminal.png">
 
-     <!-- font-awesome icons -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,7 +20,7 @@
     <title>Ryan Burke</title>
 </head>
 
-<body class="p-3 mb-2 bg-dark text-white" onload="getResolution()">
+<body class="p-3 mb-2 bg-dark text-white" onload="getResolution(); showPics()">
 
     <!-- Nav Bar -->
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark outline">
@@ -29,11 +29,9 @@
                 <li class="nav-item active">
                     <a class="nav-link navbarlinks" href="./index.html">home</a>
                 </li>
-                <!--
-                <li class="nav-item active">
+                <li id="pics" class="nav-item active picsNav">
                     <a class="nav-link navbarlinks" href="./photos.html">pics</a>
                 </li>
-                -->
                 <li class="nav-item active">
                     <a class="nav-link navbarlinks" href="https://github.com/ryandburke" target="_blank">github</a>
                 </li>
@@ -88,7 +86,7 @@
                 </h4>
 
                 <p class="mt-3 ml-3">
-                    I'm a software engineer based in Washington, DC.
+                    I'm a software developer based in Washington, DC.
                     I graduate from University of Maryland, College Park
                     in December 2020 with a B.S in Computer Science. I primarily
                     code in <em>Java, C, Ruby, and Python</em>,
@@ -104,23 +102,16 @@
                 </p>
                 -->
 
-                <i  onclick="github()"
-                    target="_blank" 
-                    class="fa fa-github mt-3 ml-3 mb-4"
-                    style="font-size: 2.4rem; cursor: pointer;" 
-                    id="github-icon">
+                <i onclick="github()" target="_blank" class="fa fa-github mt-3 ml-3 mb-4"
+                    style="font-size: 2.4rem; cursor: pointer;" id="github-icon">
                 </i>
-                <i  onclick="linkedin()"
-                    target="_blank" 
-                    class="fa fa-linkedin mt-3 ml-3 mb-4"
-                    style="font-size: 2.4rem; cursor: pointer;" 
-                    id="linkedin-icon">
+                <i onclick="linkedin()" target="_blank" class="fa fa-linkedin mt-3 ml-3 mb-4"
+                    style="font-size: 2.4rem; cursor: pointer;" id="linkedin-icon">
                 </i>
             </div>
         </div>
     </div>
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -132,40 +123,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <script>
+    <!-- JAVASCRIPT FOR PAGE -->
+    <script src="./js/about.js"></script>
 
-        function getResolution() {
-            var width = window.screen.width * window.devicePixelRatio;
-            var height = window.screen.height * window.devicePixelRatio;
-            var modal = document.getElementById("modal");
-            var img = document.getElementById("projectImage");
-            var github = document.getElementById("github-icon");
-            var linkedin = document.getElementById("linkedin-icon");
-
-            if (width >= 1920) {
-                modal.style.left = '20%';
-                modal.style.right = '20%';
-            } 
-            
-            // for mobile
-            else {
-                modal.style.left = '0%';
-                modal.style.right = '0%';
-                modal.style.top = '7%';
-                modal.className = "projectModalContainer bg-dark";
-                github.className = "fa fa-github mt-2 mb-5 ml-3";
-                linkedin.className = "fa fa-linkedin mt-2 mb-5 ml-3";
-            }
-        }
-
-        function github() {
-            window.open("https://github.com/RyanDBurke");
-        }
-
-        function linkedin() {
-            window.open("https://www.linkedin.com/in/ryanburke96/");
-        }
-    </script>
 </body>
 
 </html>

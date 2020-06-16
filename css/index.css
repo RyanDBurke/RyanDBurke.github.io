@@ -9,6 +9,10 @@ html {
     outline-color: white;
 }
 
+.picsNav {
+    display: none;
+}
+
 /* animation for navbar links
 .navbarlinks {
     transition: transform .2s;

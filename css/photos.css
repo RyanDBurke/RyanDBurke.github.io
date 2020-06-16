@@ -4,7 +4,7 @@
     outline-color: white;
 }
 
-/* animation for navbar links */
+/* animation for navbar links 
 .navbarlinks {
     transition: transform .2s;
 }
@@ -12,6 +12,8 @@
 .navbarlinks:hover {
     transform: scale(1.2);
 }
+
+*/
 
 
 /* hr below "pics" */
@@ -53,19 +55,12 @@
     overflow: auto; /* Enable scroll if needed */
 }
 
-.close {
-    cursor: pointer;
-    color: black;
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    overflow: auto; /* Enable scroll if needed */
-    height: 100px;
-    width: 100px;
-}
-
 .NameModal {
     font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.closeModal {
+    border: none;
 }
 
 
@@ -81,12 +76,6 @@ img {
 .centered {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.centeredTop {
-    position: fixed;
     left: 50%;
     transform: translate(-50%, -50%);
 }

@@ -73,15 +73,14 @@
     <!-- modal container -->
     <div id="modal" class="ModalContainer outline centered">
         <div class="modalContentTop bg-white">
-            <!-- <span id="close" style="font-size: 5rem;" class="close bg-white" onclick="close()">&times;</span> -->
             <img src="" id="modalImage" class="mx-auto img-fluid d-block">
         </div>
 
         <div class="modalContentBottom bg-dark">
-            <div class="col-10">
-                <h4 id="picName" class="mt-3 ml-3 font-weight-bold NameModal">
-                    close
-                </h4>
+            <div class="col-10 mt-3 fixed-top">
+                <button onclick="modalClose()" class="bg-light closeModal">
+                    X
+                </button>
             </div>
         </div>
     </div>
@@ -143,52 +142,9 @@
         </div>
     </div>
 
-    <script>
+    <!-- JAVASCRIPT FOR PAGE -->
+    <script src="./js/photos.js"></script>
 
-        var body = document.body;
-        var modalState = false;
-
-        function openModal(src) {
-
-            // IDs
-            var containerID = document.getElementById("container");
-            var modalID = document.getElementById("modal");
-            var setModalImage = document.getElementById("modalImage");
-            var width = window.screen.width * window.devicePixelRatio;
-
-            /* format for mobile or desktop */
-            if (width < 1400) {
-                setModalImage.className = "mx-auto d-block";    // change img-fluid
-                setModalImage.src = src + '-mobile.jpg';        // add mobile image
-            } else {
-                setModalImage.src = src + '.jpg';               // desktop image
-            }
-
-            // always do this
-            containerID.style.opacity = 0.2;
-            modalID.style.display = "block";
-
-            // scroll to top
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-
-        function close() {
-            console.log("here");
-
-            var containerID = document.getElementById("container");
-            var modalID = document.getElementById("modal");
-
-
-        }
-
-
-
-
-    </script>
-
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
