@@ -70,6 +70,10 @@
     <br>
     <br>
 
+    <!-- next/prev arrows for pics -->
+    <div onclick="prevPhoto()" id="prev" class="previous round arrow">&#8249;</div>
+    <div onclick="nextPhoto()" id="next" class="next round arrow">&#8250;</div>
+
     <!-- modal container -->
     <div id="modal" class="ModalContainer outline centered">
         <div class="modalContentTop bg-white">
@@ -89,54 +93,54 @@
 
         <!-- row 1 -->
         <div class="row">
-            <div class="col-4" onclick="openModal('./images/JPG/home')">
-                <img id="home" class="mx-auto img-fluid enlarge" src="./images/PNG/home.png">
+            <div class="col-4" onclick="openModal(0)">
+                <img id="home" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/home.png">
                 <h4 id="homeText" class="centered">home</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/monument')">
-                <img id="monument" class="mx-auto img-fluid enlarge" src="./images/PNG/monument.png">
+            <div class="col-4" onclick="openModal(1)">
+                <img id="monument" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/monument.png">
                 <h4 id="monumentText" class="centered">monument</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/dawn')">
-                <img id="dawn" class="mx-auto img-fluid enlarge" src="./images/PNG/kanishk.png">
+            <div class="col-4" onclick="openModal(2)">
+                <img id="dawn" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/kanishk.png">
                 <h4 id="dawnText" class="centered">dawn</h4>
             </div>
         </div>
 
         <!-- row 2 -->
         <div class="row mt-5">
-            <div class="col-4" onclick="openModal('./images/JPG/shadow')">
-                <img id="brisk" class="mx-auto img-fluid enlarge" src="./images/PNG/shadow.png">
+            <div class="col-4" onclick="openModal(3)">
+                <img id="brisk" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/shadow.png">
                 <h4 id="briskText" class="centered">brisk</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/cherry blossom')">
-                <img id="blossom" class="mx-auto img-fluid enlarge" src="./images/PNG/cherry blossom.png">
+            <div class="col-4" onclick="openModal(4)">
+                <img id="blossom" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/cherry blossom.png">
                 <h4 id="blossomText" class="centered">cherry blossom</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/dusk')">
-                <img id="dusk" class="mx-auto img-fluid enlarge" src="./images/PNG/kanishk-shadow.png">
+            <div class="col-4" onclick="openModal(5)">
+                <img id="dusk" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/kanishk-shadow.png">
                 <h4 id="duskText" class="centered">dusk</h4>
             </div>
         </div>
 
         <!-- row 3 -->
         <div class="row mt-5">
-            <div class="col-4" onclick="openModal('./images/JPG/crabs')">
-                <img id="crabs" class="mx-auto img-fluid enlarge" src="./images/PNG/crabs.png">
+            <div class="col-4" onclick="openModal(6)">
+                <img id="crabs" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/crabs.png">
                 <h4 id="crabsText" class="centered">crabs</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/fall')">
-                <img id="autumn" class="mx-auto img-fluid enlarge" src="./images/PNG/fall.png">
+            <div class="col-4" onclick="openModal(7)">
+                <img id="autumn" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/fall.png">
                 <h4 id="autumnText" class="centered">autumn</h4>
             </div>
 
-            <div class="col-4" onclick="openModal('./images/JPG/stLucia')">
-                <img id="boat" class="mx-auto img-fluid enlarge" src="./images/PNG/stLucia.png">
+            <div class="col-4" onclick="openModal(8)">
+                <img id="boat" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/stLucia.png">
                 <h4 id="boatText" class="centered">st. lucia</h4>
             </div>
         </div>
