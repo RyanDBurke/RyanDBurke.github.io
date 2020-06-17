@@ -34,7 +34,12 @@ function openModal(index) {
     var width = window.screen.width * window.devicePixelRatio;
 
     /* Set modal image src */
-    setModalImage.src = src + '.jpg';
+    if (src == './images/JPG/moon') {
+        setModalImage.src = src + '.JPG';
+    } else {
+        setModalImage.src = src + '.jpg';
+    }
+    
 
     // always do this
     containerID.style.opacity = 0.2;
