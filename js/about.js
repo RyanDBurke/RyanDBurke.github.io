@@ -31,11 +31,19 @@ function linkedin() {
 
 function email() {
 
-    var emailID = document.getElementById("email");
+    var bubbleID = document.getElementById("bubble");
     var emailIconID = document.getElementById("email-icon");
 
-    emailID.style.display = "block";
-    emailIconID.style.display = "none";
+    emailIconID.style.opacity = 0.5;
+    bubbleID.style.display = "block";
+}
+
+function emailReset() {
+    var bubbleID = document.getElementById("bubble");
+    var emailIconID = document.getElementById("email-icon");
+
+    emailIconID.style.opacity = 1.0;
+    bubbleID.style.display = "none";
 }
 
 function showPics() {
@@ -46,4 +54,13 @@ function showPics() {
     if (width >= 1920) {
         picsNavID.style.display = "block";
     }
+}
+
+function highlight(id,color,seconds){
+    var element = document.getElementById(id)
+    var origcolor = element.style.backgroundColor
+    element.style.backgroundColor = color;
+    var t = setTimeout(function(){
+       element.style.backgroundColor = origcolor;
+    },(seconds*1000));
 }
