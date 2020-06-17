@@ -91,7 +91,7 @@
                 <button onclick="modalClose()" class="bg-light closeModal" style="font-size: 1.2rem;">
                     X
                 </button>
-            </div>
+            </div>           
         </div>
     </div>
 
@@ -99,55 +99,68 @@
 
         <!-- row 1 -->
         <div class="row">
-            <div class="col-4" onclick="openModal(0)">
+            <div class="col-4" onclick="openModal(0)" onmouseover="imageHover('home')" onmouseout="resetHover('home')">
                 <img id="home" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/home.png">
-                <h4 id="homeText" class="centered">home</h4>
+                <p id="homeText" class="subtitle">9:58am</p>
             </div>
 
-            <div class="col-4" onclick="openModal(1)">
+            <div class="col-4" onclick="openModal(1)" onmouseover="imageHover('monument')" onmouseout="resetHover('monument')">
                 <img id="monument" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/monument.png">
-                <h4 id="monumentText" class="centered">monument</h4>
+                <h4 id="monumentText" class="subtitle">3:28pm</h4>
             </div>
 
-            <div class="col-4" onclick="openModal(2)">
+            <div class="col-4" onclick="openModal(2)" onmouseover="imageHover('dawn')" onmouseout="resetHover('dawn')">
                 <img id="dawn" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/kanishk.png">
-                <h4 id="dawnText" class="centered">dawn</h4>
+                <h4 id="dawnText" class="subtitle">7:59pm</h4>
             </div>
         </div>
 
         <!-- row 2 -->
         <div class="row mt-5">
-            <div class="col-4" onclick="openModal(3)">
+            <div class="col-4" onclick="openModal(3)" onmouseover="imageHover('brisk')" onmouseout="resetHover('brisk')">
                 <img id="brisk" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/shadow.png">
-                <h4 id="briskText" class="centered">brisk</h4>
+                <h4 id="briskText" class="subtitle">8:12am</h4>
             </div>
 
-            <div class="col-4" onclick="openModal(4)">
-                <img id="blossom" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/cherry blossom.png">
-                <h4 id="blossomText" class="centered">cherry blossom</h4>
+            <div class="col-4" onclick="openModal(4)" onmouseover="imageHover('boyAndBoats')" onmouseout="resetHover('boyAndBoats')">
+                <img id="boyAndBoats" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/boyAndBoats.png">
+                <h4 id="boyAndBoatsText" class="subtitle">1:22pm</h4>
             </div>
 
-            <div class="col-4" onclick="openModal(5)">
+            <div class="col-4" onclick="openModal(5)" onmouseover="imageHover('dusk')" onmouseout="resetHover('dusk')">
                 <img id="dusk" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/kanishk-shadow.png">
-                <h4 id="duskText" class="centered">dusk</h4>
+                <h4 id="duskText" class="subtitle">7:25am</h4>
             </div>
         </div>
 
         <!-- row 3 -->
         <div class="row mt-5">
-            <div class="col-4" onclick="openModal(6)">
+            <div class="col-4" onclick="openModal(6)" onmouseover="imageHover('crabs')" onmouseout="resetHover('crabs')">
                 <img id="crabs" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/crabs.png">
-                <h4 id="crabsText" class="centered">crabs</h4>
+                <h4 id="crabsText" class="subtitle">6:36pm</h4>
             </div>
 
-            <div class="col-4" onclick="openModal(7)">
+            <div class="col-4" onclick="openModal(7)" onmouseover="imageHover('autumn')" onmouseout="resetHover('autumn')">
                 <img id="autumn" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/fall.PNG">
-                <h4 id="autumnText" class="centered">autumn</h4>
+                <h4 id="autumnText" class="subtitle">6:01pm</h4>
             </div>
 
-            <div class="col-4" onclick="openModal(8)">
+            <div class="col-4" onclick="openModal(8)" onmouseover="imageHover('boat')" onmouseout="resetHover('boat')">
                 <img id="boat" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/stLucia.png">
-                <h4 id="boatText" class="centered">st. lucia</h4>
+                <h4 id="boatText" class="subtitle">12:30pm</h4>
+            </div>
+        </div>
+
+        <!-- row 4 -->
+        <div class="row mt-5">
+            <div class="col-4" onclick="openModal(9)" onmouseover="imageHover('blossom')" onmouseout="resetHover('blossom')">
+                <img id="blossom" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/cherry blossom.png">
+                <h4 id="blossomText" class="subtitle">2:15pm</h4>
+            </div>
+
+            <div class="col-4" onclick="openModal(10)" onmouseover="imageHover('santaMonica')" onmouseout="resetHover('santaMonica')">
+                <img id="santaMonica" class="mx-auto img-fluid enlarge imgCirlce" src="./images/PNG/santaMonica.png">
+                <h4 id="santaMonicaText" class="subtitle">7:18pm</h4>
             </div>
         </div>
     </div>

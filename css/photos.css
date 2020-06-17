@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 /* outline for navbar */
 .outline {
     outline: solid;
@@ -120,4 +124,18 @@ h4 {
   
 .round {
     border-radius: 50%;
-  }
+}
+
+.subtitle {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: yellow;
+    font-family: Arial;
+    font-size: 1.5rem;
+    text-shadow: .1rem .1rem black;
+    text-align: center;
+}

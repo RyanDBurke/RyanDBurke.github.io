@@ -2,18 +2,23 @@ var body = document.body;
 var modalState = "closed";
 var photoSources = ['./images/JPG/home', './images/JPG/monument', 
                     './images/JPG/dawn', './images/JPG/shadow', 
-                    './images/JPG/cherry blossom', './images/JPG/dusk', 
+                    './images/JPG/boyAndBoats', './images/JPG/dusk', 
                     './images/JPG/crabs', './images/JPG/fall', 
-                    './images/JPG/stLucia'];
+                    './images/JPG/stLucia','./images/JPG/cherry blossom',
+                    './images/JPG/santaMonica'];
 var currentImg = 0;
+var scrollYReturn = 0;
 
 function openModal(index) {
 
     // set current image
     currentImg = index;
 
+    // set current caption
+    currentCaption = index;
+
     // src for photo
-    src = photoSources[index];
+    src = photoSources[index];    
 
     // IDs
     var containerID = document.getElementById("container");
@@ -23,13 +28,8 @@ function openModal(index) {
     var nextID = document.getElementById("next");
     var width = window.screen.width * window.devicePixelRatio;
 
-    /* format for mobile or desktop */
-    if (width < 1400) {
-        setModalImage.className = "mx-auto d-block";    // change img-fluid
-        setModalImage.src = src + '-mobile.jpg';        // add mobile image
-    } else {
-        setModalImage.src = src + '.jpg';               // desktop image
-    }
+    /* Set modal image src */
+    setModalImage.src = src + '.jpg';
 
     // always do this
     containerID.style.opacity = 0.2;
@@ -39,9 +39,9 @@ function openModal(index) {
     prevID.style.opacity = 1.0;
     nextID.style.opacity = 1.0;
 
-    // scroll to top
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    /* scroll to top */
+    scrollYReturn = window.scrollY; // keep track of where we were
+    window.scrollTo(0, 0);
 
     // change modal state
     modalState = "open";
@@ -62,6 +62,9 @@ function modalClose() {
     modalID.style.display = "none";
     prevID.style.display = "none";
     nextID.style.display = "none";
+
+    // return to scrollY before modal was opened
+    window.scrollTo(0, scrollYReturn);
 
     // changed modal state
     modalState = "closed";
@@ -100,4 +103,27 @@ function ifMobile() {
         window.location.href = "./index.html";
         alert("pics page not available for mobile.");
     }
+}
+
+// display time on hover
+function imageHover(ID) {
+
+    // IDs
+    var imageID = document.getElementById(ID);
+    var textID = document.getElementById(ID + 'Text');
+
+    imageID.style.opacity = 0.3;
+    textID.style.display = "block";
+    textID.style.opacity = 1.0;
+}
+
+// reset hover
+function resetHover(ID) {
+
+    // IDs
+    var imageID = document.getElementById(ID);
+    var textID = document.getElementById(ID + 'Text');
+
+    imageID.style.opacity = 1.0;
+    textID.style.display = "none";
 }
