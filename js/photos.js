@@ -1,11 +1,11 @@
 var body = document.body;
 var modalState = "closed";
-var photoSources = ['./images/JPG/home', './images/JPG/monument', 
-                    './images/JPG/dawn', './images/JPG/shadow', 
-                    './images/JPG/boyAndBoats', './images/JPG/dusk', 
-                    './images/JPG/crabs', './images/JPG/fall', 
-                    './images/JPG/stLucia','./images/JPG/cherry blossom',
-                    './images/JPG/santaMonica'];
+var photoSources = ['./images/JPG/home', './images/JPG/monument',
+    './images/JPG/dawn', './images/JPG/shadow',
+    './images/JPG/boyAndBoats', './images/JPG/dusk',
+    './images/JPG/crabs', './images/JPG/fall',
+    './images/JPG/stLucia', './images/JPG/cherry blossom',
+    './images/JPG/santaMonica'];
 var currentImg = 0;
 var scrollYReturn = 0;
 
@@ -18,7 +18,7 @@ function openModal(index) {
     currentCaption = index;
 
     // src for photo
-    src = photoSources[index];    
+    src = photoSources[index];
 
     // IDs
     var containerID = document.getElementById("container");
@@ -127,3 +127,15 @@ function resetHover(ID) {
     imageID.style.opacity = 1.0;
     textID.style.display = "none";
 }
+
+document.addEventListener('keydown', function (event) {
+
+    if (modalState == "open") {
+        if (event.keyCode == 37) {
+            prevPhoto();
+        }
+        else if (event.keyCode == 39) {
+            nextPhoto();
+        }
+    }
+});
