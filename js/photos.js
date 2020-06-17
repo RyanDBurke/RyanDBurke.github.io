@@ -7,7 +7,10 @@ var photoSources = ['./images/JPG/home', './images/JPG/monument',
     './images/JPG/stLucia', './images/JPG/cherry blossom',
     './images/JPG/santaMonica', 'images/JPG/cherry-blossom2',
     './images/JPG/grad', './images/JPG/sunset',
-    './images/JPG/boat2', './images/JPG/helicopter'];
+    './images/JPG/boat2', './images/JPG/helicopter',
+    './images/JPG/LA', './images/JPG/shadow2',
+    './images/JPG/moon', './images/JPG/lobster',
+    './images/JPG/rain', './images/JPG/beige'];
 var currentImg = 0;
 var scrollYReturn = 0;
 
@@ -142,3 +145,23 @@ document.addEventListener('keydown', function (event) {
         }
     }
 });
+
+// to top button
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+
+    var topID = document.getElementById("toTop");
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        topID.style.display = "block";
+    } else {
+        topID.style.display = "none";
+    }
+}
+
+// scroll to top
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
