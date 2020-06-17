@@ -1,9 +1,7 @@
 
 function getResolution() {
     var width = window.screen.width * window.devicePixelRatio;
-    var height = window.screen.height * window.devicePixelRatio;
     var modal = document.getElementById("modal");
-    var img = document.getElementById("projectImage");
     var github = document.getElementById("github-icon");
     var linkedin = document.getElementById("linkedin-icon");
 
@@ -29,6 +27,15 @@ function github() {
 
 function linkedin() {
     window.open("https://www.linkedin.com/in/ryanburke96/");
+}
+
+function email() {
+
+    var emailID = document.getElementById("email");
+    var emailIconID = document.getElementById("email-icon");
+
+    emailID.style.display = "block";
+    emailIconID.style.display = "none";
 }
 
 function showPics() {

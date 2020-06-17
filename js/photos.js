@@ -128,6 +128,7 @@ function resetHover(ID) {
     textID.style.display = "none";
 }
 
+// allow arrows to navigate photos
 document.addEventListener('keydown', function (event) {
 
     if (modalState == "open") {
