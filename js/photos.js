@@ -5,7 +5,9 @@ var photoSources = ['./images/JPG/home', './images/JPG/monument',
     './images/JPG/boyAndBoats', './images/JPG/dusk',
     './images/JPG/crabs', './images/JPG/fall',
     './images/JPG/stLucia', './images/JPG/cherry blossom',
-    './images/JPG/santaMonica'];
+    './images/JPG/santaMonica', 'images/JPG/cherry-blossom2',
+    './images/JPG/grad', './images/JPG/sunset',
+    './images/JPG/boat2', './images/JPG/helicopter'];
 var currentImg = 0;
 var scrollYReturn = 0;
 
