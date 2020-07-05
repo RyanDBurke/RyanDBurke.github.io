@@ -71,7 +71,6 @@ html {
 /* responsive text */
 .projectName {
     font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
-    color: white
 }
 
 /* responsive text */
@@ -108,8 +107,4 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-}
-
-.test {
-    background-color: lightgray;
 }
