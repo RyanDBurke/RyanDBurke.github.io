@@ -2,7 +2,44 @@ html, body {
     font-family: monospace;
     color: black;
     scroll-behavior: smooth;
+
+    /* adde with pic 
+    height: 100%;
+    margin: 0;
+    */
 }
+
+/* added with pic 
+.bg {
+  
+    /* Full height 
+    height: 100%;
+    width: 100%;
+  
+    /* Center and scale the image nicely 
+    /* background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+*/
+
+/* center hero text 
+.heroText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+*/
 
 /* make text black */
 .blackText {
@@ -94,13 +131,7 @@ html, body {
     cursor: pointer;
 }
 
-.projectCard {
-    height: 188px;
-}
-
 /*adjust color of github icon in project description */
 .github {
     color: black;
 }
-
-

@@ -9,6 +9,7 @@ function mobile() {
     /* all IDs of elements changing */
     var nameID = document.getElementById("name");
     var rnaID = document.getElementById("rna");
+    var heroID = document.getElementById("hero");
     // var projCardID = document.getElementById("projectCard");
 
     /* desktop */
@@ -19,6 +20,7 @@ function mobile() {
     /* mobile */
     else {
         rnaID.src ='./images/PNG/rna-mobile.png';
+        heroID.src = "./images/JPG/dusk.jpg"
         // projCardID.style.height = '188px';
     }
 }
@@ -95,12 +97,6 @@ function openLink(linkIndex) {
     var links = ['https://github.com/ryandburke', 
                 'https://www.linkedin.com/in/ryanburke96/'];
 
-    if (linkIndex == 2) {
-        var projectID = document.getElementById("projects");
-        projectID.scrollIntoView();
-        return;
-    }
-
     window.open(links[linkIndex]);
     
 }
@@ -111,4 +107,8 @@ function github(projName) {
     } else if (projName == 'rna') {
         window.open('https://github.com/RyanDBurke/RNA-seq-quantification-using-the-EM-algorithm');
     }
+}
+
+function heroClick() {
+    
 }
