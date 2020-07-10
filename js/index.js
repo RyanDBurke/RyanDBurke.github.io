@@ -45,6 +45,7 @@ function navbarToggle() {
     var containerID = document.getElementById("container");
     var projectID = document.getElementById("projects");
     var heroID = document.getElementById("heroDiv");
+    var bottomBoxID = document.getElementById("bottomBox");
 
     /* dimID */
     dimID.style.display = 'block';
@@ -63,6 +64,9 @@ function navbarToggle() {
 
     /* heroID */
     heroID.style.display = 'none';
+
+    /* bottomBoxID */
+    bottomBoxID.style.display = "none";
 }
 
 /* bad coding, doing this as a bandaid */
@@ -75,6 +79,7 @@ function navbarToggleRestore() {
     var containerID = document.getElementById("container");
     var projectID = document.getElementById("projects");
     var heroID = document.getElementById("heroDiv");
+    var bottomBoxID = document.getElementById("bottomBox");
 
     /* closeID */
     closeID.style.display = 'none';
@@ -93,6 +98,9 @@ function navbarToggleRestore() {
 
     /* heroID */
     heroID.style.display = 'block';
+
+    /* bottomBoxID */
+    bottomBoxID.style.display = "block";
 
     hero();
     
