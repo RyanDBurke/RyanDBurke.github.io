@@ -150,4 +150,5 @@ function heroButtonReset() {
 /* scroll to bottom when clicking hero button */
 function hero() {
     window.scrollTo(0,document.body.scrollHeight);
+    heroButtonReset();
 }
