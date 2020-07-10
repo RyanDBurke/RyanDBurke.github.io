@@ -17,7 +17,8 @@ function mobile() {
     
     /* mobile */
     else {
-        rnaID.src ='./images/PNG/rna-mobile.png';
+        // rnaID.src ='./images/PNG/rna-mobile.png';
+        rnaID.src ='./images/PNG/rna.png';
     }
 }
 
