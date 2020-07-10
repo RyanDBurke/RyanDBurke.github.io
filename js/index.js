@@ -16,6 +16,7 @@ function mobile() {
     var containerID = document.getElementById("container");
     var heroPicID = document.getElementById("heroPic");
     var heroButtonID = document.getElementById("heroButton");
+    var bottomBoxID = document.getElementById("bottomBox");
     // var projCardID = document.getElementById("projectCard");
 
     /* desktop */
@@ -27,9 +28,10 @@ function mobile() {
     /* mobile */
     else {
         rnaID.src ='./images/PNG/rna-mobile.png';
-        containerID.style.marginBottom = '70%';
+        containerID.style.marginBottom = '0%';
         heroPicID.src = './images/PNG/boat-mobile.PNG';
         heroButtonID.style.width = '20%';
+        bottomBoxID.style.display = "block";
     }
 }
 
