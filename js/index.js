@@ -161,6 +161,15 @@ function heroButtonReset() {
 
 /* scroll to bottom when clicking hero button */
 function hero() {
-    window.scrollTo(0,document.body.scrollHeight);
+
+    var width = window.screen.width * window.devicePixelRatio;
+    var navID = document.getElementById("nav");
+
+    if (width > 1300) {
+        window.scrollTo(0,document.body.scrollHeight);
+    } else {
+        navID.scrollIntoView();
+    }
+    
     heroButtonReset();
 }
