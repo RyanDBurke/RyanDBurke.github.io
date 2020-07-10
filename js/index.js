@@ -26,7 +26,7 @@ function mobile() {
     else {
         rnaID.src ='./images/PNG/rna-mobile.png';
         containerID.style.marginBottom = '40%';
-        heroPic.src = './images/PNG/boat-mobile.png';
+        heroPic.src = './images/PNG/boat-mobile.PNG';
         // projCardID.style.height = '188px';
     }
 }
@@ -63,8 +63,6 @@ function navbarToggle() {
 
 /* bad coding, doing this as a bandaid */
 function navbarToggleRestore() {
-
-    // location.reload();
 
     /* IDs */
     var dimID = document.getElementById("dim");
