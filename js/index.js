@@ -1,131 +1,105 @@
 /* index.js */
 
-// modal, container, state, github-link
-var modal = document.getElementById("modal");
-var container = document.getElementById("container");
-var modalState = "closed";
-var githubLink;
+/* formats page depending if the user is mobile or desktop */
+function mobile() {
 
-
-// handle our modal if coronavirus project is clicked
-function covidClick() {
-
-    var name = "Coronavirus Genome Variant [C]";
-    var desc = "An efficient seed-search alignment tool \
-                to compare read-variants to the COVID-19 \
-                virus genome using Burrows-Wheeler transform, \
-                suffix arrays, the FM-Index, and core dynamic \
-                programming principles.";
-
-    // fade out container
-    container.style.opacity = 0.1;
-
-    // bring modal to front
-    modal.style.display = "block";
-
-    // adjust modal information and set github link
-    document.getElementById("projectName").innerHTML = name;
-    document.getElementById("projectDescription").innerHTML = desc;
-    document.getElementById("projectImage").src = "./images/PNG/IGV-10K-small.png";
-    document.getElementById("github-icon").style.display = "block";
-    githubLink = "https://github.com/RyanDBurke/coronavirus-genome-variant";
-
-    // set modal state
-    modalState = "open";
-}
-
-// handle our modal if RNA Sequence project is clicked
-function rnaClick() {
-
-    var name = "RNA Sequence Quantification [Python]";
-    var desc = "Implements the EM algorithm for transcript \
-                quantification from RNA-alignments, takes in \
-                a transcript-alignment file, and returns \
-                estimated read-counts for each transcript in the \
-                transcriptome.";
-
-    // fade out container
-    container.style.opacity = 0.1;
-
-    // bring modal to front
-    modal.style.display = "block";
-
-    // adjust modal information and set github link
-    document.getElementById("projectName").innerHTML = name;
-    document.getElementById("projectDescription").innerHTML = desc;
-    document.getElementById("projectImage").src = "./images/PNG/rna-small.png";
-    document.getElementById("github-icon").style.display = "block";
-    githubLink = "https://github.com/RyanDBurke/EM-Algorithm";
-
-    // set modal state
-    modalState = "open";
-}
-
-// handle our modal if Abstract Syn Struct project is clicked
-function absClick() {
-
-    var name = "Abstract Syntactic Structure [OCaml]";
-    var desc = "Designed, built, and debugged a lexer, parser,\
-                and interpreter for small-scale C programs using \
-                abstract syntactic structure and imperative programming. \
-                Then, fed the interpreter a C program to evaluate \
-                and output.";
-
-    // fade out container
-    container.style.opacity = 0.1;
-
-    // bring modal to front
-    modal.style.display = "block";
-
-    // adjust modal information and set github link
-    document.getElementById("projectName").innerHTML = name;
-    document.getElementById("projectDescription").innerHTML = desc;
-    document.getElementById("projectImage").src = "./images/PNG/abstract-syntactic-structure-small.png";
-    document.getElementById("github-icon").style.display = "none";
-
-    // set modal state
-    modalState = "open";
-}
-
-// open github link w/ icon
-function github() {
-    window.open(githubLink);
-}
-
-// close modal if (X) is clicked
-function modalClose() {
-
-    // fade out container
-    container.style.opacity = 1.0;
-
-    // bring modal to front
-    modal.style.display = "none";
-
-    // set modal state
-    modalState = "closed";
-}
-
-// adjust based on screen res
-function getResolution() {
+    /* window width */
     var width = window.screen.width * window.devicePixelRatio;
-    var height = window.screen.height * window.devicePixelRatio;
-    var modal = document.getElementById("modal");
 
-    if (width >= 1920) {
-        modal.style.left = '20%';
-        modal.style.right = '20%';
-    } else {
-        modal.style.left = '0%';
-        modal.style.right = '0%';
+    /* all IDs of elements changing */
+    var nameID = document.getElementById("name");
+    var rnaID = document.getElementById("rna");
+
+    /* desktop */
+    if (width > 1300) {
+        rnaID.src ='./images/PNG/rna.png';
+    } 
+    
+    /* mobile */
+    else {
+        rnaID.src ='./images/PNG/rna-mobile.png';
     }
 }
 
-function showPics() {
+/* showcase blown-up navbar links */
+function navbarToggle() {
 
-    var width = window.screen.width * window.devicePixelRatio;
-    var picsNavID = document.getElementById("pics");
+    /* IDs */
+    var dimID = document.getElementById("dim");
+    var closeID = document.getElementById("close");
+    var navID = document.getElementById("nav");
+    var containerID = document.getElementById("container");
+    var projectID = document.getElementById("projects");
 
-    if (width >= 1920) {
-        picsNavID.style.display = "block";
+    /* dimID */
+    dimID.style.display = 'block';
+
+    /* closeID */
+    closeID.style.display = 'block';
+
+    /* navID */
+    navID.style.display = 'none';
+
+    /* containerID */
+    containerID.style.display = 'none';
+
+    /* projectID */
+    projectID.style.display = 'none';
+}
+
+/* bad coding, doing this as a bandaid */
+function navbarToggleRestore() {
+
+    location.reload();
+
+     /* IDs */
+     var dimID = document.getElementById("dim");
+     var closeID = document.getElementById("close");
+     var navID = document.getElementById("nav");
+
+     /* dimID
+    dimID.style.display = 'none';
+
+    /* closeID
+    closeID.style.display = 'none';
+
+    navID.style.display = 'block';
+
+    */
+    
+}
+
+function readmore() {
+
+    /* IDs */
+    var bioID = document.getElementById("bioText");
+    var readmoreID = document.getElementById("readmore");
+
+    /* updating */
+    bioID.style.display = 'block';
+    readmoreID.style.display = 'none';
+
+}
+
+function openLink(linkIndex) {
+
+    var links = ['https://github.com/ryandburke', 
+                'https://www.linkedin.com/in/ryanburke96/'];
+
+    if (linkIndex == 2) {
+        var projectID = document.getElementById("projects");
+        projectID.scrollIntoView();
+        return;
+    }
+
+    window.open(links[linkIndex]);
+    
+}
+
+function github(projName) {
+    if (projName == 'corona') {
+        window.open('https://github.com/RyanDBurke/coronavirus-genome-variant');
+    } else if (projName == 'rna') {
+        window.open('https://github.com/RyanDBurke/RNA-seq-quantification-using-the-EM-algorithm');
     }
 }

@@ -1,81 +1,79 @@
-/* allows for smooth scrolling */
-html {
+html, body {
+    font-family: monospace;
+    color: black;
     scroll-behavior: smooth;
-  }
+}
+
+/* make text black */
+.blackText {
+    color: black;
+}
+
+/* dim screen when nav-links are clicked */
+.dimScreen {
+    display: none;
+    position: fixed;
+    padding:0;
+    margin:0;
+    z-index: -1;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+}
+
+/* close button for dim screen */
+.close {
+    position: fixed;
+    display: none;
+    color: white;
+    font-size: calc(70px + (100 - 70) * ((100vw - 300px) / (1600 - 300)));
+    right: 5%;
+    z-index: 1;
+}
+
+/* Text links for dimScreen */
+.dimText {
+    color: white;
+    font-size: 40px;
+}
 
 /* outline for navbar */
 .outline {
     outline: solid;
-    outline-color: white;
-}
-
-.picsNav {
-    display: none;
-}
-
-/* animation for navbar links
-.navbarlinks {
-    transition: transform .2s;
-}
-
-.navbarlinks:hover {
-    transform: scale(1.2);
-}
-*/
-
-.outlineHr {
-    outline: solid;
-    outline-color: white;
-    width: 260px;
-    outline-width: 1px;
-    margin-left: 0;
+    outline-color: black;
+    outline-width: 0.1rem;
 }
 
 /* ryan burke at top */
 .name {
-    font-weight: bold;
     font-size: 30px;
-}
-
-/* hey, im ryan */
-.hi {
-    color: white;
-}
-
-
-/* all stuff for modal */
-.projectModalContainer {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    overflow: auto; /* Enable scroll if needed */
-}
-
-.modalContentTop {
-    overflow: auto; /* Enable scroll if needed */
-}
-
-.modalContentBottom {
-    overflow: auto; /* Enable scroll if needed */
-}
-
-#close {
-    cursor: pointer;
     color: black;
 }
 
-.projectNameModal {
-    font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+/* container up and lower bounds */
+.containerBounds {
+    margin-top: 50%;
 }
 
-/* responsive text */
-.projectName {
-    font-size: calc(12px + (22 - 12) * ((100vw - 300px) / (1600 - 300)));
+.custom-toggler.navbar-toggler {
+    border-color: black;
 }
 
-/* responsive text */
-.projectDescription {
-    font-size: calc(9px + (19 - 9) * ((100vw - 300px) / (1600 - 300)));
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.read {
+    color: black;
+    border-color: black;
+    display: inline;
+}
+
+.bioText {
+    display: none;
 }
 
 /* project cards */
@@ -84,27 +82,19 @@ html {
 }
 
 .project:hover {
-    opacity: 0.05;
+    /* opacity: 0.05; */
     transform: scale(1.05);
     cursor: pointer;
 }
 
-/* for temporary project cards */
-.projectTemp {
-    height: 300px;
-    transition: transform .2s;
+.modal {
+    position: fixed;
+    display: none;
 }
 
-/* for temporary project cards */
-.projectTemp:hover {
-    opacity: 0.05;
-    transform: scale(1.05);
+.github {
+    color: black;
 }
 
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+
+

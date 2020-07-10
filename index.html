@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" id="restore">
+<html lang="en">
 
 <head>
     <!-- Required meta tags -->
@@ -12,44 +12,82 @@
     <!-- font-awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./CSS/index.css">
 
     <title>Ryan Burke</title>
 </head>
 
-<body class="p-3 mb-2 bg-dark text-white" onload="getResolution(); showPics()">
+<body class="bg-white" onload="mobile()">
+
+    <span id="close" class="close" onclick="navbarToggleRestore()">x</span>
+
+    <!-- dim screen when nav-bar links are clicked -->
+    <div id="dim" class="dimScreen">
+        <div class="container containerBounds">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <p class="dimText" onclick="openLink(0)">
+                        github
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <p class="dimText" onclick="openLink(1)">
+                        linkedin
+                    </p>
+                </div>
+            </div>
+            <!--
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <p class="dimText" onclick="openLink(2)">
+                            projects
+                    </p>
+                </div>
+            </div>
+        -->
+        </div>
+    </div>
 
     <!-- Nav Bar -->
-    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark outline">
+    <nav id="nav" class="navbar fixed-top navbar-expand-md navbar-light bg-white outline">
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link navbarlinks" href="#">home</a>
-                </li>
-                <li id="pics" class="nav-item active picsNav">
-                    <a class="nav-link navbarlinks" href="./photos.html">pics</a>
+                    <a class="nav-link blackText" href="https://github.com/ryandburke" target="_blank">github</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link navbarlinks" href="https://github.com/ryandburke" target="_blank">github</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link navbarlinks" href="https://www.linkedin.com/in/ryanburke96/"
+                    <a class="nav-link blackText" href="https://www.linkedin.com/in/ryanburke96/"
                         target="_blank">linkedin</a>
                 </li>
+                <!--
                 <li class="nav-item active">
-                    <a class="nav-link navbarlinks" href="./about.html">about</a>
+                    <a class="nav-link blackText" href="#projects">
+                        projects
+                    </a>
                 </li>
+            -->
             </ul>
         </div>
         <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto name" href="#">ryan burke</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a id="name" class="navbar-brand name" href="#">ryan burke</a>
         </div>
+
+        <!-- old navbar toggle (hamburger)
+        <button class="navbar-toggler mobileNavBar" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        -->
+
+        <button class="navbar-toggler custom-toggler" onclick="navbarToggle()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
@@ -67,104 +105,160 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
 
-    <!-- modal container -->
-    <div id="modal" class="projectModalContainer bg-dark outline ml-5 mr-5 mb-5 mt-1">
-        <div class="modalContentTop bg-white">
-            <span id="close" style="font-size: 5rem;" class="close bg-white" onclick="modalClose()">&times;</span>
-            <img id="projectImage" class="mx-auto m-5 d-block img-fluid">
+    <div id="container" class="container">
+
+        <!-- about -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <img src="./images/PNG/profile.png" class="mx-auto m-5 d-block img-fluid">
+                <h4>
+                    about &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn read" type="button" data-toggle="collapse" data-target="#bio"
+                        aria-expanded="false" aria-controls="bio">
+                        ...
+                    </button>
+                </h4>
+                <div class="collapse" id="bio">
+                    <div class="card card-body mb-3">
+                        I'm a software developer based in Washington, DC.
+                        I graduate from University of Maryland, College Park in
+                        December 2020 with a B.S in Computer Science. I primarily code
+                        in Java, C, Ruby, and Python, but programming aside, I love playing
+                        basketball, photography, and watching movies and stuff
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="modalContentBottom">
-            <div class="col-10">
-                <h4 id="projectName" class="mt-3 ml-3 font-weight-bold projectNameModal">
+        <!-- contact -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h4>
+                    contact &nbsp;&nbsp;
+                    <button class="btn read" type="button" data-toggle="collapse" data-target="#contact"
+                        aria-expanded="false" aria-controls="contact">
+                        ...
+                    </button>
                 </h4>
+                <div class="collapse" id="contact">
+                    <div class="card card-body mb-3">
+                        ryanburke111@hotmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                <p id="projectDescription" class="mt-3 ml-3 projectDescription">
-                </p>
+        <!-- projects-->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h4>
+                    projects &nbsp;
+                    <button class="btn read" type="button" data-toggle="collapse" data-target="#projectCard"
+                        aria-expanded="false" aria-controls="bio">
+                        ...
+                    </button>
+                </h4>
+                <div class="collapse" id="projectCard">
+                    <div class="card card-body mb-3">
+                        <div id="projects" class="container">
 
-                <i onclick="github()" 
-                    target="_blank" 
-                    class="fa fa-github mt-3 ml-3 mb-4"
-                    style="font-size: 2.4rem; cursor: pointer;" 
-                    id="github-icon">
-                </i>
+                            <!-- project 1 -->
+                            <div class="row m-4 project">
+                                <div class="col-12 bg-light" data-toggle="collapse" data-target="#proj1"
+                                    aria-expanded="false" aria-controls="proj1">
+                                    <img src="./images/PNG/IGV.png" class="mx-auto m-5 d-block img-fluid">
+                                    <div class="collapse" id="proj1">
+                                        <div class="card card-body mb-3">
+                                            <h6>
+                                                Coronavirus Genome Variant
+                                                <hr>
+                                            </h6>
+                                            <p>
+                                                An efficient seed-search alignment
+                                                tool to compare read-variants to the
+                                                COVID-19 virus genome using Burrows-Wheeler
+                                                transform, suffix arrays, the FM-Index, and core
+                                                dynamic programming principles.
+                                            </p>
+                                            <hr>
+                                            <i onclick="github('corona')" target="_blank" class="fa fa-github"
+                                                style="font-size: 2.4rem; cursor: pointer;" id="github-icon">
+                                            </i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- project 2 -->
+                            <div class="row m-4 project">
+                                <div class="col-12 bg-light" data-toggle="collapse" data-target="#proj2"
+                                    aria-expanded="false" aria-controls="proj2">
+                                    <img id="rna" src="" class="mx-auto m-5 d-block img-fluid">
+                                    <div class="collapse" id="proj2">
+                                        <div class="card card-body mb-3">
+                                            <h6>
+                                                RNA Sequence Quantification
+                                                <hr>
+                                            </h6>
+                                            <p>
+                                                Implements the Expectation-Maximization (EM)
+                                                algorithm for transcript quantification from RNA-alignments.
+                                            </p>
+                                            <hr>
+                                            <i onclick="github('rna')" target="_blank" class="fa fa-github"
+                                                style="font-size: 2.4rem; cursor: pointer;" id="github-icon">
+                                            </i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- project 3 -->
+                            <div class="row m-4 project">
+                                <div class="col-12 bg-light" data-toggle="collapse" data-target="#proj3"
+                                    aria-expanded="false" aria-controls="proj3">
+                                    <img src="./images/PNG/ast.png" class="mx-auto m-5 d-block img-fluid">
+                                    <div class="collapse" id="proj3">
+                                        <div class="card card-body mb-3">
+                                            <h6>
+                                                Abstract Syntactic Structure
+                                                <hr>
+                                            </h6>
+                                            <p>
+                                                Designed, built, and debugged a lexer,
+                                                parser, and interpreter for small-scale C
+                                                programs using abstract syntactic structure and imperative
+                                                programming. Then, fed the interpreter a C program to
+                                                evaluate and output.
+                                            </p>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- about -->
-    <div class="container" id="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="hi" id="projects-jump-link">[hey, i'm ryan]</h1>
-                <!-- <hr class="bg-white outlineHr"> -->
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12">
-                <h4 class="mt-5">stuff i've worked on</h4>
-            </div>
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
-        </div>
 
-        <!-- project card row 1 -->
-        <div class="row">
-            <div class="col-7 mt-4 position-absolute center-text">
-                <h4 class="font-weight-bold projectName">
-                    Coronavirus Genome Variant
-                </h4>
-            </div>
-            <div class="col-12 mt-3 project bg-white border" onclick="covidClick()">
-                <img class="mx-auto d-block img-fluid" src="./images/PNG/dna.png">
-            </div>
-        </div>
-
-        <!-- project card row 2 -->
-        <div class="row">
-            <div class="col-7 mt-4 position-absolute">
-                <h4 class="font-weight-bold projectName">
-                    RNA Sequence Quantification
-                </h4>
-            </div>
-            <div class="col-12 mt-3 project bg-white border" onclick="rnaClick()">
-                <img class="mx-auto d-block img-fluid" src="./images/PNG/rna.png">
-            </div>
-        </div>
-
-        <!-- project card row 3 -->
-        <div class="row">
-            <div class="col-7 mt-4 position-absolute">
-                <h4 class="font-weight-bold projectName">
-                    Abstract Syntactic Structure
-                </h4>
-            </div>
-            <div class="col-12 mt-3 project bg-white border" onclick="absClick()">
-                <img class="mx-auto d-block img-fluid" src="./images/PNG/abstract-syntactic-structure.png">
-            </div>
-        </div>
-    </div>
-
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
 
     <!-- JAVASCRIPT FOR PAGE -->
-    <script src="./js/index.js"></script>
+    <script src="./JS/index.js"></script>
 </body>
 
 </html>
