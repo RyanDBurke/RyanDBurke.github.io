@@ -8,6 +8,9 @@ function mobile() {
 
     /* window width */
     var width = window.screen.width * window.devicePixelRatio;
+    var height = window.screen.height * window.devicePixelRatio;
+
+    alert(`${width} x ${height}`);
 
     /* all IDs of elements changing */
     var nameID = document.getElementById("name");
@@ -29,7 +32,6 @@ function mobile() {
         containerID.style.marginBottom = '65%';
         heroPicID.src = './images/PNG/boat-mobile.PNG';
         heroButtonID.style.width = '20%';
-        // projCardID.style.height = '188px';
     }
 }
 
