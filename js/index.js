@@ -14,6 +14,7 @@ function mobile() {
     var rnaID = document.getElementById("rna");
     var containerID = document.getElementById("container");
     var heroPicID = document.getElementById("heroPic");
+    var heroButtonID = document.getElementById("heroButton");
     // var projCardID = document.getElementById("projectCard");
 
     /* desktop */
@@ -25,8 +26,9 @@ function mobile() {
     /* mobile */
     else {
         rnaID.src ='./images/PNG/rna-mobile.png';
-        containerID.style.marginBottom = '40%';
-        heroPic.src = './images/PNG/boat-mobile.PNG';
+        containerID.style.marginBottom = '65%';
+        heroPicID.src = './images/PNG/boat-mobile.PNG';
+        heroButtonID.style.width = '15%';
         // projCardID.style.height = '188px';
     }
 }
