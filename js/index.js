@@ -17,6 +17,7 @@ function mobile() {
     var heroPicID = document.getElementById("heroPic");
     var heroButtonID = document.getElementById("heroButton");
     var bottomBoxID = document.getElementById("bottomBox");
+    var breakID = document.getElementById("break");
     // var projCardID = document.getElementById("projectCard");
 
     /* desktop */
@@ -32,6 +33,7 @@ function mobile() {
         heroPicID.src = './images/PNG/boat-mobile.PNG';
         heroButtonID.style.width = '20%';
         bottomBoxID.style.display = "block";
+        breakID.style.display = "none";
     }
 }
 
