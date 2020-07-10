@@ -31,7 +31,7 @@ html, body {
     color: white;
     font-size: calc(70px + (100 - 70) * ((100vw - 300px) / (1600 - 300)));
     right: 5%;
-    z-index: 1;
+    z-index: 3;
 }
 
 /* Text links for dimScreen */
@@ -66,6 +66,12 @@ html, body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+.togglerPosition {
+    position: fixed;
+    top: 2.5%;
+    right: 5%;
+}
+
 .read {
     color: black;
     border-color: black;
@@ -94,10 +100,6 @@ html, body {
 
 .github {
     color: black;
-}
-
-.test {
-    color: white;
 }
 
 

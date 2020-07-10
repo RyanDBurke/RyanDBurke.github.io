@@ -51,22 +51,29 @@ function navbarToggle() {
 /* bad coding, doing this as a bandaid */
 function navbarToggleRestore() {
 
-    location.reload();
+    // location.reload();
 
-     /* IDs */
-     var dimID = document.getElementById("dim");
-     var closeID = document.getElementById("close");
-     var navID = document.getElementById("nav");
+    /* IDs */
+    var dimID = document.getElementById("dim");
+    var closeID = document.getElementById("close");
+    var navID = document.getElementById("nav");
+    var containerID = document.getElementById("container");
+    var projectID = document.getElementById("projects");
 
-     /* dimID
-    dimID.style.display = 'none';
-
-    /* closeID
+    /* closeID */
     closeID.style.display = 'none';
 
+    /* dimID */
+    dimID.style.display = 'none';
+
+    /* navID */
     navID.style.display = 'block';
 
-    */
+    /* containerID */
+    containerID.style.display = 'block';
+
+    /* projectID */
+    projectID.style.display = 'block';
     
 }
 
