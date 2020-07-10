@@ -23,14 +23,15 @@
 
 <body class="bg-white" onload="mobile()">
 
-    <!-- page BG
-    <div class="bg texter-center">
-        <img id="hero" src="./images/JPG/boat.jpg" class="img-fluid bg">
-        <button class="heroText btn btn-light" onclick="heroClick()">
-            >_
+    <!-- page BG -->
+    <div id="heroDiv" class="bg texter-center">
+        <img id="heroPic" src="./images/JPG/boat.jpg" class="img-fluid bg">
+        <button onclick="hero()" id="heroButton" onmouseover="heroButton()" onmouseout="heroButtonReset()" class="heroButton btn btn-white" onclick="heroClick()">
+            <p id="heroText" class="heroText" style="margin-bottom: 0px;">
+                もっと
+            </p>
         </button>
     </div>
-    -->
 
     <span id="close" class="close" onclick="navbarToggleRestore()">x</span>
 
@@ -56,7 +57,7 @@
     </div>
 
     <!-- Nav Bar -->
-    <nav id="nav" class="navbar fixed-top navbar-expand-md navbar-light bg-white outline">
+    <nav id="nav" class="navbar navbar-expand-md navbar-light bg-white outline navPosition"> <!-- fixed-top -->
         <!-- display: block -->
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav mr-auto">
@@ -100,11 +101,9 @@
     </nav>
 
     <br>
-    <br>
-    <br>
-    <br>
 
-    <div id="container" class="container">
+    <!-- container for profile pic, about, contact, and project -->
+    <div id="container" class="container container-margin">
 
         <!-- about -->
         <div class="row">

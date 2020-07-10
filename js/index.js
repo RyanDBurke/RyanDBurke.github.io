@@ -3,24 +3,30 @@
 /* formats page depending if the user is mobile or desktop */
 function mobile() {
 
+    /* on load, scroll to top */
+    window.scrollTo(0, 0);
+
     /* window width */
     var width = window.screen.width * window.devicePixelRatio;
 
     /* all IDs of elements changing */
     var nameID = document.getElementById("name");
     var rnaID = document.getElementById("rna");
-    var heroID = document.getElementById("hero");
+    var containerID = document.getElementById("container");
+    var heroPicID = document.getElementById("heroPic");
     // var projCardID = document.getElementById("projectCard");
 
     /* desktop */
     if (width > 1300) {
         rnaID.src ='./images/PNG/rna.png';
+        containerID.style.marginBottom = '7%';
     } 
     
     /* mobile */
     else {
         rnaID.src ='./images/PNG/rna-mobile.png';
-        heroID.src = "./images/JPG/dusk.jpg"
+        containerID.style.marginBottom = '40%';
+        heroPic.src = './images/PNG/boat-mobile.png';
         // projCardID.style.height = '188px';
     }
 }
@@ -34,6 +40,7 @@ function navbarToggle() {
     var navID = document.getElementById("nav");
     var containerID = document.getElementById("container");
     var projectID = document.getElementById("projects");
+    var heroID = document.getElementById("heroDiv");
 
     /* dimID */
     dimID.style.display = 'block';
@@ -49,6 +56,9 @@ function navbarToggle() {
 
     /* projectID */
     projectID.style.display = 'none';
+
+    /* heroID */
+    heroID.style.display = 'none';
 }
 
 /* bad coding, doing this as a bandaid */
@@ -62,6 +72,7 @@ function navbarToggleRestore() {
     var navID = document.getElementById("nav");
     var containerID = document.getElementById("container");
     var projectID = document.getElementById("projects");
+    var heroID = document.getElementById("heroDiv");
 
     /* closeID */
     closeID.style.display = 'none';
@@ -77,6 +88,11 @@ function navbarToggleRestore() {
 
     /* projectID */
     projectID.style.display = 'block';
+
+    /* heroID */
+    heroID.style.display = 'block';
+
+    hero();
     
 }
 
@@ -109,6 +125,31 @@ function github(projName) {
     }
 }
 
-function heroClick() {
-    
+/* hover-oo hero button */
+function heroButton() {
+
+    // IDs
+    var heroButtonID = document.getElementById("heroButton");
+    var heroTextID = document.getElementById("heroText");
+
+    heroButtonID.style.backgroundColor = 'white';
+    heroTextID.style.color = 'black';
+    // heroTextID.innerHTML = "more";
+}
+
+/* hover-out hero button */
+function heroButtonReset() {
+
+    // IDs
+    var heroButtonID = document.getElementById("heroButton");
+    var heroTextID = document.getElementById("heroText");
+
+    heroButtonID.style.backgroundColor = 'transparent';
+    heroTextID.style.color = 'white';
+    //heroTextID.innerHTML = "もっと";
+}
+
+/* scroll to bottom when clicking hero button */
+function hero() {
+    window.scrollTo(0,document.body.scrollHeight);
 }

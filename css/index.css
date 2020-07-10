@@ -3,43 +3,43 @@ html, body {
     color: black;
     scroll-behavior: smooth;
 
-    /* adde with pic 
+    /* added with pic */
     height: 100%;
     margin: 0;
-    */
+    
 }
 
-/* added with pic 
+/* added with pic */
 .bg {
   
-    /* Full height 
+    /* Full height */
     height: 100%;
     width: 100%;
   
-    /* Center and scale the image nicely 
-    /* background-position: center; 
+    /* Center and scale the image nicely */
+    background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-*/
+/* center hero text */
+.heroButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0%;
+    border-width: 1%;
+    border-color: white;
+    width: 10%;
+    box-shadow: none;
+    background-color: transparent;
+}
 
-/* center hero text 
 .heroText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 0px;
+    color: white;
 }
 
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-*/
 
 /* make text black */
 .blackText {
@@ -107,8 +107,8 @@ html, body {
 
 /* adjust toggler position */
 .togglerPosition {
-    position: fixed;
-    top: 2.5%;
+    top: 25%;
+    position: absolute;
     right: 5%;
 }
 
@@ -135,3 +135,4 @@ html, body {
 .github {
     color: black;
 }
+  
