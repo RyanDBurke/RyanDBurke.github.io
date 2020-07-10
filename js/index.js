@@ -9,6 +9,7 @@ function mobile() {
     /* all IDs of elements changing */
     var nameID = document.getElementById("name");
     var rnaID = document.getElementById("rna");
+    // var projCardID = document.getElementById("projectCard");
 
     /* desktop */
     if (width > 1300) {
@@ -17,8 +18,8 @@ function mobile() {
     
     /* mobile */
     else {
-        // rnaID.src ='./images/PNG/rna-mobile.png';
         rnaID.src ='./images/PNG/rna-mobile.png';
+        // projCardID.style.height = '188px';
     }
 }
 
