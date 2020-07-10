@@ -28,7 +28,7 @@ function mobile() {
         rnaID.src ='./images/PNG/rna-mobile.png';
         containerID.style.marginBottom = '65%';
         heroPicID.src = './images/PNG/boat-mobile.PNG';
-        heroButtonID.style.width = '15%';
+        heroButtonID.style.width = '20%';
         // projCardID.style.height = '188px';
     }
 }
