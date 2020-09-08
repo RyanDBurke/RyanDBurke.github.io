@@ -1,0 +1,28 @@
+/* outline for navbar */
+.outline {
+    outline: solid;
+    outline-color: white;
+}
+
+/* animation for navbar links */
+.navbarlinks {
+    transition: transform .2s;
+}
+
+.navbarlinks:hover {
+    transform: scale(1.2);
+}
+
+
+/* hr below "under construction" */
+.outlineHr {
+    outline: solid;
+    outline-color: white;
+    outline-width: 1px;
+}
+
+/* ryan burke at top */
+.name {
+    font-weight: bold;
+    font-size: 30px;
+}

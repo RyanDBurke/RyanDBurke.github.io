@@ -9,129 +9,27 @@ html, body {
     
 }
 
-/* added with pic */
-.bg {
-  
-    /* Full height */
-    height: 100%;
-    width: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
+.row-height {
+    height: 300px;
 }
 
-/* center hero text */
-.heroButton {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 0%;
-    border-width: 1%;
-    border-color: white;
-    width: 10%;
-    box-shadow: none;
-    background-color: transparent;
-}
-
-.heroText {
-    color: white;
-}
-
-
-/* make text black */
-.blackText {
-    color: black;
-}
-
-/* dim screen when nav-links are clicked */
-.dimScreen {
-    display: none;
-    position: fixed;
-    padding:0;
-    margin:0;
-    z-index: -1;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 0.8;
-}
-
-/* close button for dim screen */
-.close {
-    position: fixed;
-    display: none;
-    color: white;
-    font-size: calc(70px + (100 - 70) * ((100vw - 300px) / (1600 - 300)));
-    right: 5%;
-    z-index: 3;
-}
-
-/* Text links for dimScreen */
-.dimText {
-    color: white;
-    font-size: 40px;
-}
-
-/* outline for navbar */
-.outline {
-    outline: solid;
-    outline-color: black;
-    outline-width: 0.1rem;
-}
-
-/* ryan burke at top */
 .name {
-    font-size: 30px;
-    color: black;
+    font-size: 5rem;
 }
 
-/* container up and lower bounds */
-.containerBounds {
-    margin-top: 50%;
+.bio {
+    margin-top: -2%;
 }
 
-/* adjust color of hamburger toggler for mobile */
-.custom-toggler.navbar-toggler {
-    border-color: black;
-}
-
-/* adjust color of hamburger toggler for mobile */
-.custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-/* adjust toggler position */
-.togglerPosition {
-    top: 25%;
-    position: absolute;
-    right: 5%;
-}
-
-/* more [...] next to about, contact, and project */
-.more {
-    color: black;
-    border-color: black;
-    display: inline;
-}
-
-/* project cards */
-.project {
-    transition: transform .2s;
-}
-
-/* enlarge projects on hober */
-.project:hover {
-    /* opacity: 0.05; */
-    transform: scale(1.05);
+.github {
+    font-size: 2rem;
     cursor: pointer;
 }
 
-/*adjust color of github icon in project description */
-.github {
-    color: black;
+.projectText {
+    font-size: 1rem;
+}
+
+.lang {
+    font-size: 2rem;
 }

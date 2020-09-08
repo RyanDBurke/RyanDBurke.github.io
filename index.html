@@ -12,6 +12,8 @@
     <!-- font-awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- program language icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -23,238 +25,177 @@
 
 <body class="bg-white" onload="mobile()">
 
-    <!-- page BG -->
-    <div id="heroDiv" class="bg texter-center">
-        <img id="heroPic" src="./images/JPG/boat.jpg" class="img-fluid bg">
-        <button onclick="hero()" id="heroButton" onmouseover="heroButton()" onmouseout="heroButtonReset()" class="heroButton btn btn-white" onclick="heroClick()">
-            <p id="heroText" class="heroText" style="margin-bottom: 0px;">
-                もっと
-            </p>
-        </button>
-    </div>
-
-    <span id="close" class="close" onclick="navbarToggleRestore()">x</span>
-
-    <!-- dim screen when nav-bar links are clicked -->
-    <div id="dim" class="dimScreen">
-        <div class="container containerBounds">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <p class="dimText" onclick="openLink(0)">
-                        github
+    <div class="container">
+        <div class="row mt-5 bg-light">
+            <div class="col-2 mt-5 mb-5">
+            </div>
+            <div id="profilepic" class="col-2 mt-5 mb-5">
+                <img src="./images/PNG/profile.png" class="d-block img-fluid" />
+            </div>
+            <div class="col mt-5 mb-5">
+                <p class="name">
+                    𝙍𝙮𝙖𝙣 𝘽𝙪𝙧𝙠𝙚
+                    <p class="bio">
+                        I'm a software developer based in Washington, DC.
                     </p>
+                </p>
+            </div>
+        </div>
+
+        <div id="project-rows1" class="row row-height mt-5 bg-white">
+
+            <!-- project 1 -->
+            <div id="project1" class="col bg-light d-flex align-items-center justify-content-center"
+                onmouseenter="projectMouseOverLeft('project1', 'project1Desc')">
+                <img src="./images/PNG/IGV.png" class="img-fluid" />
+            </div>
+
+            <!-- project 1 description -->
+            <div id="project1Desc" class="col bg-white d-none align-items-center justify-content-center"
+                onmouseleave="projectMouseOutLeft('project1', 'project1Desc')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <p class="projectText">coronavirus-genome-variant</p>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-center">
+                            <p class="projectText">An efficient seed-search alignment tool to compare read-variants to the COVID-19 virus
+                                genome using Burrows-Wheeler transform, suffix arrays,
+                                the FM-Index, and core dynamic programming principles.
+                                <hr>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-center">
+                            <i onclick="github('https://github.com/RyanDBurke/coronavirus-genome-variant')"
+                                class="fa fa-github github"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <p class="dimText" onclick="openLink(1)">
-                        linkedin
-                    </p>
-                </div>
+            <!-- project divider -->
+            <div class="col-1 bg-white"></div>
+
+            <!-- project 2 -->
+            <div id="project2" class="col bg-light d-flex align-items-center justify-content-center"
+                onmouseenter="projectMouseOverRight('project2', 'project2Desc')">
+                <img src="./images/PNG/heatMap.png" class="img-fluid" />
             </div>
-        </div>
-    </div>
 
-    <!-- Nav Bar -->
-    <nav id="nav" class="navbar navbar-expand-md navbar-light bg-white outline navPosition"> <!-- fixed-top -->
-        <!-- display: block -->
-        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link blackText" href="https://github.com/ryandburke" target="_blank">
-                        [github]
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link blackText" href="https://www.linkedin.com/in/ryanburke96/"
-                        target="_blank">
-                        [linkedin]
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="">
-            <!-- mx-auto order-0 -->
-            <a id="name" class="navbar-brand name" href="#">ryan burke</a>
-            <button class="navbar-toggler custom-toggler togglerPosition" onclick="navbarToggle()">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+            <!-- project 2 description -->
+            <div id="project2Desc" class="col bg-white d-none align-items-center justify-content-center"
+                onmouseleave="projectMouseOutRight('project2', 'project2Desc')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <p>coronavirus-heat-map</p>
+                            <hr>
+                        </div>
+                    </div>
 
-        <!-- old navbar toggle (hamburger)
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        -->
-        <!--
-        <button class="navbar-toggler custom-toggler" onclick="navbarToggle()">
-            <span class="navbar-toggler-icon"></span>
-        </button>-->
+                    <div class="row">
+                        <div class="col text-center">
+                            <p>a Windows desktop application
+                                that displays a nationwide COVID-19 heat map,
+                                as well as an interactive map to view state-by-state
+                                COVID-19 statistics.
+                                <hr>
+                            </p>
+                        </div>
+                    </div>
 
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <br id="break">
-
-    <!-- container for profile pic, about, contact, and project -->
-    <div id="container" class="container container-margin">
-
-        <!-- about -->
-        <div class="row">
-            <div class="col-12 text-center">
-                <img src="./images/PNG/profile2.png" class="mx-auto m-4 d-block img-fluid">
-                <h4>
-                    about &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button class="btn more" type="button" data-toggle="collapse" data-target="#bio"
-                        aria-expanded="false" aria-controls="bio">
-                        ...
-                    </button>
-                </h4>
-                <div class="collapse" id="bio">
-                    <div class="card card-body mb-3">
-                        <p>
-                            [Hey, I'm Ryan]<br>
-                            I'm a software developer based in Washington, DC.
-                            I graduate from the University of Maryland, College Park in
-                            December 2020 with a B.S in Computer Science. I'm super
-                            interested in bioinformatics, clever/space-efficient
-                            data structures, AI, neural networks, and statically-typed languages.
-                            I primarily code in Java, C, Ruby, and Python, but programming aside; I <u>love</u> playing
-                            basketball, photography, video-games, and watching cool films.
-                        </p>
+                    <div class="row">
+                        <div class="col text-center">
+                            <i onclick="github('https://github.com/RyanDBurke/coronavirus-heat-map')"
+                                class="fa fa-github github"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- contact -->
-        <div class="row">
-            <div class="col-12 text-center">
-                <h4>
-                    contact &nbsp;&nbsp;
-                    <button class="btn more" type="button" data-toggle="collapse" data-target="#contact"
-                        aria-expanded="false" aria-controls="contact">
-                        ...
-                    </button>
-                </h4>
-                <div class="collapse" id="contact">
-                    <div class="card card-body mb-3">
-                        [ryanburke111@hotmail.com]
+        <div id="project-rows2" class="row row-height mt-5 bg-white">
+
+            <!-- project 3 -->
+            <div id="project3" class="col bg-light d-flex align-items-center justify-content-center"
+                onmouseenter="projectMouseOverLeft('project3', 'project3Desc')">
+                <img src="./images/PNG/rna-mobile.png" class="img-fluid" />
+            </div>
+
+            <!-- project 3 description -->
+            <div id="project3Desc" class="col bg-white d-none align-items-center justify-content-center"
+                onmouseleave="projectMouseOutLeft('project3', 'project3Desc')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <p>RNA-sequence-quantification</p>
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-center">
+                            <p>Implements the Expectation-Maximization (EM)
+                                algorithm for transcript quantification from
+                                RNA-alignments takes in a transcript/alignment file
+                                and returns estimated read-counts for each transcript
+                                in the transcriptome.
+                                <hr>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-center">
+                            <i onclick="github('https://github.com/RyanDBurke/RNA-seq-quantification-using-the-EM-algorithm')"
+                                class="fa fa-github github"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- projects-->
-        <div class="row">
-            <div class="col-12 text-center">
-                <h4>
-                    projects &nbsp;
-                    <button onclick="projectScroll()" class="btn more" type="button" data-toggle="collapse" data-target="#projectCard"
-                        aria-expanded="false" aria-controls="bio">
-                        ...
-                    </button>
-                </h4>
-                <div class="collapse" id="projectCard">
-                    <div class="card card-body mb-3">
-                        <div id="projects" class="container">
+            <!-- project divider -->
+            <div class="col-1 bg-white"></div>
 
-                            <!-- project 1 -->
-                            <div class="row m-4 project">
-                                <div class="col-12 bg-light" data-toggle="collapse" data-target="#proj1"
-                                    aria-expanded="false" aria-controls="proj1">
-                                    <img src="./images/PNG/IGV.png" class="mx-auto m-5 d-block img-fluid">
-                                    <div class="collapse" id="proj1">
-                                        <div class="card card-body mb-3">
-                                            <h6>
-                                                Coronavirus Genome Variant
-                                                <hr>
-                                            </h6>
-                                            <p>
-                                                An efficient seed-search alignment
-                                                tool to compare read-variants to the
-                                                COVID-19 virus genome using Burrows-Wheeler
-                                                transform, suffix arrays, the FM-Index, and core
-                                                dynamic programming principles.
-                                            </p>
-                                            <hr>
-                                            <i onclick="github('corona')" class="fa fa-github"
-                                                style="font-size: 2.4rem; cursor: pointer;" id="github-icon">
-                                            </i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- project 4 -->
+            <div id="project4" class="col bg-light d-flex align-items-center justify-content-center"
+                onmouseenter="projectMouseOverRight('project4', 'project4Desc')">
+                <!-- <img src="./images/PNG/heatMap.png" class="img-fluid" /> -->
+                <img src="./images/PNG/ast.png" class="img-fluid" />
+            </div>
 
-                            <!-- project 2 -->
-                            <div class="row m-4 project">
-                                <div class="col-12 bg-light" data-toggle="collapse" data-target="#proj2"
-                                    aria-expanded="false" aria-controls="proj2">
-                                    <img id="rna" src="./images/PNG/rna.png" class="mx-auto m-5 d-block img-fluid">
-                                    <div class="collapse" id="proj2">
-                                        <div class="card card-body mb-3">
-                                            <h6>
-                                                RNA Sequence Quantification
-                                                <hr>
-                                            </h6>
-                                            <p>
-                                                Implements the Expectation-Maximization (EM)
-                                                algorithm for transcript quantification from RNA-alignments
-                                            </p>
-                                            <hr>
-                                            <i onclick="github('rna')" class="fa fa-github"
-                                                style="font-size: 2.4rem; cursor: pointer;" id="github-icon">
-                                            </i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- project 4 description -->
+            <div id="project4Desc" class="col bg-white d-none align-items-center justify-content-center"
+                onmouseleave="projectMouseOutRight('project4', 'project4Desc')">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <p>abstract-syntactic-structure</p>
+                            <hr>
+                        </div>
+                    </div>
 
-                            <!-- project 3 -->
-                            <div class="row m-4 project">
-                                <div class="col-12 bg-light" data-toggle="collapse" data-target="#proj3"
-                                    aria-expanded="false" aria-controls="proj3">
-                                    <img src="./images/PNG/ast.png" class="mx-auto m-5 d-block img-fluid">
-                                    <div class="collapse" id="proj3">
-                                        <div class="card card-body mb-3">
-                                            <h6>
-                                                Abstract Syntactic Structure
-                                                <hr>
-                                            </h6>
-                                            <p>
-                                                Designed, built, and debugged a lexer,
-                                                parser, and interpreter for small-scale C
-                                                programs using abstract syntactic structure and imperative
-                                                programming. Then, fed the interpreter a C program to
-                                                evaluate and output.
-                                            </p>
-                                            <hr>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col text-center">
+                            <p>Designed, built, and debugged a lexer, parser,
+                                and interpreter for small-scale C programs using
+                                abstract syntactic structure and imperative programming.
+                                Then, fed the interpreter a C program to evaluate and output.
+                                <hr>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div id="bottomBox" class="bg-white" style="height: 200px; width: 100%; display: none;">
-    </div>
-
-
-
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

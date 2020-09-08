@@ -1,0 +1,95 @@
+/* outline for navbar */
+.outline {
+    outline: solid;
+    outline-color: white;
+}
+
+.picsNav {
+    display: none;
+}
+
+/* animation for navbar links 
+.navbarlinks {
+    transition: transform .2s;
+}
+
+.navbarlinks:hover {
+    transform: scale(1.2);
+}
+
+*/
+
+
+/* hr below "about" */
+.outlineHr {
+    outline: solid;
+    outline-color: white;
+    width: 130px;
+    outline-width: 1px;
+    margin-left: 0;
+}
+
+/* ryan burke at top */
+.name {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* all stuff for modal */
+.projectModalContainer {
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* all stuff for modal */
+.email {
+    display: block; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 2; /* Sit on top */
+}
+
+.modalContentTop {
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modalContentBottom {
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.speech-bubble {
+    display: none;
+	position: absolute;
+    border-radius: .4em;
+    height: 3rem;
+    width: 12rem;
+    top: 81%;
+    left: 25.6%;
+    z-index: 2;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 19px solid transparent;
+	border-bottom-color: white;
+	border-top: 0;
+	margin-left: -19px;
+	margin-top: -19px;
+}
+
+.email-text {
+    font-size: 1.2rem;
+}

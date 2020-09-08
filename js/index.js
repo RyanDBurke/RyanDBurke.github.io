@@ -1,177 +1,56 @@
-/* index.js */
-
-/* formats page depending if the user is mobile or desktop */
 function mobile() {
+    var width = window.innerWidth;
+    var profileID = document.getElementById("profilepic");
+    var rowID1 = document.getElementById("project-rows1");
+    var rowID2= document.getElementById("project-rows2");
 
-    /* on load, scroll to top */
-    window.scrollTo(0, 0);
-
-    /* window width */
-    var width = window.screen.width * window.devicePixelRatio;
-    var height = window.screen.height * window.devicePixelRatio;
-
-    /* all IDs of elements changing */
-    var nameID = document.getElementById("name");
-    var rnaID = document.getElementById("rna");
-    var containerID = document.getElementById("container");
-    var heroPicID = document.getElementById("heroPic");
-    var heroButtonID = document.getElementById("heroButton");
-    var bottomBoxID = document.getElementById("bottomBox");
-    var breakID = document.getElementById("break");
-    // var projCardID = document.getElementById("projectCard");
-
-    /* desktop */
-    if (width > 1300) {
-        rnaID.src ='./images/PNG/rna.png';
-        containerID.style.marginBottom = '7%';
-    } 
-    
-    /* mobile */
-    else {
-        rnaID.src ='./images/PNG/rna-mobile.png';
-        containerID.style.marginBottom = '0%';
-        heroPicID.src = './images/PNG/boat-mobile.PNG';
-        heroButtonID.style.width = '20%';
-        bottomBoxID.style.display = "block";
-        breakID.style.display = "none";
+    if (width < 1000) {
+        profileID.style.display = "none";
+        rowID1.className = "row mt-5 bg-white";
+        rowID2.className = "row mt-5 bg-white";
     }
 }
 
-/* showcase blown-up navbar links */
-function navbarToggle() {
 
-    /* IDs */
-    var dimID = document.getElementById("dim");
-    var closeID = document.getElementById("close");
-    var navID = document.getElementById("nav");
-    var containerID = document.getElementById("container");
-    var projectID = document.getElementById("projects");
-    var heroID = document.getElementById("heroDiv");
-    var bottomBoxID = document.getElementById("bottomBox");
-
-    /* dimID */
-    dimID.style.display = 'block';
-
-    /* closeID */
-    closeID.style.display = 'block';
-
-    /* navID */
-    navID.style.display = 'none';
-
-    /* containerID */
-    containerID.style.display = 'none';
-
-    /* projectID */
-    projectID.style.display = 'none';
-
-    /* heroID */
-    heroID.style.display = 'none';
-
-    /* bottomBoxID */
-    bottomBoxID.style.display = "none";
+function github(link) {
+    window.open(link);
 }
 
-/* bad coding, doing this as a bandaid */
-function navbarToggleRestore() {
-
-    /* IDs */
-    var dimID = document.getElementById("dim");
-    var closeID = document.getElementById("close");
-    var navID = document.getElementById("nav");
-    var containerID = document.getElementById("container");
-    var projectID = document.getElementById("projects");
-    var heroID = document.getElementById("heroDiv");
-    var bottomBoxID = document.getElementById("bottomBox");
-
-    /* closeID */
-    closeID.style.display = 'none';
-
-    /* dimID */
-    dimID.style.display = 'none';
-
-    /* navID */
-    navID.style.display = 'block';
-
-    /* containerID */
-    containerID.style.display = 'block';
-
-    /* projectID */
-    projectID.style.display = 'block';
-
-    /* heroID */
-    heroID.style.display = 'block';
-
-    /* bottomBoxID */
-    bottomBoxID.style.display = "block";
-
-    hero();
-    
+function linkedin() {
+    window.open("https://www.linkedin.com/in/ryanburke96/");
 }
 
-function readmore() {
+/* handles projects on the left */
+function projectMouseOverLeft(projectID, descID) {
+    var project = document.getElementById(projectID);
+    var description = document.getElementById(descID);
 
-    /* IDs */
-    var bioID = document.getElementById("bioText");
-    var readmoreID = document.getElementById("readmore");
-
-    /* updating */
-    bioID.style.display = 'block';
-    readmoreID.style.display = 'none';
-
+    project.className = "col bg-light d-none align-items-center justify-content-center";
+    description.className = "col bg-white d-flex align-items-center justify-content-center";
 }
 
-function openLink(linkIndex) {
+function projectMouseOutLeft(projectID, descID) {
+    var project = document.getElementById(projectID);
+    var description = document.getElementById(descID);
 
-    var links = ['https://github.com/ryandburke', 
-                'https://www.linkedin.com/in/ryanburke96/'];
-
-    window.open(links[linkIndex]);
-    
+    project.className = "col bg-light d-flex align-items-center justify-content-center";
+    description.className = "col bg-white d-none align-items-center justify-content-center";
 }
 
-function github(projName) {
-    if (projName == 'corona') {
-        window.open('https://github.com/RyanDBurke/coronavirus-genome-variant');
-    } else if (projName == 'rna') {
-        window.open('https://github.com/RyanDBurke/RNA-seq-quantification-using-the-EM-algorithm');
-    }
+
+/* handles projects on the right */
+function projectMouseOverRight(projectID, descID) {
+    var project = document.getElementById(projectID);
+    var description = document.getElementById(descID);
+
+    project.className = "col bg-light d-none align-items-center justify-content-center";
+    description.className = "col bg-white d-flex align-items-center justify-content-center";
 }
 
-/* hover-oo hero button */
-function heroButton() {
+function projectMouseOutRight(projectID, descID) {
+    var project = document.getElementById(projectID);
+    var description = document.getElementById(descID);
 
-    // IDs
-    var heroButtonID = document.getElementById("heroButton");
-    var heroTextID = document.getElementById("heroText");
-
-    heroButtonID.style.backgroundColor = 'white';
-    heroTextID.style.color = 'black';
-    // heroTextID.innerHTML = "more";
-}
-
-/* hover-out hero button */
-function heroButtonReset() {
-
-    // IDs
-    var heroButtonID = document.getElementById("heroButton");
-    var heroTextID = document.getElementById("heroText");
-
-    heroButtonID.style.backgroundColor = 'transparent';
-    heroTextID.style.color = 'white';
-    //heroTextID.innerHTML = "もっと";
-}
-
-/* scroll to bottom when clicking hero button */
-function hero() {
-
-    var width = window.screen.width * window.devicePixelRatio;
-    var navID = document.getElementById("nav");
-
-    if (width > 1300) {
-        window.scrollTo(0,document.body.scrollHeight);
-    } else {
-        navID.scrollIntoView();
-    }
-    
-    heroButtonReset();
+    project.className = "col bg-light d-flex align-items-center justify-content-center";
+    description.className = "col bg-white d-none align-items-center justify-content-center";
 }
