@@ -1,11 +1,13 @@
 function mobile() {
     var width = window.innerWidth;
     var profileID = document.getElementById("profilepic");
+    var nameID = document.getElementById("name");
     var rowID1 = document.getElementById("project-rows1");
     var rowID2= document.getElementById("project-rows2");
 
     if (width < 1000) {
         profileID.style.display = "none";
+        nameID.style.fontSize = "3rem";
         rowID1.className = "row mt-5 bg-white";
         rowID2.className = "row mt-5 bg-white";
     }
