@@ -4,6 +4,7 @@ function mobile() {
     var nameID = document.getElementById("name");
     var rowID1 = document.getElementById("project-rows1");
     var rowID2= document.getElementById("project-rows2");
+    var rnaID = document.getElementById("rna");
 
     if (width < 1000) {
         profileID.style.display = "none";
