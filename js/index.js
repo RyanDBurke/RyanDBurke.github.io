@@ -3,14 +3,17 @@ function mobile() {
     var profileID = document.getElementById("profilepic");
     var nameID = document.getElementById("name");
     var rowID1 = document.getElementById("project-rows1");
-    var rowID2= document.getElementById("project-rows2");
+    var rowID2 = document.getElementById("project-rows2");
     var rnaID = document.getElementById("rna");
+    var heatID = document.getElementById("heatMap");
 
     if (width < 1000) {
         profileID.style.display = "none";
         nameID.style.fontSize = "3rem";
         rowID1.className = "row mt-5 bg-white";
         rowID2.className = "row mt-5 bg-white";
+        rnaID.className = "img-fluid m-5";
+        heatID.className = "img-fluid m-5"
     }
 }
 
