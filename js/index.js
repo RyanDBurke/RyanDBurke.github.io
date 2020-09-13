@@ -41,6 +41,7 @@ function projectMouseOutLeft(projectID, descID) {
 
     project.className = "col bg-light d-flex align-items-center justify-content-center";
     description.className = "col bg-white d-none align-items-center justify-content-center";
+
 }
 
 
