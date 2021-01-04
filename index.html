@@ -23,214 +23,72 @@
     <title>Ryan Burke</title>
 </head>
 
-<body class="bg-white" onload="mobile()">
+<body class="bg-light" onload="mobile()">
 
-    <div class="container">
-        <div class="row mt-5 bg-light">
-            <div class="col-2 mt-5 mb-5">
-            </div>
-            <div id="profilepic" class="col-2 mt-5 mb-5">
-                <img src="./images/PNG/profile.png" class="d-block img-fluid" />
-            </div>
-            <div class="col mt-5 mb-5">
-                <p id="name" class="name">
-                    𝙍𝙮𝙖𝙣 𝘽𝙪𝙧𝙠𝙚
-                <p class="bio">
-                    I'm a software developer based in Washington, DC.
-                </p>
-                </p>
+    <!--------------------------->
+    <!-- mobile webpage view!  -->
+    <!--------------------------->
+    <div id="mobile" class="mobile container bg-light">
+        <div class="row">
+            <div class="col text-center">
+                <h1>RYAN BURKE</h1>
             </div>
         </div>
+        <div class="row">
+            <div class="col-4">
 
-        <div id="project-rows1" class="row row-height mt-5 bg-white">
-
-            <div class="col-3">
             </div>
-
-
-            <!-- project 1 -->
-            <div id="project1" class="col bg-light d-flex align-items-center justify-content-center"
-                onmouseenter="projectMouseOverLeft('project1', 'project1Desc')">
-                <img src="./images/PNG/IGV.png" class="img-fluid" />
+            <div class="col-2 text-center">
+                <i class="fa fa-linkedin icon-mobile" onclick="linkedin()"></i>
             </div>
-
-            <!-- project 1 description -->
-            <div id="project1Desc" class="col bg-white d-none align-items-center justify-content-center"
-                onmouseleave="projectMouseOutLeft('project1', 'project1Desc')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <p class="projectText">coronavirus-genome-variant</p>
-                            <hr>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center">
-                            <p class="projectText">An efficient seed-search alignment tool to compare read-variants to
-                                the COVID-19 virus
-                                genome using Burrows-Wheeler transform, suffix arrays,
-                                the FM-Index, and core dynamic programming principles.
-                                <hr>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center">
-                            <i onclick="github('https://github.com/RyanDBurke/coronavirus-genome-variant')"
-                                class="fa fa-github github"></i>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-2 text-center">
+                <i class="fa fa-github icon-mobile" onclick="github()"></i>
             </div>
+            <div class="col-4">
 
-            <div class="col-3">
             </div>
+        </div>        
+    </div>
 
+    <!--------------------------->
+    <!-- desktop webpage view! -->
+    <!--------------------------->
 
-        </div>
+    <!-- background image -->
+    <img id="desktop" src="images/JPG/house-2.jpg" class="img-fluid bg-img" />
+    
+    <!-- container for top bar -->
+    <div id="top-bar" class="top-bar-container">
 
-        <div id="project-rows2" class="row row-height mt-5 bg-white">
-
-            <div class="col-3">
-            </div>
-
-            <!-- project 2 -->
-            <div id="project2" class="col bg-light d-flex align-items-center justify-content-center"
-                onmouseenter="projectMouseOverRight('project2', 'project2Desc')">
-                <img id="heatMap" src="./images/PNG/heatMap.png" class="img-fluid" />
-            </div>
-
-            <!-- project 2 description -->
-            <div id="project2Desc" class="col bg-white d-none align-items-center justify-content-center"
-                onmouseleave="projectMouseOutRight('project2', 'project2Desc')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <p>coronavirus-heat-map</p>
-                            <hr>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center">
-                            <p>a Windows desktop application
-                                that displays a nationwide COVID-19 heat map,
-                                as well as an interactive map to view state-by-state
-                                COVID-19 statistics.
-                                <hr>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center">
-                            <i onclick="github('https://github.com/RyanDBurke/coronavirus-heat-map')"
-                                class="fa fa-github github"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3">
-            </div>
-        </div>
-
-        <div id="project-rows3" class="row row-height mt-5 bg-white">
-
-            <div class="col-3">
-            </div>
-
-            <div id="project3" class="col bg-light d-flex align-items-center justify-content-center"
-                onmouseenter="projectMouseOverLeft('project3', 'project3Desc')">
-                <img id="rna" src="./images/PNG/rna-mobile.png" class="img-fluid" />
-            </div>
-
-            <!-- project 3 description -->
-            <div id="project3Desc" class="col bg-white d-none align-items-center justify-content-center"
-                onmouseleave="projectMouseOutLeft('project3', 'project3Desc')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <p>RNA-sequence-quantification</p>
-                            <hr>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center">
-                            <p>Implements the Expectation-Maximization (EM)
-                                algorithm for transcript quantification from
-                                RNA-alignments takes in a transcript/alignment file
-                                and returns estimated read-counts for each transcript
-                                in the transcriptome.
-                                <hr>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center">
-                            <i onclick="github('https://github.com/RyanDBurke/RNA-seq-quantification-using-the-EM-algorithm')"
-                                class="fa fa-github github"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3">
-            </div>
-        </div>
-
-        <div id="project-rows4" class="row row-height mt-5 bg-white">
-
-            <div class="col-3">
-            </div>
-
-            <!-- project 4 -->
-            <div id="project4" class="col bg-light d-flex align-items-center justify-content-center"
-                onmouseenter="projectMouseOverRight('project4', 'project4Desc')">
-                <!-- <img src="./images/PNG/heatMap.png" class="img-fluid" /> -->
-                <img src="./images/PNG/twitter-tui-demo.png" class="img-fluid" />
-            </div>
-
-            <!-- project 4 description -->
-            <div id="project4Desc" class="col bg-white d-none align-items-center justify-content-center"
-                onmouseleave="projectMouseOutRight('project4', 'project4Desc')">
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <p>mini-twitter-tui</p>
-                            <hr>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center">
-                            <p>Designed and built a lightweight in-terminal
-                                user-interface for twitter timelines using
-                                Rust’s unique ownership/borrowing paradigm,
-                                lifetimes, and multithreading.
-                                <hr>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col text-center">
-                            <i onclick="github('https://github.com/RyanDBurke/mini-twitter-tui')"
-                                class="fa fa-github github"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-3">
+        <!-- top-bar -->
+        <div class="row bg-light top-bar">
+            <div class="col-12">
+                <h3 class="name">RYAN BURKE</h3>
             </div>
         </div>
     </div>
 
+    <!-- container for left bar -->
+    <div id="left-bar" class="left-bar-container bg-light"></div>
+
+    <!-- container for right bar -->
+    <div id="right-bar" class="right-bar-container bg-light fixed-right">
+        <div class="row">
+            <div class="col">
+                <i class="fa fa-github icon" onclick="github()"></i>
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <div class="col">
+                <i class="fa fa-linkedin icon" onclick="linkedin()"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- container for bottom bar -->
+    <div id="bottom-bar" class="bottom-bar-container bg-light">
+    </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
