@@ -68,7 +68,7 @@ function mobile() {
         linkedinID.style.left = "19%"
 
         dateID.style.fontSize = "12px"
-        dateID.style.top = "50%"
+        dateID.style.top = "52%"
         dateID.style.left = "95%"
 
         birthID.style.fontSize = "11px"
