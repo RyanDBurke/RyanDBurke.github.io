@@ -2,6 +2,7 @@
 
 function mobile() {
     var width = window.innerWidth;
+    var height = window.innerHeight
 
     // IDs
     var hrTopID = document.getElementById("hr-top");
@@ -18,9 +19,13 @@ function mobile() {
     var birthID = document.getElementById("birth");
     var birthTextID = document.getElementById("birth-text");
     var morseID = document.getElementById("morse");
+    var morseTextID = document.getElementById("morse-text");
+    var englishID = document.getElementById("english");
+    var englishTextID = document.getElementById("english-text");
     var floatingID = document.getElementById("floating");
     var floatingTextID = document.getElementById("floating-text");
 
+    /* normal iPhones */
     if (width < 1000) {
         hrTopID.style.left = "30%"
         hrTopID.style.right = "30%"
@@ -28,48 +33,112 @@ function mobile() {
         bgImgID.style.top = "25%"
 
         nameID.style.fontSize = "25px"
+        nameID.style.top = "28%"
         nameID.style.left = "7%"
 
         teardropID.style.width = "20px"
         teardropID.style.left = "42%"
-        teardropID.style.top = "34%"
+        teardropID.style.top = "32%"
 
-        nounID.style.fontSize = "7px"
-        nounID.style.top = "36%"
+        nounID.style.fontSize = "10px"
+        nounID.style.top = "34%"
         nounID.style.left = "7%"
 
-        aboutID.style.fontSize = "9px"
-        aboutID.style.top = "39%"
+        aboutID.style.fontSize = "11px"
+        aboutID.style.top = "37%"
         aboutID.style.left = "7%"
+        about.innerHTML =   "Hey, I'm Ryan. I'm a software engineer based <br> \
+                            in Washington, D.C. with interests in bioinformatics, <br> \
+                            computer vision, and other cool stuff."
 
-        cornyID.style.fontSize = "9px"
-        cornyID.style.top = "90%"
+        cornyID.style.fontSize = "11px"
+        cornyID.style.top = "88%"
 
-        japaneseID.style.fontSize = "9px"
-        japaneseID.style.top = "92%"
+        japaneseID.style.fontSize = "11px"
+        japaneseID.style.top = "90%"
 
-        githubID.style.fontSize = "26px"
-        githubID.style.top = "50%"
+        githubID.style.fontSize = "30px"
+        githubID.style.top = "58%"
         githubID.style.left = "7%"
 
-        linkedinID.style.fontSize = "26px"
-        linkedinID.style.top = "50%"
-        linkedinID.style.left = "16%"
+        linkedinID.style.fontSize = "30px"
+        linkedinID.style.top = "58%"
+        linkedinID.style.left = "17%"
 
         dateID.style.fontSize = "12px"
         dateID.style.top = "50%"
-        dateID.style.left = "92%"
+        dateID.style.left = "95%"
 
-        birthID.style.fontSize = "8px"
+        birthID.style.fontSize = "11px"
         birthID.style.left = "1%"
 
         birthTextID.style.fontSize = "8px"
 
-        morseID.style.display = "none"
+        morseID.style.width = "15%"
+        morseID.style.top = "2%"
+        morseID.style.left = "82%"
+        morseTextID.style.fontSize = "20px"
 
-        floatingID.style.top = "10%"
-        floatingID.style.left = "70%"
+        englishID.style.width = "15%"
+        englishID.style.top = "2%"
+        englishID.style.left = "82%"
+        englishTextID.style.fontSize = "20px"
+
+        floatingID.style.top = "23.5%"
+        floatingID.style.left = "73%"
         floatingTextID.style.fontSize = "14px"
+    }
+    
+    /* iPhone 8+ */
+    if (width > 400 && width < 1000) {
+
+        nameID.style.left = "9%"
+
+        teardropID.style.width = "20px"
+        teardropID.style.left = "41%"
+        teardropID.style.top = "32%"
+
+        nounID.style.top = "33%"
+        nounID.style.left = "9%"
+
+        cornyID.style.fontSize = "13px"
+        cornyID.style.top = "88%"
+
+        japaneseID.style.fontSize = "13px"
+        japaneseID.style.top = "90%"
+
+        aboutID.style.fontSize = "13px"
+        aboutID.style.top = "36%"
+        aboutID.style.left = "9%"
+
+        birthID.style.fontSize = "12px"
+        birthID.style.left = "1%"
+
+        birthTextID.style.fontSize = "9px"
+    }
+
+    /* iphone X */
+    if (width < 400 && height > 800) {
+        nounID.style.top = "32%"
+        nounID.style.left = "7%"
+
+        aboutID.style.fontSize = "13px"
+        aboutID.style.top = "35%"
+        aboutID.style.left = "7%"
+
+        birthID.style.fontSize = "13px"
+        birthID.style.left = "1%"
+        birthID.style.top = "12%"
+
+        birthTextID.style.fontSize = "10px"
+
+        githubID.style.fontSize = "30px"
+        githubID.style.top = "52%"
+        githubID.style.left = "7%"
+
+        linkedinID.style.fontSize = "30px"
+        linkedinID.style.top = "52%"
+        linkedinID.style.left = "17%"
     }
 }
 
