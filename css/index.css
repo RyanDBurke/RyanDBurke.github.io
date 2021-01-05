@@ -58,9 +58,7 @@ html, body {
 }
 
 .name {
-    position: absolute;
-    right: 20%;
-    top: 40%;
+    top: 30%;
     font-size: calc(12px + 12 * ((100vw - 600px) / 600));
 }
 
@@ -93,18 +91,96 @@ html, body {
 /* bottom bar css */
 /******************/
 .bottom-bar-container {
-    width: 100%;
-    height: 30%;
+    /* width: 90%; */
+    height: 80%;
     z-index: 2;
-    margin-left: 7%;
-    margin-right: 7%;
-    position: absolute;
+    top: 65%;
+    /* margin-left: 10%; */
+    /* margin-right: 200%; */
+    /* position: absolute; */
     bottom: 0%;
+
+    margin: 0;
+    right: 0%;
+    position: relative;
+    width: 100%;
 }
 
+/*********/
 /* icons */
+/*********/
 .icon {
     margin-left: 45%;
     font-size: calc(12px + 12 * ((100vw - 600px) / 600));
     cursor: pointer;
+}
+
+/*******************/
+/* row/col buffers */
+/*******************/
+.buffer {
+    height: 10%;
+}
+
+.buffer-large {
+    height: 30%;
+}
+
+.col-buffer {
+    height: 10%;
+}
+
+/***********************/
+/* project modals/util */
+/***********************/
+
+.projects {
+    position: relative;
+    top: 30%;
+    font-size: calc(12px + 12 * ((100vw - 600px) / 600));
+}
+
+.modal-outline {
+    border-color: lightgray;
+}
+
+.modal-emoji {
+    position: absolute;
+    margin-top: 1%;
+    width: 85%;
+}
+
+.modal-top {
+    width: 100%;
+    height: 30%;
+}
+
+.modal-bottom {
+    width: 100%;
+    height: 30%;
+}
+
+.modal-container {
+    height: 40%;
+}
+
+.modal-container:hover {
+    /* transform: scale(1.00); */
+    cursor: pointer;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(204, 173, 171);
+}
+
+
+/*******/
+/* hey */
+/*******/
+.hey {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+.hey-text {
+    font-size: calc(12px + 12 * ((100vw - 600px) / 600));
 }

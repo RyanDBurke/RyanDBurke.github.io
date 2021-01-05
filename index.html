@@ -62,8 +62,8 @@
 
         <!-- top-bar -->
         <div class="row bg-light top-bar">
-            <div class="col-12">
-                <h3 class="name">RYAN BURKE</h3>
+            <div class="col-12 text-center">
+                <h3 class="name mt-4">RYAN BURKE</h3>
             </div>
         </div>
     </div>
@@ -88,6 +88,61 @@
 
     <!-- container for bottom bar -->
     <div id="bottom-bar" class="bottom-bar-container bg-light">
+        <div class="row buffer mt-5">
+            <div class="col-12 text-center">
+                <p class="projects text-center">PROJECTS</p>
+            </div>
+        </div>
+        <div class="row buffer-large mt-2">
+            <div class="col-2"></div>
+
+            <!-- project 1 -->
+            <div onclick="projectClick('cgv')" class="col-2 mr-1 mb-5 text-center border modal-container">
+                <div class="modal-top mb-2 mt-3">
+                    <p class="modal-emoji text-center">🌱</p>
+                </div>
+                <div class="modal-bottom">
+                    coronavirus-genome-variant
+                </div>
+            </div>
+
+            <!-- project 2 -->
+            <div onclick="projectClick('chm')" class="col-2 mr-1 mb-5 text-center border modal-outline modal-container">
+                <div class="modal-top mb-2 mt-3">
+                    <p class="modal-emoji text-center">🔥</p>
+                </div>
+
+                <div class="modal-bottom">
+                    coronavirus-heat-map
+                </div>
+            </div>
+
+            <!-- project 3 -->
+            <div onclick="projectClick('mtt')" class="col-2 mr-1 mb-5 text-center border modal-container">
+                <div class="modal-top  mb-2 mt-3">
+                    <p class="modal-emoji text-center">🦀</p>
+                </div>
+
+                <div class="modal-bottom ">
+                    mini-twitter-tui
+                </div>
+            </div>
+
+            <!-- project 4 -->
+            <div onclick="projectClick('rsq')" class="col-2  mr-1 mb-5 text-center border modal-container">
+                <div class="modal-top  mb-2 mt-3">
+                    <p class="modal-emoji text-center">📊</p>
+                </div>
+
+                <div class="modal-bottom ">
+                    rna-sequence-quantification
+                </div>
+            </div>
+            <div class="col-2"></div>
+            </div>
+
+            <hr>
+        </div>
     </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

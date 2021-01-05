@@ -21,6 +21,19 @@ function mobile() {
     }
 }
 
+function projectClick(projectName) {
+
+    switch (projectName) {
+        case 'cgv':
+            window.open("https://github.com/RyanDBurke/coronavirus-genome-variant");
+        case "chm":
+            window.open("https://github.com/RyanDBurke/coronavirus-heat-map");
+        case "mtt":
+            window.open("https://github.com/RyanDBurke/mini-twitter-tui");
+        case "rsq":
+            window.open("https://github.com/RyanDBurke/rna-seq-quantification");
+    }
+}
 
 function github() {
     window.open("https://github.com/RyanDBurke");
