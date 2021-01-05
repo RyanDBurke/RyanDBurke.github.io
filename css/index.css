@@ -1,6 +1,6 @@
 html, body {
     font-family: 'Times New Roman', Times, serif;
-    color: black;
+    background-color:rgb(226, 223, 216); 
     scroll-behavior: smooth;
 
     /* added with pic */
@@ -21,166 +21,156 @@ html, body {
     position: absolute;
 }
 
-.icon-mobile {
-    color: black;
-    font-size: calc(60px + 60 * ((100vw - 600px) / 600));
+.hr-top {
+    position: fixed;
+    top: 1%;
+    left: 40%;
+    right: 40%;
 }
 
-/* background image */
+hr {
+    height: 3px;
+    background-color: black;
+}
+
 .bg-img {
-  height: 90%;
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 15%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  z-index: -1;
-}
+    position: fixed;
+    left: 40%;
+    top: 20%;
 
-/***************/
-/* top bar css */
-/***************/
-.top-bar-container {
-    width: 100%;
-    height: 10%;
-    z-index: 1;
-    margin: 0;
-    right: 0%;
-    position: relative;
-}
-
-.top-bar {
-    z-index: 2;
-    height: 100%;
-    position: relative;
 }
 
 .name {
+    font-family: Arial Bold, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: calc(30px + 30 * ((100vw - 600px) / 600));
+
+    position: fixed;
+    left: 19.8%;
     top: 30%;
+}
+
+.teardrop {
+    position: fixed;
+    top: 39%;
+    left: 46.5%;
+    
+}
+
+.noun {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
+
+    position: fixed;
+    left: 19.8%;
+    top: 44%;
+}
+
+.about {
+    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
+    
+    line-height: 98%;
+
+    position: fixed;
+    left: 19.8%;
+    top: 49%;
+}
+
+.corny {
+    font-style: italic;
+    font-weight: lighter;
+    position: fixed;
+    text-align: center;
+    top: 93%;
+    font-size: calc(5px + 5 * ((100vw - 600px) / 600));
+}
+
+.quotes {
+    font-weight: bold;
+    font-size: calc(8px + 8 * ((100vw - 600px) / 600));
+}
+
+.japanese {
+    position: fixed;
+    top: 96%;
+    text-align: center;
+}
+
+.box-top-right {
+    position: fixed;
+    width: 6%;
+    height: 8%;
+    top: 5%;
+    left: 85.5%;
+    border-style: solid;
+}
+
+.morse {
+    display: block;
+}
+
+.english {
+    display: none;
+    background-color: black;
+}
+
+.morse-text {
+    line-height: 80%;
+    font-weight: bold;
     font-size: calc(12px + 12 * ((100vw - 600px) / 600));
 }
 
-/****************/
-/* left bar css */
-/****************/
-.left-bar-container {
-    width: 7%;
-    height: 100%;
-    z-index: 1;
-    margin: 0;
-    position: absolute;
+.floating-number-right {
+    position: fixed;
+    left: 85.5%;
+    top: 18%;
 }
 
-/*****************/
-/* right bar css */
-/*****************/
-.right-bar-container {
-    width: 10%;
-    height: 100%;
-    z-index: 2;
-    margin: 0;
-    margin-top: 1%;
-    top: 0%;
-    position: absolute;
-    left: 93%;
+.floating-number-right-text {
+    font-weight: bold;
+    font-size: calc(8px + 8 * ((100vw - 600px) / 600));
 }
 
-/******************/
-/* bottom bar css */
-/******************/
-.bottom-bar-container {
-    /* width: 90%; */
-    height: 80%;
-    z-index: 2;
-    top: 65%;
-    /* margin-left: 10%; */
-    /* margin-right: 200%; */
-    /* position: absolute; */
-    bottom: 0%;
+.date {
+    color: rgb(226, 223, 216);
+    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
 
-    margin: 0;
-    right: 0%;
-    position: relative;
-    width: 100%;
+    position: fixed;
+    top: 60%;
+    left: 85%;
+
+    transform: rotate(270deg);
 }
 
-/*********/
-/* icons */
-/*********/
-.icon {
-    margin-left: 45%;
-    font-size: calc(12px + 12 * ((100vw - 600px) / 600));
+.birth {
+    position: fixed;
+    top: 15%;
+    left: 3%;
+    /* line-height: 100%; */
+    font-weight: bold;
+    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
+    transform: rotate(270deg);
+}
+
+.birth-text {
+    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
+    font-style: italic;
+    font-weight: normal;
+}
+
+.github {
+    position: fixed;
+    top: 70%;
+    left: 10%;
+    font-size: calc(14px + 14 * ((100vw - 600px) / 600));
     cursor: pointer;
 }
 
-/*******************/
-/* row/col buffers */
-/*******************/
-.buffer {
-    height: 10%;
-}
-
-.buffer-large {
-    height: 30%;
-}
-
-.col-buffer {
-    height: 10%;
-}
-
-/***********************/
-/* project modals/util */
-/***********************/
-
-.projects {
-    position: relative;
-    top: 30%;
-    font-size: calc(12px + 12 * ((100vw - 600px) / 600));
-}
-
-.modal-outline {
-    border-color: lightgray;
-}
-
-.modal-emoji {
-    position: absolute;
-    margin-top: 1%;
-    width: 85%;
-}
-
-.modal-top {
-    width: 100%;
-    height: 30%;
-}
-
-.modal-bottom {
-    width: 100%;
-    height: 30%;
-}
-
-.modal-container {
-    height: 40%;
-}
-
-.modal-container:hover {
-    /* transform: scale(1.00); */
+.linkedin {
+    position: fixed;
+    top: 70%;
+    left: 13%;
+    font-size: calc(14px + 14 * ((100vw - 600px) / 600));
     cursor: pointer;
-    /* background-color: rgb(255, 255, 255); */
-    background-color: rgb(204, 173, 171);
-}
-
-
-/*******/
-/* hey */
-/*******/
-.hey {
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-}
-
-.hey-text {
-    font-size: calc(12px + 12 * ((100vw - 600px) / 600));
 }

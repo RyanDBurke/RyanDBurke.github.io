@@ -23,125 +23,78 @@
     <title>Ryan Burke</title>
 </head>
 
-<body class="bg-light" onload="mobile()">
+<body onload="mobile()">
 
     <!--------------------------->
     <!-- mobile webpage view!  -->
     <!--------------------------->
-    <div id="mobile" class="mobile container bg-light">
-        <div class="row">
-            <div class="col text-center">
-                <h1>RYAN BURKE</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-
-            </div>
-            <div class="col-2 text-center">
-                <i class="fa fa-linkedin icon-mobile" onclick="linkedin()"></i>
-            </div>
-            <div class="col-2 text-center">
-                <i class="fa fa-github icon-mobile" onclick="github()"></i>
-            </div>
-            <div class="col-4">
-
-            </div>
-        </div>        
-    </div>
 
     <!--------------------------->
     <!-- desktop webpage view! -->
     <!--------------------------->
 
-    <!-- background image -->
-    <img id="desktop" src="images/JPG/house-2.jpg" class="img-fluid bg-img" />
+    <!-- hr top -->
+    <div id="hr-top" class="hr-top">
+        <hr class="">
+    </div> 
+
+    <!-- image -->
+    <img id="bg-img" src="images/JPG/house-4.png" class="img-fluid bg-img" />
+
+    <!-- name -->
+    <p id="name" class="name">Ryan Burke</p>
+
+    <!-- teardrop -->
+    <img id="teardrop" src="images/PNG/teardrop-final.png" class="img-fluid teardrop" /> 
+
+    <!-- noun -->
+    <p id="noun" class="noun">[noun]</p>
     
-    <!-- container for top bar -->
-    <div id="top-bar" class="top-bar-container">
+    <!-- about -->
+    <p id="about" class="about">
+        Hey, I'm Ryan. I'm a software engineer based in Washington, D.C. <br>
+        with interests in bioinformatics, computer vision, and other cool stuff. <br>
+    </p>
 
-        <!-- top-bar -->
-        <div class="row bg-light top-bar">
-            <div class="col-12 text-center">
-                <h3 class="name mt-4">RYAN BURKE</h3>
-            </div>
-        </div>
+    <!-- corny quote -->
+    <p id="corny" class="text-center corny w-100"><b class="quotes">"</b> A society grows great when old men plant trees whose shade they know they shall never sit in <b class="quotes">"</b></p>
+
+    <!-- japanese -->
+    <p id="japanese" class="japanese text-center w-100">こ ん に ち は</p>
+
+    <!-- box top-right-->
+    <div onmouseover="morse()" id="morse" class="box-top-right morse">
+        <p class="morse-text text-center mt-1">
+            .-. -.-- .- -.
+        </p>
     </div>
 
-    <!-- container for left bar -->
-    <div id="left-bar" class="left-bar-container bg-light"></div>
-
-    <!-- container for right bar -->
-    <div id="right-bar" class="right-bar-container bg-light fixed-right">
-        <div class="row">
-            <div class="col">
-                <i class="fa fa-github icon" onclick="github()"></i>
-            </div>
-        </div>
-
-        <div class="row mt-1">
-            <div class="col">
-                <i class="fa fa-linkedin icon" onclick="linkedin()"></i>
-            </div>
-        </div>
+    <!-- box top-right-->
+    <div onmouseout="morseOut()" id="english" class=" box-top-right english">
+        <p id="english-text" class="morse-text text-center mt-3">
+            RYAN
+        </p>
     </div>
 
-    <!-- container for bottom bar -->
-    <div id="bottom-bar" class="bottom-bar-container bg-light">
-        <div class="row buffer mt-5">
-            <div class="col-12 text-center">
-                <p class="projects text-center">PROJECTS</p>
-            </div>
-        </div>
-        <div class="row buffer-large mt-2">
-            <div class="col-2"></div>
-
-            <!-- project 1 -->
-            <div onclick="projectClick('cgv')" class="col-2 mr-1 mb-5 text-center border modal-container">
-                <div class="modal-top mb-2 mt-3">
-                    <p class="modal-emoji text-center">🌱</p>
-                </div>
-                <div class="modal-bottom">
-                    coronavirus-genome-variant
-                </div>
-            </div>
-
-            <!-- project 2 -->
-            <div onclick="projectClick('chm')" class="col-2 mr-1 mb-5 text-center border modal-outline modal-container">
-                <div class="modal-top mb-2 mt-3">
-                    <p class="modal-emoji text-center">🔥</p>
-                </div>
-
-                <div class="modal-bottom">
-                    coronavirus-heat-map
-                </div>
-            </div>
-
-            <!-- project 3 -->
-            <div onclick="projectClick('mtt')" class="col-2 mr-1 mb-5 text-center border modal-container">
-                <div class="modal-top  mb-2 mt-3">
-                    <p class="modal-emoji text-center">🦀</p>
-                </div>
-
-                <div class="modal-bottom ">
-                    mini-twitter-tui
-                </div>
-            </div>
-
-            <!-- project 4 -->
-            <div onclick="projectClick('rsq')" class="col-2  mr-1 mb-5 text-center border modal-container">
-                <div class="modal-top  mb-2 mt-3">
-                    <p class="modal-emoji text-center">📊</p>
-                </div>
-
-                <div class="modal-bottom ">
-                    rna-sequence-quantification
-                </div>
-            </div>
-            <div class="col-2"></div>
-            </div>
-        </div>
+    <!-- floating numbers right -->
+    <div id="floating" class="floating-number-right">
+        <p id="floating-text" class="floating-number-right-text m-0">0110</p>
+        <hr class="m-0">
+        <hr class="mt-1">
     </div>
+
+    <!-- date -->
+    <p id="date" class="date">2019</p>
+    
+    <!-- birthdate -->
+    <p id="birth" class="birth">
+        (1996) <br>
+        <span id="birth-text" class="birth-text">building things, learning stuff.</span>
+    </p>
+
+    <!-- github and linkedin -->
+    <i id="github" onclick="github()" class="fa fa-github github"></i>
+    <i id="linkedin" onclick="linkedin()" class="fa fa-linkedin linkedin"></i>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
