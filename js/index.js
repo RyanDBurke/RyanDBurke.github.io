@@ -89,7 +89,7 @@ function mobile() {
         floatingTextID.style.fontSize = "14px"
     }
     
-    /* iPhone 8+ */
+    /* iPhone 8+  */
     if (width > 400 && width < 1000) {
 
         nameID.style.left = "9%"
