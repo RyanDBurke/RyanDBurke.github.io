@@ -24,6 +24,8 @@ function mobile() {
     var englishTextID = document.getElementById("english-text");
     var floatingID = document.getElementById("floating");
     var floatingTextID = document.getElementById("floating-text");
+    var quotesID = document.getElementById("quotes");
+    var quotes2ID = document.getElementById("quotes2");
 
     /* normal iPhones */
     if (width < 1000) {
@@ -55,15 +57,15 @@ function mobile() {
         cornyID.style.top = "88%"
 
         japaneseID.style.fontSize = "11px"
-        japaneseID.style.top = "90%"
+        japaneseID.style.top = "92%"
 
         githubID.style.fontSize = "30px"
         githubID.style.top = "58%"
-        githubID.style.left = "7%"
+        githubID.style.left = "9%"
 
         linkedinID.style.fontSize = "30px"
         linkedinID.style.top = "58%"
-        linkedinID.style.left = "17%"
+        linkedinID.style.left = "19%"
 
         dateID.style.fontSize = "12px"
         dateID.style.top = "50%"
@@ -87,6 +89,9 @@ function mobile() {
         floatingID.style.top = "23.5%"
         floatingID.style.left = "73%"
         floatingTextID.style.fontSize = "14px"
+
+        quotesID.style.fontSize = "20px"
+        quotes2ID.style.fontSize = "20px"
     }
     
     /* iPhone 8+  */
@@ -105,7 +110,7 @@ function mobile() {
         cornyID.style.top = "88%"
 
         japaneseID.style.fontSize = "13px"
-        japaneseID.style.top = "90%"
+        japaneseID.style.top = "92%"
 
         aboutID.style.fontSize = "13px"
         aboutID.style.top = "36%"
@@ -113,8 +118,10 @@ function mobile() {
 
         birthID.style.fontSize = "12px"
         birthID.style.left = "1%"
+        birthID.style.top = "10%"
 
         birthTextID.style.fontSize = "9px"
+        birthTextID.style.top = "10%"
     }
 
     /* iphone X */
