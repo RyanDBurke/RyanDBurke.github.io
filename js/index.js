@@ -23,7 +23,7 @@ function mobile() {
     var englishID = document.getElementById("english");
     var englishTextID = document.getElementById("english-text");
     var floatingID = document.getElementById("floating");
-    var floatingTextID = document.getElementById("floating-text");
+    var floatingTextID = document.getElementById("floating-text-number");
     var quotesID = document.getElementById("quotes");
     var quotes2ID = document.getElementById("quotes2");
 
@@ -77,6 +77,7 @@ function mobile() {
         birthTextID.style.fontSize = "8px"
 
         morseID.style.width = "15%"
+        morseID.style.height = "7%"
         morseID.style.top = "2%"
         morseID.style.left = "82%"
         morseTextID.style.fontSize = "20px"
@@ -87,7 +88,7 @@ function mobile() {
         englishTextID.style.fontSize = "20px"
 
         floatingID.style.top = "23.5%"
-        floatingID.style.left = "73%"
+        floatingID.style.left = "76%"
         floatingTextID.style.fontSize = "14px"
 
         quotesID.style.fontSize = "20px"
@@ -96,12 +97,11 @@ function mobile() {
     
     /* iPhone 8+  */
     if (width > 400 && width < 1000) {
-
         nameID.style.left = "9%"
 
         teardropID.style.width = "20px"
         teardropID.style.left = "41%"
-        teardropID.style.top = "32%"
+        teardropID.style.top = "31%"
 
         nounID.style.top = "33%"
         nounID.style.left = "9%"
@@ -126,6 +126,11 @@ function mobile() {
 
     /* iphone X */
     if (width < 400 && height > 800) {
+
+        teardropID.style.width = "20px"
+        teardropID.style.left = "42%"
+        teardropID.style.top = "31%"
+
         nounID.style.top = "32%"
         nounID.style.left = "7%"
 
@@ -155,22 +160,4 @@ function github() {
 
 function linkedin() {
     window.open("https://www.linkedin.com/in/ryanburke96/");
-}
-
-function morse() {
-    var morseID = document.getElementById("morse");
-    morseID.style.display = "none"
-
-    var englishID = document.getElementById("english");
-    var englishIDText = document.getElementById("english-text");
-    englishID.style.display = "block"
-    englishIDText.style.color = "white"
-}
-
-function morseOut() {
-    var morseID = document.getElementById("morse");
-    morseID.style.display = "block"
-
-    var englishID = document.getElementById("english");
-    englishID.style.display = "none"
 }
