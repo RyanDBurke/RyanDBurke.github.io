@@ -17,6 +17,7 @@ html, body {
 }
 
 hr {
+    min-height: 3px;
     height: 3px;
     background-color: black;
 }
@@ -25,7 +26,6 @@ hr {
     position: fixed;
     left: 40%;
     top: 20%;
-
 }
 
 .name {
@@ -42,7 +42,7 @@ hr {
     position: fixed;
     top: 39%;
     left: 46.5%;
-    
+    width: 3.6%;
 }
 
 .noun {

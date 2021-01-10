@@ -27,6 +27,11 @@ function mobile() {
     var quotesID = document.getElementById("quotes");
     var quotes2ID = document.getElementById("quotes2");
 
+    /* so if it's on a desktop */
+    if (width > 1000) {
+        bgImgID.style.width = "50%"
+    }
+
     /* normal iPhones */
     if (width < 1000) {
         hrTopID.style.left = "30%"
@@ -71,10 +76,9 @@ function mobile() {
         dateID.style.top = "52%"
         dateID.style.left = "95%"
 
-        birthID.style.fontSize = "11px"
+        birthID.style.fontSize = "10px"
         birthID.style.left = "1%"
-
-        birthTextID.style.fontSize = "8px"
+        birthTextID.style.fontSize = "7px"
 
         morseID.style.width = "15%"
         morseID.style.height = "7%"
@@ -116,11 +120,11 @@ function mobile() {
         aboutID.style.top = "36%"
         aboutID.style.left = "9%"
 
-        birthID.style.fontSize = "12px"
+        birthID.style.fontSize = "10px"
         birthID.style.left = "1%"
         birthID.style.top = "10%"
 
-        birthTextID.style.fontSize = "9px"
+        birthTextID.style.fontSize = "7px"
         birthTextID.style.top = "10%"
     }
 
@@ -138,11 +142,11 @@ function mobile() {
         aboutID.style.top = "35%"
         aboutID.style.left = "7%"
 
-        birthID.style.fontSize = "13px"
+        birthID.style.fontSize = "10px"
         birthID.style.left = "1%"
         birthID.style.top = "12%"
 
-        birthTextID.style.fontSize = "10px"
+        birthTextID.style.fontSize = "7px"
 
         githubID.style.fontSize = "30px"
         githubID.style.top = "52%"
