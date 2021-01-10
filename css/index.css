@@ -16,9 +16,11 @@ html, body {
     right: 40%;
 }
 
+.hr-top-line {
+    height: calc(1px + 1 * ((100vw - 600px) / 600));
+}
+
 hr {
-    min-height: 3px;
-    height: 3px;
     background-color: black;
 }
 
@@ -83,6 +85,7 @@ hr {
     position: fixed;
     top: 96%;
     text-align: center;
+    font-size: calc(5px + 5 * ((100vw - 600px) / 600));
 }
 
 .box-top-right {
@@ -117,7 +120,11 @@ hr {
 
 .floating-number-right-text {
     font-weight: bold;
-    font-size: calc(14px + 8 * ((100vw - 600px) / 600));
+    font-size: calc(10px + 10 * ((100vw - 600px) / 600));
+}
+
+.hr-floating-number-right {
+    height: calc(0.5px + 0.5 * ((100vw - 600px) / 600));
 }
 
 .date {
