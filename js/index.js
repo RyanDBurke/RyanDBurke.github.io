@@ -1,167 +1,120 @@
+var photos = [
+        "./img/IMG1.png",
+        "./img/IMG2.png",
+        "./img/IMG3.png",
+        "./img/IMG4.png",
+        "./img/IMG5.png",
+        "./img/IMG6.png",
+        "./img/IMG2.png",
+        "./img/IMG3.png",
+        "./img/IMG4.png",
+        "./img/IMG5.png",
+    ];
+var photosPreview = [
+        "./preview/IMG1.png",
+        "./preview/IMG2.png",
+        "./preview/IMG3.png",
+        "./preview/IMG4.png",
+        "./preview/IMG5.png",
+        "./preview/IMG6.png",
+        "./preview/IMG2.png",
+        "./preview/IMG3.png",
+        "./preview/IMG4.png",
+        "./preview/IMG5.png"
+    ];
+var previewIds = [
+        document.getElementById("PREVIEW-1"),
+        document.getElementById("PREVIEW-2"),
+        document.getElementById("PREVIEW-3"),
+        document.getElementById("PREVIEW-4"),
+        document.getElementById("PREVIEW-5"),
+        document.getElementById("PREVIEW-6"),
+        document.getElementById("PREVIEW-7"),
+        document.getElementById("PREVIEW-8"),
+        document.getElementById("PREVIEW-9"),
+        document.getElementById("PREVIEW-10")
+    ];
+var imgPreviewIds = [
+    document.getElementById("IMG-PREVIEW-1"),
+    document.getElementById("IMG-PREVIEW-2"),
+    document.getElementById("IMG-PREVIEW-3"),
+    document.getElementById("IMG-PREVIEW-4"),
+    document.getElementById("IMG-PREVIEW-5"),
+    document.getElementById("IMG-PREVIEW-6"),
+    document.getElementById("IMG-PREVIEW-7"),
+    document.getElementById("IMG-PREVIEW-8"),
+    document.getElementById("IMG-PREVIEW-9"),
+    document.getElementById("IMG-PREVIEW-10")
+];
 
+var photosIdx = 0;
+var maxIdx = photos.length - 1;
 
-function mobile() {
-    var width = window.innerWidth;
-    var height = window.innerHeight
+// UPDATES PAGE
+function update() {
 
-    // IDs
-    var hrTopID = document.getElementById("hr-top");
-    var bgImgID = document.getElementById("bg-img");
-    var nameID = document.getElementById("name");
-    var teardropID = document.getElementById("teardrop");
-    var nounID = document.getElementById("noun");
-    var aboutID = document.getElementById("about");
-    var cornyID = document.getElementById("corny");
-    var japaneseID = document.getElementById("japanese");
-    var githubID = document.getElementById("github");
-    var linkedinID = document.getElementById("linkedin");
-    var dateID = document.getElementById("date");
-    var birthID = document.getElementById("birth");
-    var birthTextID = document.getElementById("birth-text");
-    var morseID = document.getElementById("morse");
-    var morseTextID = document.getElementById("morse-text");
-    var englishID = document.getElementById("english");
-    var englishTextID = document.getElementById("english-text");
-    var floatingID = document.getElementById("floating");
-    var floatingTextID = document.getElementById("floating-text-number");
-    var quotesID = document.getElementById("quotes");
-    var quotes2ID = document.getElementById("quotes2");
+    //  set opacity for ever preview box to 75%
+    previewIds.forEach(element => {
+        element.style.opacity = "0.30"
+    });
 
-    /* so if it's on a desktop */
-    if (width > 1000) {
-        bgImgID.style.width = "50%"
-    }
+    // set current selected preview box to 100%
+    previewIds[photosIdx].style.opacity = "1"
 
-    /* normal iPhones */
-    if (width < 1000) {
-        hrTopID.style.left = "30%"
-        hrTopID.style.right = "30%"
-
-        bgImgID.style.top = "25%"
-
-        nameID.style.fontSize = "25px"
-        nameID.style.top = "28%"
-        nameID.style.left = "7%"
-
-        teardropID.style.width = "20px"
-        teardropID.style.left = "42%"
-        teardropID.style.top = "32%"
-
-        nounID.style.fontSize = "10px"
-        nounID.style.top = "34%"
-        nounID.style.left = "7%"
-
-        aboutID.style.fontSize = "11px"
-        aboutID.style.top = "37%"
-        aboutID.style.left = "7%"
-        about.innerHTML =   "Hey, I'm Ryan. I'm a software engineer based <br> \
-                            in Washington, D.C. with interests in bioinformatics, <br> \
-                            computer vision, and other cool stuff."
-
-        cornyID.style.fontSize = "11px"
-        cornyID.style.top = "88%"
-
-        japaneseID.style.fontSize = "11px"
-        japaneseID.style.top = "92%"
-
-        githubID.style.fontSize = "30px"
-        githubID.style.top = "58%"
-        githubID.style.left = "9%"
-
-        linkedinID.style.fontSize = "30px"
-        linkedinID.style.top = "58%"
-        linkedinID.style.left = "19%"
-
-        dateID.style.fontSize = "12px"
-        dateID.style.top = "52%"
-        dateID.style.left = "95%"
-
-        birthID.style.fontSize = "10px"
-        birthID.style.left = "1%"
-        birthTextID.style.fontSize = "7px"
-
-        morseID.style.width = "15%"
-        morseID.style.height = "7%"
-        morseID.style.top = "2%"
-        morseID.style.left = "82%"
-        morseTextID.style.fontSize = "20px"
-
-        englishID.style.width = "15%"
-        englishID.style.top = "2%"
-        englishID.style.left = "82%"
-        englishTextID.style.fontSize = "20px"
-
-        floatingID.style.top = "23.5%"
-        floatingID.style.left = "76%"
-        floatingTextID.style.fontSize = "14px"
-
-        quotesID.style.fontSize = "20px"
-        quotes2ID.style.fontSize = "20px"
-    }
-    
-    /* iPhone 8+  */
-    if (width > 400 && width < 1000) {
-        nameID.style.left = "9%"
-
-        teardropID.style.width = "20px"
-        teardropID.style.left = "41%"
-        teardropID.style.top = "31%"
-
-        nounID.style.top = "33%"
-        nounID.style.left = "9%"
-
-        cornyID.style.fontSize = "13px"
-        cornyID.style.top = "88%"
-
-        japaneseID.style.fontSize = "13px"
-        japaneseID.style.top = "92%"
-
-        aboutID.style.fontSize = "13px"
-        aboutID.style.top = "36%"
-        aboutID.style.left = "9%"
-
-        birthID.style.fontSize = "10px"
-        birthID.style.left = "1%"
-        birthID.style.top = "10%"
-
-        birthTextID.style.fontSize = "7px"
-        birthTextID.style.top = "10%"
-    }
-
-    /* iphone X */
-    if (width < 400 && height > 800) {
-
-        teardropID.style.width = "20px"
-        teardropID.style.left = "42%"
-        teardropID.style.top = "31%"
-
-        nounID.style.top = "32%"
-        nounID.style.left = "7%"
-
-        aboutID.style.fontSize = "13px"
-        aboutID.style.top = "35%"
-        aboutID.style.left = "7%"
-
-        birthID.style.fontSize = "10px"
-        birthID.style.left = "1%"
-        birthID.style.top = "12%"
-
-        birthTextID.style.fontSize = "7px"
-
-        githubID.style.fontSize = "30px"
-        githubID.style.top = "52%"
-        githubID.style.left = "7%"
-
-        linkedinID.style.fontSize = "30px"
-        linkedinID.style.top = "52%"
-        linkedinID.style.left = "17%"
-    }
+    // set current main photo
+    document.getElementById("CURRENT-PHOTO").src = photos[photosIdx];
 }
 
-function github() {
-    window.open("https://github.com/RyanDBurke");
+function HOME() {
+    window.open("index.html", "_self")
 }
 
-function linkedin() {
-    window.open("https://www.linkedin.com/in/ryanburke96/");
+// fades in pic and short bio
+function PHOTOS() {
+    window.open("photos.html", "_self")
 }
+
+function CODE() {
+    window.open("https://github.com/RyanDBurke")
+}
+
+function SETUP() {
+
+    // set about width
+    if (document.documentElement.clientWidth > 1000) {
+        document.getElementById("about-desc").className = "col-6 text-center text-white";
+    } else {
+        document.getElementById("about-desc").className = "col text-center text-white";
+    }
+
+    // set photos index, just in case then update
+    photosIdx = 0;
+
+    // init all preview photos
+    for (var i = 0; i < imgPreviewIds.length; i++) {
+        document.getElementById(`IMG-PREVIEW-${i+1}`).src = photosPreview[i];
+    }
+
+    //  set opacity for ever preview box to 75%
+    update();
+}
+
+function SET_IMAGE(imgNumber) {
+    photosIdx = imgNumber - 1;
+    update();
+}
+
+
+// READ ARROW KEYS AND UPDATE
+document.onkeydown = function(e) {
+    if (e.code == 'ArrowRight') {
+        photoIdx = (photosIdx + 1 <= maxIdx) ? photosIdx++ : photosIdx;
+    }
+
+    if (e.code == 'ArrowLeft') {
+        photoIdx = (photosIdx - 1 >= 0) ? photosIdx-- : photosIdx;
+    }
+
+    update();
+};
+

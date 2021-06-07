@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- website icon -->
-    <link rel="icon" href="./images/PNG/terminal.png">
+    <link rel="icon" href="./img/icon.png">
 
     <!-- font-awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,75 +23,100 @@
     <title>Ryan Burke</title>
 </head>
 
-<body onload="mobile()">
+<body onload="SETUP()">
+    <div class="container mt-5">
 
-    <!-- hr top -->
-    <div id="hr-top" class="hr-top">
-        <hr class="hr-top-line">
-    </div> 
+        <!-- NAME -->
+        <div class="row">
+            <div class="NAME col text-center text-white">
+                RYAN BURKE
+            </div>
+        </div>
 
-    <!-- image -->
-    <img id="bg-img" src="images/JPG/house-4.png" class="img-fluid bg-img" />
+        <br>
 
-    <!-- name -->
-    <p id="name" class="name">Ryan Burke</p>
+        <!-- HOME, ABOUT, CODE  -->
+        <div class="row justify-content-md-center">
+            <div class="CURSOR col text-right text-white" onclick="HOME()">HOME</div>
+            <div class="CURSOR col text-center text-white" onclick="PHOTOS()">PHOTOS</div>
+            <div class="CURSOR col text-left text-white" onclick="CODE()">CODE</div>
+        </div>
 
-    <!-- teardrop -->
-    <img id="teardrop" src="images/PNG/teardrop-final.png" class="img-fluid teardrop" /> 
+        <br>
+        <hr>
 
-    <!-- noun -->
-    <p id="noun" class="noun">[noun]</p>
-    
-    <!-- about -->
-    <p id="about" class="about">
-        Hey, I'm Ryan. I'm a software engineer based in Washington, D.C. <br>
-        with interests in bioinformatics, computer vision, and other cool stuff. <br>
-    </p>
+        <!-- ABOUT -->
+        <div class="mt-5 row justify-content-md-center">
+            <div id="about-desc" class="col-6 text-center text-white">
+                <h1>ABOUT</h1>
+                <p class="text-left">
+                    What's up! I'm <span class="orange">Ryan Burke</span> and this website is just a little glimpse
+                    into the stuff I do and like.
+                    <br><br>
+                    <span class="orange">Professionally</span>, I'm a software engineer based in Washington DC.
+                    For work I typically use .NET, outside of work sometimes I write C or Python or whatever
+                    I'm feeling. Lately I've been fiddling with Go, pretty cool stuff.
+                    <br><br>
+                    <span class="orange">Unprofessionally</span>, I'm a huge NBA basketball 🏀 fan and love playing it
+                    myself <span class="orange">(no, you cannot guard me)</span> and photographer 📷 (although, that sounds
+                    so formal. I'm more of just a dude-who-owns-a-camera lol). Lately I've been
+                    shooting strictly with 35mm color-film which I've enjoyed (expensive as hell tho).
+                    Anyways, this about me section is starting to lose it's shape, how you been? Why
+                    are you here lol? I can't believe you made it this far, thanks tho! For whatever
+                    reason I like the idea of people just deciding to read this site. Go check out my pics
+                    some of them are cool, my mom agrees with me too, so.. yeah.
+                    <br><br>
+                    <em>June 2021</em>
+                </p>
+            </div>
+        </div>
 
-    <!-- corny quote -->
-    <p id="corny" class="text-center corny w-100">
-        <b id="quotes" class="quotes">"</b> 
-        See you, space cowboy 
-        <b id="quotes2" class="quotes">"</b>
-    </p>
+        <!--
+        Photo box
+        <div class="row mt-5">
+            <div class="col">
+                <div class="PHOTO-BOX text-center">
+                    <img onmouseover="INFO()" id="CURRENT-PHOTO" class="" src='' />
+                </div>
+            </div>
+        </div>
 
-    <!-- japanese -->
-    <p id="japanese" class="japanese text-center w-100">こ ん に ち は</p>
-
-    <!-- box top-right-->
-    <div id="morse" class="box-top-right morse">
-        <p id="morse-text" class="morse-text text-center mt-1">
-            -.-. .- .-. ..
-        </p>
+        PHOTO PREVIEWS
+        each preview needs to be 111px x 111px ?
+        <div class="row">
+            <div id="PREVIEW-1" class="NO-PADDING-RIGHT col" onclick="SET_IMAGE(1)">
+                <img id="IMG-PREVIEW-1" />
+            </div>
+            <div id="PREVIEW-2" class=" NO-PADDING-RIGHT NO-PADDING-LEFT col" onclick="SET_IMAGE(2)">
+                <img id="IMG-PREVIEW-2" />
+            </div>
+            <div id="PREVIEW-3" class=" NO-PADDING-RIGHT NO-PADDING-LEFT col" onclick="SET_IMAGE(3)">
+                <img id="IMG-PREVIEW-3" />
+            </div>
+            <div id="PREVIEW-4" class=" NO-PADDING-RIGHT NO-PADDING-LEFT col" onclick="SET_IMAGE(4)">
+                <img id="IMG-PREVIEW-4" />
+            </div>
+            <div id="PREVIEW-5" class=" NO-PADDING-RIGHT NO-PADDING-LEFT col" onclick="SET_IMAGE(5)">
+                <img id="IMG-PREVIEW-5" />
+            </div>
+            <div id="PREVIEW-6" class=" NO-PADDING-RIGHT NO-PADDING-LEFT col" onclick="SET_IMAGE(6)">
+                <img id="IMG-PREVIEW-6" />
+            </div>
+            <div id="PREVIEW-7" class=" NO-PADDING-RIGHT NO-PADDING-LEFT col" onclick="SET_IMAGE(7)">
+                <img id="IMG-PREVIEW-7" />
+            </div>
+            <div id="PREVIEW-8" class=" NO-PADDING-RIGHT NO-PADDING-LEFT col" onclick="SET_IMAGE(8)">
+                <img id="IMG-PREVIEW-8" />
+            </div>
+            <div id="PREVIEW-9" class=" NO-PADDING-RIGHT NO-PADDING-LEFT col" onclick="SET_IMAGE(9)">
+                <img id="IMG-PREVIEW-9" />
+            </div>
+            <div id="PREVIEW-10" class=" NO-PADDING-LEFT col" onclick="SET_IMAGE(10)">
+                <img id="IMG-PREVIEW-10" />
+            </div>
+        </div>
     </div>
-
-    <!-- box top-right on mouseover -->
-    <!-- I have no reason why, but don't delete this.. -->
-    <div id="english" class=" box-top-right english">
-        <p id="english-text" class="morse-text text-center mt-3">
-            cari
-        </p>
-    </div>
-
-    <!-- floating numbers right -->
-    <div id="floating" class="floating-number-right">
-        <p id="floating-text-number" class="floating-number-right-text m-0">0110</p>
-        <hr class="m-0 hr-floating-number-right">
-        <hr class="mt-1 hr-floating-number-right">
-    </div>
-
-    <!-- date -->
-    <p id="date" class="date">2019</p>
-    
-    <!-- birthdate -->
-    <p id="birth" class="birth">
-        (1996) <br>
-        <span id="birth-text" class="birth-text">building things, learning stuff.</span>
-    </p>
-
-    <!-- github and linkedin -->
-    <i id="github" onclick="github()" class="fa fa-github github"></i>
-    <i id="linkedin" onclick="linkedin()" class="fa fa-linkedin linkedin"></i>
+    -->
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
