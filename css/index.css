@@ -1,7 +1,7 @@
 html, body {
     font-family: 'Times New Roman', Times, serif;
-    background-color:rgb(226, 223, 216); 
     scroll-behavior: smooth;
+    background-color: #487450;
 
     /* added with pic */
     height: 100%;
@@ -9,163 +9,41 @@ html, body {
     margin: 0;    
 }
 
-.hr-top {
-    position: fixed;
-    top: 1%;
-    left: 40%;
-    right: 40%;
+.NAME {
+    font-size: 4vw;
 }
 
-.hr-top-line {
-    height: calc(1px + 1 * ((100vw - 600px) / 600));
+.PHOTO-DESC {
+    font-size: 3vw;
+}
+
+.CURSOR {
+    cursor: pointer;
+}
+
+.PHOTO-BOX {
+    height: 600px;
+    background-color: white;
+}
+
+.NO-PADDING-RIGHT {
+    padding-right: 0px;
+}
+
+.NO-PADDING-LEFT {
+    padding-left: 0px;
+}
+
+.PREVIEW-BOX {
+    width: 111px;
+    height: 111px;
+    background-color: black;
 }
 
 hr {
-    background-color: black;
+    background-color:white;
 }
 
-.bg-img {
-    position: fixed;
-    left: 40%;
-    top: 20%;
-}
-
-.name {
-    font-family: Arial Bold, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: calc(30px + 30 * ((100vw - 600px) / 600));
-
-    position: fixed;
-    left: 19.8%;
-    top: 30%;
-}
-
-.teardrop {
-    position: fixed;
-    top: 39%;
-    left: 46.5%;
-    width: 3.6%;
-}
-
-.noun {
-    font-style: italic;
-    font-weight: lighter;
-    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
-
-    position: fixed;
-    left: 19.8%;
-    top: 43%;
-}
-
-.about {
-    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
-    
-    line-height: 98%;
-
-    position: fixed;
-    left: 19.8%;
-    top: 47%;
-}
-
-.corny {
-    font-style: italic;
-    font-weight: lighter;
-    position: fixed;
-    text-align: center;
-    top: 93%;
-    font-size: calc(5px + 5 * ((100vw - 600px) / 600));
-}
-
-.quotes {
-    font-weight: bold;
-    font-size: calc(8px + 8 * ((100vw - 600px) / 600));
-}
-
-.japanese {
-    position: fixed;
-    top: 96%;
-    text-align: center;
-    font-size: calc(5px + 5 * ((100vw - 600px) / 600));
-}
-
-.box-top-right {
-    position: fixed;
-    width: 6%;
-    height: 8%;
-    top: 5%;
-    left: 81%;
-    border-style: solid;
-}
-
-.morse {
-    display: block;
-}
-
-.english {
-    display: none;
-    background-color: black;
-}
-
-.morse-text {
-    line-height: 80%;
-    font-weight: bold;
-    font-size: calc(12px + 12 * ((100vw - 600px) / 600));
-}
-
-.floating-number-right {
-    position: fixed;
-    left: 81%;
-    top: 18%;
-}
-
-.floating-number-right-text {
-    font-weight: bold;
-    font-size: calc(10px + 10 * ((100vw - 600px) / 600));
-}
-
-.hr-floating-number-right {
-    height: calc(0.5px + 0.5 * ((100vw - 600px) / 600));
-}
-
-.date {
-    color: rgb(226, 223, 216);
-    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
-
-    position: fixed;
-    top: 60%;
-    left: 85%;
-
-    transform: rotate(270deg);
-}
-
-.birth {
-    position: fixed;
-    top: 15%;
-    left: 3%;
-    /* line-height: 100%; */
-    font-weight: bold;
-    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
-    transform: rotate(270deg);
-}
-
-.birth-text {
-    font-size: calc(7px + 7 * ((100vw - 600px) / 600));
-    font-style: italic;
-    font-weight: normal;
-}
-
-.github {
-    position: fixed;
-    top: 70%;
-    left: 10%;
-    font-size: calc(14px + 14 * ((100vw - 600px) / 600));
-    cursor: pointer;
-}
-
-.linkedin {
-    position: fixed;
-    top: 70%;
-    left: 13%;
-    font-size: calc(14px + 14 * ((100vw - 600px) / 600));
-    cursor: pointer;
+.orange {
+    color: orange;
 }
