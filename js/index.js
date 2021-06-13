@@ -65,6 +65,10 @@ function update() {
     document.getElementById("CURRENT-PHOTO").src = photos[photosIdx];
 }
 
+function CONSTRUCTION() {
+    window.open("brb.html", "_self")
+}
+
 function HOME() {
     window.open("index.html", "_self")
 }
