@@ -9,6 +9,10 @@ html, body {
     margin: 0;    
 }
 
+p {
+    font-family: 'Helvetica';
+}
+
 .NAME {
     font-size: 4vw;
 }
