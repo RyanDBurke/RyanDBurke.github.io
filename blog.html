@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- website icon -->
+    <link rel="icon" href="./img/icon.png">
+
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- program language icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <title>Ryan Burke</title>
+</head>
+
+<body onload="SETUP()">
+    <div class="container mt-5">
+
+        <!-- NAME -->
+        <div class="row">
+            <div class="NAME col text-center text-white">
+                RYAN BURKE
+            </div>
+        </div>
+
+        <br>
+
+        <!-- HOME, PHOTOS, CODE  -->
+        <div class="row justify-content-md-center">
+            <div class="CURSOR col text-center text-white" onclick="HOME()">HOME</div>
+            <div class="CURSOR col text-center text-white" onclick="PHOTOS()">PHOTOS</div>
+            <div class="CURSOR col text-center text-white" onclick="BLOG()">BLOG</div>
+            <div class="CURSOR col text-center text-white" onclick="CODE()">CODE</div>
+        </div>
+
+        <br>
+        <hr>
+
+        <!-- MediatR
+        <div class="mt-5 row justify-content-md-center">
+            <div id="about-desc" class="col-6 text-center text-white">
+                <h1>MEDIATOR<hr></h1>
+                <p class="text-left"><br><br>
+                    <em>"A Simple, unambitious design pattern."</em> - the dude who made it I think, idk
+                    <br><br>
+                    At work we've been moving our monolith of a codebase with a billion services
+                    who's jobs are never clearly stated, ex. <em>ServiceHelperService.cs</em>, bro
+                    what the hell does this do? <em>Oh it's the main factory for an extremely vital part
+                    of our repo, sweet lmao.</em>
+                    <br><br>
+                    <em>June 7, 2021</em>
+                </p>
+            </div>
+        </div>
+    -->
+
+        <!-- LUKA 
+        <div class="mt-5 row justify-content-md-center">
+            <div id="about-desc" class="col-6 text-center text-white">
+                <h1>LUKA DONCIC<hr></h1>
+                <p class="text-left">
+                    Last night the mavs lost game 7 to the LA Clippers.
+                    <br><br>
+                    Super heartbreaking
+                    I absolutely hate the Clippers lol. We lost to them last year, and this
+                    felt like the perfect revenge story. Weird-ass series, the home team lost the
+                    first 6 games (idk how), but Luka proved himself to be an absolute demon
+                    at basketball. Series averages were nuts, like (I didn't research) 36-10-9
+                    on 50% from the field and 40% from 3PT (I'm omitting FT%, you know why).
+                    Anyways I'm pissed, Luka clearly needs help, KP is too passive and Kawhi is
+                    a robot who will never miss a shot. Reggie Jackson turned into Ray Allen (?) and
+                    for like a 5m stretch Terrance Mann was posessed by Michael Jordan himself.
+                    <br><br>
+                    But more on Luka, this brother is different. His little back-down one-legged midrange
+                    is MONEY. He's developed that out of nowhere at 22 years old.. WHAT. I'm hesistant to
+                    say it, but he has seriously potential to go down as a TOP FIVE PLAYER OF ALL TIME.
+                    Ok anyways I'm out -- been watching 
+                    <span onclick="window.open('https://myanimelist.net/anime/37521/Vinland_Saga', '_target')" class="orange CURSOR">Vinland Saga</span> 
+                    lately, 4 episodes left gonna finish like an episode or ✌ before work tomorrow. 
+                    <br><br>
+                    <em>June 7, 2021</em>
+                </p>
+            </div>
+        </div>
+        -->
+
+        <!-- init, first blog post -->
+        <div class="mt-5 row justify-content-md-center">
+            <div id="about-desc" class="col-6 text-center text-white">
+                <h1>INIT<hr></h1>
+                <p class="text-left">
+                    hey
+                    <br><br>
+                    First blog post, hoping to write these with a more
+                    <span onclick="window.open('https://en.wikipedia.org/wiki/Stream_of_consciousness', '_target')" class="orange CURSOR">stream-of-consciousness</span> style.
+                    Not really looking for conhesive writing structure, that's going to get boring to
+                    me (I think). I'll talk mainly about software engineering, basketball, and film 
+                    photography. My opinions on stuff that absolutely no one asked for, but I'll do it
+                    anyways cause why not lol. Hope you enjoy some of these readings ✌
+                    <br><br>
+                    <em>June 6, 2021</em>
+                </p>
+            </div>
+        </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- JAVASCRIPT FOR PAGE -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

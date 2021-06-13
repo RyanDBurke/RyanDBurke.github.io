@@ -78,6 +78,10 @@ function CODE() {
     window.open("https://github.com/RyanDBurke")
 }
 
+function BLOG() {
+    window.open("blog.html", "_self")
+}
+
 function SETUP() {
 
     // set about width
