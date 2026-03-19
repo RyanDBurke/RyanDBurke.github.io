@@ -65,17 +65,31 @@
       <header>
         <h1>Ryan Burke</h1>
         <p>
-        Software engineer, film photographer, enjoyer of the NBA, amateur cook, oil-pastel artist
+        software engineer | 
+        film photographer | 
+        enjoyer of the NBA |
+        amateur chef |
+        oil-pastel artist
         </p>
       </header>
     
+    <section class="work-section">
+      <h2 class="work-title">work I'm doing, work I've done</h2>
+    </section>
+
     <main>
       <div class="square dealeron" @click="showDealerOnModal = true">
         <span class="dealeron-label">DealerOn</span>
         <span class="dealeron-subtitle">Software Engineer</span>
       </div>
-      <div class="square"></div>
-      <div class="square"></div>
+      <div class="square tech" @click="showTechModal = true">
+        <span class="tech-label">University of Maryland, IT</span>
+        <span class="tech-subtitle">IT Technician</span>
+      </div>
+      <div class="square covid-project" @click="showCovidProjectModal = true">
+        <span class="covid-project-label">Covid Genome Variant</span>
+        <span class="covid-project-subtitle">Project</span>
+      </div>
       <div class="square"></div>
     </main>
 
@@ -88,10 +102,52 @@
               <span class="modal-techstack">.NET | C# | Azure | SQL Server | RabbitMq | Redis | Copilot</span>
           </div>
           <p class="modal-description">
-          Programming, architectural planning, debugging, code-reviews, guiding other engineers, and smiling in meetings
+          Programming, architectural planning, debugging, code-reviews, guiding other engineers, and smiling in meetings; 
+          I do it all
           <br>
           </p>
           <em class="disclaimer">[read my resume if you want a professional description]</em>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="showTechModal" class="modal-overlay" @click="showTechModal = false">
+      <div class="modal-content tech-modal" @click.stop>
+        <div class="modal-text-content">
+          <div class="modal-header">
+            <p class="modal-title">University of Maryland, Division of IT</p>
+              <h3 class="modal-subtitle">IT Technician</h3>
+              <span class="modal-techstack">
+              Problem-solving | Documentation | Remote Tooling | Windows | Linux | MacOS
+</span>
+          </div>
+          <p class="modal-description">
+          Installed, diagnosed, and repaired hardware/software for students and staff.
+          <br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="showCovidProjectModal" class="modal-overlay" @click="showCovidProjectModal = false">
+      <div class="modal-content covid-project-modal" @click.stop>
+        <div class="modal-text-content">
+          <div class="modal-header">
+            <div class="modal-title-container">
+              <p class="modal-title">Covid Genome Variant</p>
+              <a href="https://github.com/RyanDBurke/coronavirus-genome-variant" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View on GitHub">
+                <img src="/assets/images/github-icon.jpg" alt="GitHub" class="project-github-icon" />
+              </a>
+            </div>
+              <h3 class="modal-subtitle">Project</h3>
+              <span class="modal-techstack">C | Bioinformatics | Data Analysis</span>
+          </div>
+          <p class="modal-description">
+          A basic seed-search alignment tool to compare read-variants to the nCov-19 virus genome using 
+          Burrows-Wheeler transform, suffix arrays, the FM-Index, and core dynamic programming principles.
+          Kinda cool.
+          <br>
+          </p>
         </div>
       </div>
     </div>
@@ -108,6 +164,8 @@
 import { ref, computed } from 'vue'
 
 const showDealerOnModal = ref(false)
+const showTechModal = ref(false)
+const showCovidProjectModal = ref(false)
 const showResumeModal = ref(false)
 const showEmailModal = ref(false)
 const showDogModal = ref(false)
@@ -266,6 +324,18 @@ header p {
   margin: 0;
 }
 
+.work-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.work-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+  font-weight: 700;
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -335,6 +405,116 @@ main {
   opacity: 1;
 }
 
+.tech {
+  background-image: url('/assets/images/tech.png');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tech::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 150, 200, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech:hover::after {
+  opacity: 1;
+}
+
+.tech-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.tech-subtitle {
+  position: absolute;
+  top: 2.5rem;
+  left: 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.tech:hover .tech-label,
+.tech:hover .tech-subtitle {
+  opacity: 1;
+}
+
+.covid-project {
+  background-image: url('/assets/images/covid-project.png');
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.covid-project::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 100, 150, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.covid-project:hover::after {
+  opacity: 1;
+}
+
+.covid-project-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.covid-project-subtitle {
+  position: absolute;
+  top: 2.5rem;
+  left: 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.covid-project:hover .covid-project-label,
+.covid-project:hover .covid-project-subtitle {
+  opacity: 1;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -394,6 +574,78 @@ main {
   text-align: left;
 }
 
+.tech-modal {
+  background-color: #e6e6e6;
+  background-image: url('/assets/images/tech.png');
+  background-size: 50%;
+  background-position: center 9rem;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.tech-modal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 150, 200, 0.8);
+  opacity: 0;
+  z-index: 0;
+}
+
+.tech-modal .tech-label,
+.tech-modal .tech-subtitle {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.covid-project-modal {
+  background-color: #e6e6e6;
+  background-image: url('/assets/images/covid-project.png');
+  background-size: 50%;
+  background-position: center 9rem;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.covid-project-modal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 100, 150, 0.8);
+  opacity: 0;
+  z-index: 0;
+}
+
+.covid-project-modal .covid-project-label,
+.covid-project-modal .covid-project-subtitle {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
 .modal-description {
   position: relative;
   z-index: 1;
@@ -424,6 +676,30 @@ main {
   margin: 0;
   font-size: 2rem;
   font-weight: 700;
+}
+
+.modal-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.project-github-link:hover {
+  transform: scale(1.1);
+}
+
+.project-github-icon {
+  width: 30px;
+  height: 30px;
 }
 
 .modal-subtitle {
