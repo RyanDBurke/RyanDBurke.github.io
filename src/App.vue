@@ -14,6 +14,9 @@
         <a href="#" @click.prevent="showEmailModal = true" title="Email">
           <img src="/assets/images/email-icon.jpg" alt="Email" class="icon email-icon" />
         </a>
+        <a href="#" @click.prevent="showDogModal = true" title="click here to see my dog">
+          <img src="/assets/images/dog-icon.jpg" alt="click here to see my dog" class="icon dog-icon" />
+        </a>
       </div>
     </nav>
 
@@ -44,10 +47,26 @@
       </div>
     </div>
 
+    <div v-if="showDogModal" class="modal-overlay" @click="showDogModal = false">
+      <div class="modal-content dog-modal" @click.stop>
+        <div class="modal-text-content">
+          <h2 class="dog-modal-title">bean</h2>
+          <div class="carousel-container">
+            <img :src="currentDogImage" alt="Bean" class="dog-image" />
+          </div>
+          <div class="carousel-indicators">
+            <span v-for="(img, index) in dogImages" :key="index" class="indicator" :class="{ active: index === currentDogImageIndex }" @click="currentDogImageIndex = index"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <header>
-        <h1>Hi, I'm Ryan Burke</h1>
-        <p>I'm a software engineer based out of Washington D.C. Outside of work I'm really into film-photography, basketball, cooking new recipes, and oil-pastel art!</p>
+        <h1>Ryan Burke</h1>
+        <p>
+        Software engineer, film photographer, enjoyer of the NBA, amateur cook, oil-pastel artist
+        </p>
       </header>
     
     <main>
@@ -86,12 +105,30 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const showDealerOnModal = ref(false)
 const showResumeModal = ref(false)
 const showEmailModal = ref(false)
+const showDogModal = ref(false)
 const emailCopied = ref(false)
+const currentDogImageIndex = ref(0)
+const dogImages = [
+  '/assets/images/bean/bean.jpeg',
+  '/assets/images/bean/IMG_2045.jpeg',
+  '/assets/images/bean/IMG_6290.jpeg',
+  '/assets/images/bean/IMG_7747.jpeg'
+]
+
+const currentDogImage = computed(() => dogImages[currentDogImageIndex.value])
+
+const nextDogImage = () => {
+  currentDogImageIndex.value = (currentDogImageIndex.value + 1) % dogImages.length
+}
+
+const previousDogImage = () => {
+  currentDogImageIndex.value = (currentDogImageIndex.value - 1 + dogImages.length) % dogImages.length
+}
 
 const copyEmailToClipboard = () => {
   const email = 'ryanburketv@gmail.com'
@@ -187,6 +224,11 @@ align-items: center;
 }
 
 .email-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.dog-icon {
   width: 50px;
   height: 50px;
 }
@@ -434,7 +476,8 @@ footer {
 }
 
 .resume-image:hover {
-  transform: scale(1.7);
+  /* scale 1.7 */
+  transform: scale(1); 
 }
 
 .resume-header {
@@ -513,4 +556,91 @@ footer {
 
 .copy-button.copied {
   color: #4caf50;
+}
+
+.dog-modal {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  max-width: 1200px;
+  width: 30vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+.dog-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  object-fit: cover;
+}
+
+.dog-image:hover {
+  cursor: pointer;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.carousel-button {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #90c454;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-button:hover {
+  transform: scale(1.1);
+  background-color: #90c454;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #90c454;
+}
+
+.dog-modal-title {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-align: center;
 }</style>
