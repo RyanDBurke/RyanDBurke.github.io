@@ -10,7 +10,9 @@
           </div>
           <p v-else class="modal-title">{{ title }}</p>
           <h3 class="modal-subtitle">{{ subtitle }}</h3>
-          <span class="modal-techstack">{{ techstack }}</span>
+          <div class="modal-techstack">
+            <span v-for="tech in techItems" :key="tech" class="techstack-tag">{{ tech }}</span>
+          </div>
         </div>
         <p class="modal-description">
           <slot></slot>
@@ -21,7 +23,9 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
   isOpen: {
     type: Boolean,
     required: true
@@ -34,7 +38,7 @@ defineProps({
     type: String,
     required: true
   },
-  techstack: {
+  skills: {
     type: String,
     required: true
   },
@@ -45,4 +49,8 @@ defineProps({
 })
 
 defineEmits(['close'])
+
+const techItems = computed(() =>
+  props.skills.split('|').map(t => t.trim()).filter(Boolean)
+)
 </script>

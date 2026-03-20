@@ -398,9 +398,20 @@ main {
 }
 
 .modal-techstack {
-  font-size: 0.8rem;
-  color: var(--color-text);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
   margin-bottom: 0.5rem;
+}
+
+.techstack-tag {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  background-color: rgba(150, 150, 150, 0.15);
+  border: 1px solid rgba(150, 150, 150, 0.3);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
 }
 
 .disclaimer {

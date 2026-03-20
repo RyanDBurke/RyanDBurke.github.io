@@ -99,7 +99,7 @@
       :is-open="showDealerOnModal"
       title="DealerOn"
       subtitle="Software Engineer"
-      techstack=".NET | C# | Azure | SQL Server | RabbitMq | Redis | Copilot"
+      skills=".NET | C# | Azure | SQL Server | RabbitMq | Redis | Copilot"
       modal-class="dealeron-modal"
       @close="showDealerOnModal = false"
     >
@@ -115,7 +115,7 @@
       :is-open="showTechModal"
       title="University of Maryland, Division of IT"
       subtitle="IT Technician"
-      techstack="Problem-solving | Documentation | Remote Tooling | Windows | Linux | MacOS"
+      skills="Problem-solving | Documentation | Remote Tooling | Windows | Linux | MacOS"
       modal-class="tech-modal"
       @close="showTechModal = false"
     >
@@ -131,7 +131,7 @@
       :is-open="showCovidProjectModal"
       title="Covid Genome Variant"
       subtitle="Project"
-      techstack="C | Bioinformatics | Data Analysis"
+      skills="C | Bioinformatics | Data Analysis"
       modal-class="covid-project-modal"
       @close="showCovidProjectModal = false"
     >
@@ -147,7 +147,7 @@
       :is-open="showLeBitModal"
       title="LeBit"
       subtitle="Project"
-      techstack="Python | PyQt | PostgreSQL"
+      skills="Python | PyQt | PostgreSQL"
       modal-class="lebit-modal"
       @close="showLeBitModal = false"
     >
