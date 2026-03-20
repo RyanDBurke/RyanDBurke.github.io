@@ -9,6 +9,7 @@ export const showEmailModal = ref(false)
 export const showDogModal = ref(false)
 export const emailCopied = ref(false)
 export const currentDogImageIndex = ref(0)
+export const wipAnimating = ref(false)
 export const dogImages = [
   '/assets/images/bean/bean.jpeg',
   '/assets/images/bean/IMG_2045.jpeg',
@@ -35,4 +36,21 @@ export const downloadResume = () => {
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
+}
+
+export const triggerWipAnimation = () => {
+  wipAnimating.value = true
+  setTimeout(() => {
+    wipAnimating.value = false
+  }, 1500)
+}
+
+export const handleDogImageKeyboard = (event) => {
+  if (!showDogModal.value) return
+  
+  if (event.key === 'ArrowLeft') {
+    currentDogImageIndex.value = (currentDogImageIndex.value - 1 + dogImages.length) % dogImages.length
+  } else if (event.key === 'ArrowRight') {
+    currentDogImageIndex.value = (currentDogImageIndex.value + 1) % dogImages.length
+  }
 }

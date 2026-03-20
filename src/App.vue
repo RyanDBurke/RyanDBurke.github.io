@@ -22,6 +22,7 @@
 
     <div v-if="showResumeModal" class="modal-overlay" @click="showResumeModal = false">
       <div class="modal-content resume-modal" @click.stop>
+        <button class="modal-close-btn" @click="showResumeModal = false" title="Close">✕</button>
         <div class="modal-text-content">
           <div class="resume-header">
             <img src="/assets/images/resume.png" alt="Ryan Burke Resume" class="resume-image" />
@@ -35,6 +36,7 @@
 
     <div v-if="showEmailModal" class="modal-overlay" @click="showEmailModal = false">
       <div class="modal-content email-modal" @click.stop>
+        <button class="modal-close-btn" @click="showEmailModal = false" title="Close">✕</button>
         <div class="modal-text-content">
           <div class="email-container">
             <p class="email-display">ryanburketv@gmail.com</p>
@@ -49,8 +51,9 @@
 
     <div v-if="showDogModal" class="modal-overlay" @click="showDogModal = false">
       <div class="modal-content dog-modal" @click.stop>
+        <button class="modal-close-btn" @click="showDogModal = false" title="Close">✕</button>
         <div class="modal-text-content">
-          <h2 class="dog-modal-title">bean</h2>
+          <h2 class="dog-modal-title">my dog, bean</h2>
           <div class="carousel-container">
             <img :src="currentDogImage" alt="Bean" class="dog-image" />
           </div>
@@ -92,78 +95,69 @@
       </div>
     </main>
 
-    <div v-if="showDealerOnModal" class="modal-overlay" @click="showDealerOnModal = false">
-      <div class="modal-content modal-base dealeron-modal" @click.stop>
-        <div class="modal-text-content">
-          <div class="modal-header">
-            <p class="modal-title">DealerOn</p>
-              <h3 class="modal-subtitle">Software Engineer</h3>
-              <span class="modal-techstack">.NET | C# | Azure | SQL Server | RabbitMq | Redis | Copilot</span>
-          </div>
-          <p class="modal-description">
-          Programming, architectural planning, debugging, code-reviews, guiding other engineers, and general problem-solving for a 
-          suite of SaaS products for enterprise car dealerships.
-          </p>
-        </div>
-      </div>
-    </div>
+    <ProjectModal
+      :is-open="showDealerOnModal"
+      title="DealerOn"
+      subtitle="Software Engineer"
+      techstack=".NET | C# | Azure | SQL Server | RabbitMq | Redis | Copilot"
+      modal-class="dealeron-modal"
+      @close="showDealerOnModal = false"
+    >
+      <template #icon>
+        <a href="https://www.dealeron.com/" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View DealerOn">
+          <img src="/assets/images/dealeron-icon.png" alt="DealerOn" class="project-github-icon" />
+        </a>
+      </template>
+      Programming, architectural planning, debugging, code-reviews, guiding other engineers, and general problem-solving for a suite of SaaS products for enterprise car dealerships.
+    </ProjectModal>
 
-    <div v-if="showTechModal" class="modal-overlay" @click="showTechModal = false">
-      <div class="modal-content modal-base tech-modal" @click.stop>
-        <div class="modal-text-content">
-          <div class="modal-header">
-            <p class="modal-title">University of Maryland, Division of IT</p>
-              <h3 class="modal-subtitle">IT Technician</h3>
-              <span class="modal-techstack">
-              Problem-solving | Documentation | Remote Tooling | Windows | Linux | MacOS
-</span>
-          </div>
-          <p class="modal-description">
-          Installed, diagnosed, and repaired hardware/software for students and staff.
-          <br>
-          </p>
-        </div>
-      </div>
-    </div>
+    <ProjectModal
+      :is-open="showTechModal"
+      title="University of Maryland, Division of IT"
+      subtitle="IT Technician"
+      techstack="Problem-solving | Documentation | Remote Tooling | Windows | Linux | MacOS"
+      modal-class="tech-modal"
+      @close="showTechModal = false"
+    >
+      <template #icon>
+        <a href="https://it.umd.edu/" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View UMD IT">
+          <img src="/assets/images/umd-icon.png" alt="University of Maryland" class="project-github-icon umd-icon" />
+        </a>
+      </template>
+      Installed, diagnosed, and repaired hardware/software for students and staff.
+    </ProjectModal>
 
-    <div v-if="showCovidProjectModal" class="modal-overlay" @click="showCovidProjectModal = false">
-      <div class="modal-content modal-base covid-project-modal" @click.stop>
-        <div class="modal-text-content">
-          <div class="modal-header">
-            <div class="modal-title-container">
-              <p class="modal-title">Covid Genome Variant</p>
-              <a href="https://github.com/RyanDBurke/coronavirus-genome-variant" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View on GitHub">
-                <img src="/assets/images/github-icon.jpg" alt="GitHub" class="project-github-icon" />
-              </a>
-            </div>
-              <h3 class="modal-subtitle">Project</h3>
-              <span class="modal-techstack">C | Bioinformatics | Data Analysis</span>
-          </div>
-          <p class="modal-description">
-          A basic seed-search alignment tool to compare read-variants to the nCov-19 virus genome using 
-          Burrows-Wheeler transform, suffix arrays, the FM-Index, and core dynamic programming principles.
-          Kinda cool.
-          <br>
-          </p>
-        </div>
-      </div>
-    </div>
+    <ProjectModal
+      :is-open="showCovidProjectModal"
+      title="Covid Genome Variant"
+      subtitle="Project"
+      techstack="C | Bioinformatics | Data Analysis"
+      modal-class="covid-project-modal"
+      @close="showCovidProjectModal = false"
+    >
+      <template #icon>
+        <a href="https://github.com/RyanDBurke/coronavirus-genome-variant" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View on GitHub">
+          <img src="/assets/images/github-icon.jpg" alt="GitHub" class="project-github-icon" />
+        </a>
+      </template>
+      A basic seed-search alignment tool to compare read-variants to the nCov-19 virus genome using Burrows-Wheeler transform, suffix arrays, the FM-Index, and core dynamic programming principles. Kinda cool.
+    </ProjectModal>
 
-    <div v-if="showLeBitModal" class="modal-overlay" @click="showLeBitModal = false">
-      <div class="modal-content modal-base lebit-modal" @click.stop>
-        <div class="modal-text-content">
-          <div class="modal-header">
-            <p class="modal-title">LeBit</p>
-              <h3 class="modal-subtitle">Project</h3>
-              <span class="modal-techstack">Python | PyQt | PostgreSQL</span>
-          </div>
-          <p class="modal-description">
-          An in-progress project to build a 8-bit themed desktop app for sport fantasy teams
-          <br>
-          </p>
+    <ProjectModal
+      :is-open="showLeBitModal"
+      title="LeBit"
+      subtitle="Project"
+      techstack="Python | PyQt | PostgreSQL"
+      modal-class="lebit-modal"
+      @close="showLeBitModal = false"
+    >
+      <template #icon>
+        <div class="project-github-link" title="Still a work in progress" @click="triggerWipAnimation">
+          <img src="/assets/images/work-in-progress.png" alt="Work in Progress" :class="{ 'wip-animating': wipAnimating }" class="project-github-icon" />
         </div>
-      </div>
-    </div>
+      </template>
+      An in-progress project to build a 8-bit themed desktop app for sport fantasy teams
+    </ProjectModal>
 
     <footer>
       <p>&copy; 2026 Ryan Burke</p>
@@ -173,8 +167,9 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import './styles/App.css'
+import ProjectModal from './components/ProjectModal.vue'
 import {
   showDealerOnModal,
   showTechModal,
@@ -188,6 +183,13 @@ import {
   dogImages,
   currentDogImage,
   copyEmailToClipboard,
-  downloadResume
+  downloadResume,
+  wipAnimating,
+  triggerWipAnimation,
+  handleDogImageKeyboard
 } from './appSetup'
+
+onMounted(() => {
+  window.addEventListener('keydown', handleDogImageKeyboard)
+})
 </script>

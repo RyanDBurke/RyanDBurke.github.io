@@ -1,42 +1,102 @@
+/* ==========================================================================
+   Custom Properties
+   ========================================================================== */
+
 :root {
   --transition-speed: 0.3s ease;
-}
-
-body, html {
-  background-color: #30302C;
-}
-
-.dealeron-modal, .modal-text-content, .modal-header, .modal-title, .modal-subtitle, .modal-description, .app, .navbar, .nav-links, .container, header, main, section, footer, body, html {
-  font-family: CircularStd, sans-serif !important;
-}
-
-/* Resume modal styling */
-.resume-modal {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
-  max-width: 900px;
-  width: 100vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-}
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  --color-bg: #30302C;
+  --color-text: #999999;
+  --color-text-hover: #b3b3b3;
+  --color-border: #555;
+  --color-surface: #404039;
+  --color-accent: #90c454;
   --color-dealeron: rgba(144, 196, 84, 0.8);
   --color-tech: rgba(100, 150, 200, 0.8);
   --color-covid: rgba(200, 100, 150, 0.8);
   --color-lebit: rgba(150, 120, 200, 0.8);
 }
 
+/* ==========================================================================
+   Reset & Base
+   ========================================================================== */
+
+body, html {
+  background-color: var(--color-bg);
+}
+
+.dealeron-modal,
+.modal-text-content,
+.modal-header,
+.modal-title,
+.modal-subtitle,
+.modal-description,
+.app,
+.navbar,
+.nav-links,
+.container,
+header,
+main,
+section,
+footer,
+body,
+html {
+  font-family: CircularStd, sans-serif !important;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  min-width: 50vw;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  flex: 1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
 .navbar {
-  background-color: #30302C;
+  background-color: var(--color-bg);
   padding: 1rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -54,7 +114,7 @@ body, html {
 }
 
 .nav-links a {
-  color: #999999;
+  color: var(--color-text);
   text-decoration: none;
   font-weight: 700;
   transition: color 0.3s ease;
@@ -63,63 +123,22 @@ body, html {
   justify-content: center;
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
+.nav-links a:hover {
+  color: var(--color-text-hover);
 }
 
-.linkedin-icon {
-  width: 50px;
-  height: 50px;
-}
-
-.resume-icon {
-  width: 50px;
-  height: 50px;
-}
-
-.email-icon {
-  width: 50px;
-  height: 50px;
-}
-
+.icon,
+.linkedin-icon,
+.resume-icon,
+.email-icon,
 .dog-icon {
   width: 50px;
   height: 50px;
 }
 
-.nav-links a:hover {
-  color: #b3b3b3;
-}
-
-.container {
-  max-width: 800px;
-  min-width: 50vw;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.6;
-  color: #999999;
-  flex: 1;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  border-bottom: 2px solid #555;
-  padding-bottom: 2rem;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin: 0 0 0.5rem 0;
-}
-
-header p {
-  font-size: 1.1rem;
-  color: #999999;
-  margin: 0;
-}
+/* ==========================================================================
+   Work Section & Project Grid
+   ========================================================================== */
 
 .work-section {
   text-align: center;
@@ -128,7 +147,7 @@ header p {
 
 .work-title {
   font-size: 1.8rem;
-  color: #999999;
+  color: var(--color-text);
   margin: 0;
   font-weight: 700;
 }
@@ -142,10 +161,14 @@ main {
 }
 
 .square {
-  background-color: #404039;
-  border: 1px solid #555;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
 }
+
+/* ==========================================================================
+   Tile Component
+   ========================================================================== */
 
 .tile-base {
   background-size: 80%;
@@ -172,7 +195,8 @@ main {
   opacity: 1;
 }
 
-.tile-label, .tile-subtitle {
+.tile-label,
+.tile-subtitle {
   position: absolute;
   left: 1rem;
   color: white;
@@ -197,6 +221,8 @@ main {
   opacity: 1;
 }
 
+/* --- Project tile variants --- */
+
 .dealeron {
   background-image: url('/assets/images/dealeron.png');
 }
@@ -215,6 +241,7 @@ main {
 
 .covid-project {
   background-image: url('/assets/images/covid-project.png');
+  background-size: 30%;
 }
 
 .covid-project::after {
@@ -228,6 +255,10 @@ main {
 .lebit::after {
   background-color: var(--color-lebit);
 }
+
+/* ==========================================================================
+   Modal – Shared / Overlay
+   ========================================================================== */
 
 .modal-overlay {
   position: fixed;
@@ -250,7 +281,51 @@ main {
   max-width: 500px;
   width: 90%;
   text-align: center;
+  position: relative;
 }
+
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: transform 0.2s ease, color 0.2s ease;
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  transform: scale(1.2);
+  color: #333333;
+}
+
+.modal-text-content {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-content h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+
+.modal-content p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   Modal – Project
+   ========================================================================== */
 
 .modal-base {
   background-color: #e6e6e6;
@@ -286,6 +361,78 @@ main {
   text-align: left;
 }
 
+.modal-header {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.modal-title {
+  color: var(--color-text);
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.modal-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.modal-subtitle {
+  color: var(--color-text);
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.modal-description {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text);
+  margin: 0;
+  font-size: 0.9rem;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.modal-techstack {
+  font-size: 0.8rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.disclaimer {
+  font-size: 0.7rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.project-github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.project-github-link:hover {
+  transform: scale(1.1);
+}
+
+.project-github-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.umd-icon {
+  width: 50px;
+  height: 30px;
+}
+
+/* --- Project modal variants --- */
+
 .dealeron-modal {
   background-image: url('/assets/images/dealeron.jpg');
 }
@@ -318,114 +465,19 @@ main {
   background-color: var(--color-lebit);
 }
 
-.modal-description {
-  position: relative;
-  z-index: 1;
-  color: #999999;
-  margin: 0;
-  font-size: 0.9rem;
-  text-align: left;
-  line-height: 1.4;
-}
+/* ==========================================================================
+   Modal – Resume
+   ========================================================================== */
 
-.modal-text-content {
-  position: relative;
-  z-index: 1;
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.modal-header {
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-.modal-title {
-  color: #999999;
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.modal-title-container {
+.resume-modal {
+  max-width: 600px;
+  width: 70vw;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.project-github-link {
-  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
-
-.project-github-link:hover {
-  transform: scale(1.1);
-}
-
-.project-github-icon {
-  width: 30px;
-  height: 30px;
-}
-
-.modal-subtitle {
-  color: #999999;
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.modal-content h2 {
-  margin: 0 0 1rem 0;
-  font-size: 2rem;
-}
-
-.modal-content p {
-  margin: 0;
-  font-size: 1.2rem;
-  color: #999999;
-}
-
-.modal-techstack {
-  font-size: 0.8rem;
-  color: #999999;
-  margin-bottom: 0.5rem;
-}
-
-.disclaimer {
-  font-size: 0.7rem;
-  color: #999999;
-  margin-bottom: 0.5rem;
-}
-
-footer {
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 2px solid #555;
-  color: #999999;
-  font-size: 0.9rem;
-}
-
-.resume-image {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  background: #fff;
-  transition: transform 0.3s ease;
-  cursor: zoom-in;
-}
-
-.resume-image:hover {
-  /* scale 1.7 */
-  transform: scale(1); 
+  height: 60vh;
+  overflow: hidden;
 }
 
 .resume-header {
@@ -434,12 +486,26 @@ footer {
   width: 100%;
 }
 
+.resume-image {
+  width: 60%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  cursor: zoom-in;
+}
+
+.resume-image:hover {
+  transform: scale(1);
+}
+
 .download-button {
   position: absolute;
   top: 1rem;
   right: 1rem;
   background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #90c454;
+  border: 2px solid var(--color-accent);
   border-radius: 50%;
   width: 45px;
   height: 45px;
@@ -454,17 +520,15 @@ footer {
 
 .download-button:hover {
   transform: scale(1.1);
-  background-color: #90c454;
+  background-color: var(--color-accent);
 }
 
+/* ==========================================================================
+   Modal – Email
+   ========================================================================== */
+
 .email-modal {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   padding: 3rem 2rem;
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -480,7 +544,7 @@ footer {
 
 .email-display {
   font-size: 1.5rem;
-  color: #999999;
+  color: var(--color-text);
   margin: 0;
   font-weight: 600;
   word-break: break-all;
@@ -500,21 +564,20 @@ footer {
 
 .copy-button:hover {
   transform: scale(1.2);
-  color: #90c454;
+  color: var(--color-accent);
 }
 
 .copy-button.copied {
   color: #4caf50;
 }
 
+/* ==========================================================================
+   Modal – Dog / Carousel
+   ========================================================================== */
+
 .dog-modal {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  padding: 2rem;
   max-width: 1200px;
   width: 30vw;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -522,10 +585,17 @@ footer {
   min-height: 90vh;
 }
 
+.dog-modal-title {
+  color: var(--color-text);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
 .dog-image {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   background: #fff;
   transition: transform 0.3s ease;
@@ -563,13 +633,105 @@ footer {
 }
 
 .indicator.active {
-  background-color: #90c454;
+  background-color: var(--color-accent);
 }
 
-.dog-modal-title {
-  color: #999999;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-  text-align: center;
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .nav-links {
+    justify-content: center;
+  }
+
+  .modal-overlay {
+    background-color: transparent;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: auto;
+  }
+
+  .square {
+    width: 95%;
+    height: 40vh;
+    margin: 0 auto;
+  }
+
+  .tile-base:hover::after {
+    opacity: 0;
+  }
+
+  .dog-icon {
+    display: none;
+  }
+
+  .resume-modal {
+    width: 95vw;
+  }
+
+  .resume-image {
+    width: 90%;
+  }
+
+  .resume-header {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar,
+.container header,
+.work-section,
+.square,
+footer {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.navbar              { animation-delay: 0.15s; }
+.container header    { animation-delay: 0.4s; }
+.work-section        { animation-delay: 0.65s; }
+.square:nth-child(1) { animation-delay: 0.9s; }
+.square:nth-child(2) { animation-delay: 1.05s; }
+.square:nth-child(3) { animation-delay: 1.2s; }
+.square:nth-child(4) { animation-delay: 1.35s; }
+footer               { animation-delay: 1.6s; }
+
+@keyframes wipPulse {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(3);
+  }
+  80% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wip-animating {
+  animation: wipPulse 1.5s ease-in-out;
+  z-index: 9999;
 }
