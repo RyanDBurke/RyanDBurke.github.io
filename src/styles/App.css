@@ -681,6 +681,13 @@ main {
     display: flex;
     justify-content: center;
   }
+
+  .download-button {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    right: 2.5rem;
+  }
 }
 
 /* ==========================================================================
