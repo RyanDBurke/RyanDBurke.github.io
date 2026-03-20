@@ -25,10 +25,7 @@
         <button class="modal-close-btn" @click="showResumeModal = false" title="Close">✕</button>
         <div class="modal-text-content">
           <div class="resume-header">
-            <img src="/assets/images/resume.png" alt="Ryan Burke Resume" class="resume-image" />
-            <button @click="downloadResume" class="download-button" title="Download resume">
-              📥
-            </button>
+            <img src="/assets/images/resume.png" alt="Ryan Burke Resume" class="resume-image" @click="downloadResume" />
           </div>
         </div>
       </div>
@@ -66,7 +63,7 @@
 
     <div class="container">
       <header>
-        <h1>Ryan Burke</h1>
+        <h1>{{ displayedName }}<span v-if="showCursor" class="typing-cursor">|</span></h1>
         <h3>
         software engineer who likes building cool things for cool people.
         </h3>
@@ -150,6 +147,7 @@
       skills="Python | PyQt | PostgreSQL"
       modal-class="lebit-modal"
       @close="showLeBitModal = false"
+      @mousemove="handleLeBitMouseMove"
     >
       <template #icon>
         <div class="project-icon-link" title="Still a work in progress" @click="triggerWipAnimation">
@@ -159,6 +157,14 @@
       An in-progress project to build a 8-bit themed desktop app for sport fantasy teams
     </ProjectModal>
 
+    <img
+      v-if="showLeBitModal"
+      src="/assets/images/bball-cursor.png"
+      class="bball-cursor"
+      :style="{ left: bballCursorX + 'px', top: bballCursorY + 'px' }"
+      alt=""
+    />
+
     <footer>
       <p>&copy; 2026 Ryan Burke</p>
     </footer>
@@ -167,7 +173,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import './styles/App.css'
 import ProjectModal from './components/ProjectModal.vue'
 import {
@@ -186,10 +192,21 @@ import {
   downloadResume,
   wipAnimating,
   triggerWipAnimation,
-  handleDogImageKeyboard
+  handleDogImageKeyboard,
+  displayedName,
+  showCursor,
+  startNameAnimation,
+  bballCursorX,
+  bballCursorY,
+  handleLeBitMouseMove
 } from './appSetup'
 
 onMounted(() => {
   window.addEventListener('keydown', handleDogImageKeyboard)
+  startNameAnimation()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleDogImageKeyboard)
 })
 </script>

@@ -1,15 +1,67 @@
-import { ref, computed, type Ref, type ComputedRef } from 'vue'
+import { ref, computed } from 'vue'
 
-export const showDealerOnModal: Ref<boolean> = ref(false)
-export const showTechModal: Ref<boolean> = ref(false)
-export const showCovidProjectModal: Ref<boolean> = ref(false)
-export const showLeBitModal: Ref<boolean> = ref(false)
-export const showResumeModal: Ref<boolean> = ref(false)
-export const showEmailModal: Ref<boolean> = ref(false)
-export const showDogModal: Ref<boolean> = ref(false)
-export const emailCopied: Ref<boolean> = ref(false)
-export const currentDogImageIndex: Ref<number> = ref(0)
-export const wipAnimating: Ref<boolean> = ref(false)
+export const showDealerOnModal = ref(false)
+export const showTechModal = ref(false)
+export const showCovidProjectModal = ref(false)
+export const showLeBitModal = ref(false)
+export const showResumeModal = ref(false)
+export const showEmailModal = ref(false)
+export const showDogModal = ref(false)
+export const emailCopied = ref(false)
+export const currentDogImageIndex = ref(0)
+export const wipAnimating = ref(false)
+
+export const displayedName = ref('')
+export const showCursor = ref(true)
+
+export const bballCursorX = ref(0)
+export const bballCursorY = ref(0)
+
+export const handleLeBitMouseMove = (event: MouseEvent): void => {
+  bballCursorX.value = event.clientX
+  bballCursorY.value = event.clientY
+}
+
+export const startNameAnimation = (): void => {
+  const typo = 'Ryn Brk'
+  const full = 'Ryan Burke'
+  const typeSpeed = 120
+  const deleteSpeed = 80
+
+  const typeChars = (text: string, index: number, onDone: () => void) => {
+    if (index < text.length) {
+      displayedName.value += text[index]
+      setTimeout(() => typeChars(text, index + 1, onDone), typeSpeed)
+    } else {
+      onDone()
+    }
+  }
+
+  const deleteAll = (onDone: () => void) => {
+    if (displayedName.value.length > 0) {
+      displayedName.value = displayedName.value.slice(0, -1)
+      setTimeout(() => deleteAll(onDone), deleteSpeed)
+    } else {
+      onDone()
+    }
+  }
+
+  setTimeout(() => {
+    typeChars(typo, 0, () => {
+      setTimeout(() => {
+        deleteAll(() => {
+          setTimeout(() => {
+            typeChars(full, 0, () => {
+              setTimeout(() => {
+                showCursor.value = false
+              }, 2000)
+            })
+          }, 300)
+        })
+      }, 1200)
+    })
+  }, 800)
+}
 
 export const dogImages: string[] = [
   '/assets/images/bean/bean.jpeg',
@@ -18,7 +70,7 @@ export const dogImages: string[] = [
   '/assets/images/bean/IMG_7747.jpeg'
 ]
 
-export const currentDogImage: ComputedRef<string> = computed(() => dogImages[currentDogImageIndex.value])
+export const currentDogImage = computed(() => dogImages[currentDogImageIndex.value])
 
 export const copyEmailToClipboard = (): void => {
   const email = 'ryanburketv@gmail.com'
@@ -27,16 +79,13 @@ export const copyEmailToClipboard = (): void => {
     setTimeout(() => {
       emailCopied.value = false
     }, 2000)
+  }).catch(() => {
+    // Clipboard access denied — fail silently
   })
 }
 
 export const downloadResume = (): void => {
-  const link = document.createElement('a')
-  link.href = '/assets/resume/RyanBurkeResume.pdf'
-  link.download = 'RyanBurkeResume.pdf'
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
+  window.open('/assets/resume/RyanBurkeResume.pdf')
 }
 
 export const triggerWipAnimation = (): void => {

@@ -72,8 +72,18 @@ header {
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 6rem;
   margin: 0 0 0.5rem 0;
+  min-height: 1.2em;
+}
+
+.typing-cursor {
+  font-weight: 100;
+  animation: blink 0.6s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 header p {
@@ -476,6 +486,16 @@ main {
   background-color: var(--color-lebit);
 }
 
+.bball-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 3000;
+  width: 72px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  transition: left 0.15s ease-out, top 0.15s ease-out;
+}
+
 /* ==========================================================================
    Modal – Resume
    ========================================================================== */
@@ -504,34 +524,12 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   background: #fff;
-  cursor: zoom-in;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .resume-image:hover {
-  transform: scale(1);
-}
-
-.download-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid var(--color-accent);
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.download-button:hover {
-  transform: scale(1.1);
-  background-color: var(--color-accent);
+  transform: scale(1.05);
 }
 
 /* ==========================================================================
@@ -693,11 +691,11 @@ main {
     justify-content: center;
   }
 
-  .download-button {
-    width: 30px;
-    height: 30px;
-    font-size: 1rem;
-    right: 2.5rem;
+  .bball-cursor {
+    left: 50% !important;
+    top: 50% !important;
+    animation: bballFloat 15s ease-in-out infinite;
+    transition: none;
   }
 }
 
@@ -752,4 +750,16 @@ footer               { animation-delay: 1.6s; }
 .wip-animating {
   animation: wipPulse 1.5s ease-in-out;
   z-index: 9999;
+}
+
+@keyframes bballFloat {
+  0%   { transform: translate(-50%, -50%); }
+  12%  { transform: translate(15vw, -20vh); }
+  25%  { transform: translate(-20vw, 15vh); }
+  37%  { transform: translate(20vw, 20vh); }
+  50%  { transform: translate(-15vw, -15vh); }
+  62%  { transform: translate(10vw, 25vh); }
+  75%  { transform: translate(-20vw, -5vh); }
+  87%  { transform: translate(5vw, -20vh); }
+  100% { transform: translate(-50%, -50%); }
 }
