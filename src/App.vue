@@ -3,19 +3,19 @@
     <nav class="navbar">
       <div class="nav-links">
         <a href="https://github.com/RyanDBurke" target="_blank" rel="noopener noreferrer" title="GitHub">
-          <img src="/assets/images/github-icon.jpg" alt="GitHub" class="icon" />
+          <img src="/assets/images/github-icon.png" alt="GitHub" class="icon" />
         </a>
         <a href="https://www.linkedin.com/in/ryanburke77/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-          <img src="/assets/images/linkedin-icon.jpg" alt="LinkedIn" class="icon linkedin-icon" />
+          <img src="/assets/images/linkedin-icon.png" alt="LinkedIn" class="icon linkedin-icon" />
         </a>
         <a href="#" @click.prevent="showResumeModal = true" title="Resume">
-          <img src="/assets/images/resume-icon.jpg" alt="Resume" class="icon resume-icon" />
+          <img src="/assets/images/resume-icon.png" alt="Resume" class="icon resume-icon" />
         </a>
         <a href="#" @click.prevent="showEmailModal = true" title="Email">
-          <img src="/assets/images/email-icon.jpg" alt="Email" class="icon email-icon" />
+          <img src="/assets/images/email-icon.png" alt="Email" class="icon email-icon" />
         </a>
         <a href="#" @click.prevent="showDogModal = true" title="click here to see my dog">
-          <img src="/assets/images/dog-icon.jpg" alt="click here to see my dog" class="icon dog-icon" />
+          <img src="/assets/images/dog-icon.png" alt="click here to see my dog" class="icon dog-icon" />
         </a>
       </div>
     </nav>
@@ -64,17 +64,13 @@
     <div class="container">
       <header>
         <h1>Ryan Burke</h1>
-        <p>
-        software engineer | 
-        film photographer | 
-        enjoyer of the NBA |
-        amateur chef |
-        oil-pastel artist
-        </p>
+        <h3>
+        software engineer who likes building cool things for cool people.
+        </h3>
       </header>
     
     <section class="work-section">
-      <h2 class="work-title">work I'm doing, work I've done</h2>
+      <h2 class="work-title">stuff I'm doing, stuff I've done</h2>
     </section>
 
     <main>
@@ -105,11 +101,9 @@
               <span class="modal-techstack">.NET | C# | Azure | SQL Server | RabbitMq | Redis | Copilot</span>
           </div>
           <p class="modal-description">
-          Programming, architectural planning, debugging, code-reviews, guiding other engineers, and smiling in meetings; 
-          I do it all
-          <br>
+          Programming, architectural planning, debugging, code-reviews, guiding other engineers, and general problem-solving for a 
+          suite of SaaS products for enterprise car dealerships.
           </p>
-          <em class="disclaimer">[read my resume if you want a professional description]</em>
         </div>
       </div>
     </div>
