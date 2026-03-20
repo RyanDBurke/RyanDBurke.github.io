@@ -420,7 +420,7 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.project-github-link {
+.project-icon-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -428,7 +428,7 @@ main {
   transition: transform 0.2s ease;
 }
 
-.project-github-link:hover {
+.project-icon-link:hover {
   transform: scale(1.1);
 }
 

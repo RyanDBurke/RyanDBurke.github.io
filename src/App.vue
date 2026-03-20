@@ -104,7 +104,7 @@
       @close="showDealerOnModal = false"
     >
       <template #icon>
-        <a href="https://www.dealeron.com/" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View DealerOn">
+        <a href="https://www.dealeron.com/" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="View DealerOn">
           <img src="/assets/images/dealeron-icon.png" alt="DealerOn" class="project-github-icon" />
         </a>
       </template>
@@ -120,7 +120,7 @@
       @close="showTechModal = false"
     >
       <template #icon>
-        <a href="https://it.umd.edu/" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View UMD IT">
+        <a href="https://it.umd.edu/" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="View UMD IT">
           <img src="/assets/images/umd-icon.png" alt="University of Maryland" class="project-github-icon umd-icon" />
         </a>
       </template>
@@ -136,7 +136,7 @@
       @close="showCovidProjectModal = false"
     >
       <template #icon>
-        <a href="https://github.com/RyanDBurke/coronavirus-genome-variant" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View on GitHub">
+        <a href="https://github.com/RyanDBurke/coronavirus-genome-variant" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="View on GitHub">
           <img src="/assets/images/github-icon.jpg" alt="GitHub" class="project-github-icon" />
         </a>
       </template>
@@ -152,7 +152,7 @@
       @close="showLeBitModal = false"
     >
       <template #icon>
-        <div class="project-github-link" title="Still a work in progress" @click="triggerWipAnimation">
+        <div class="project-icon-link" title="Still a work in progress" @click="triggerWipAnimation">
           <img src="/assets/images/work-in-progress.png" alt="Work in Progress" :class="{ 'wip-animating': wipAnimating }" class="project-github-icon" />
         </div>
       </template>
