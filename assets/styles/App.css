@@ -193,7 +193,7 @@ main {
 }
 
 .dealeron {
-  background-image: url('/assets/images/dealeron.jpg');
+  background-image: url('/assets/images/dealeron.png');
 }
 
 .dealeron::after {
@@ -282,7 +282,7 @@ main {
 }
 
 .dealeron-modal {
-  background-image: url('/assets/images/dealeron.jpg');
+  background-image: url('/assets/images/dealeron-trans.png');
 }
 
 .dealeron-modal::after {
