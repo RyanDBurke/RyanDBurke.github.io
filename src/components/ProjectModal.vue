@@ -22,33 +22,20 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 
-const props = defineProps({
-  isOpen: {
-    type: Boolean,
-    required: true
-  },
-  title: {
-    type: String,
-    required: true
-  },
-  subtitle: {
-    type: String,
-    required: true
-  },
-  skills: {
-    type: String,
-    required: true
-  },
-  modalClass: {
-    type: String,
-    required: true
-  }
-})
+const props = defineProps<{
+  isOpen: boolean
+  title: string
+  subtitle: string
+  skills: string
+  modalClass: string
+}>()
 
-defineEmits(['close'])
+defineEmits<{
+  close: []
+}>()
 
 const techItems = computed(() =>
   props.skills.split('|').map(t => t.trim()).filter(Boolean)

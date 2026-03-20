@@ -166,7 +166,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import './styles/App.css'
 import ProjectModal from './components/ProjectModal.vue'

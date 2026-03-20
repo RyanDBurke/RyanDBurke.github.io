@@ -1,25 +1,26 @@
-import { ref, computed } from 'vue'
+import { ref, computed, type Ref, type ComputedRef } from 'vue'
 
-export const showDealerOnModal = ref(false)
-export const showTechModal = ref(false)
-export const showCovidProjectModal = ref(false)
-export const showLeBitModal = ref(false)
-export const showResumeModal = ref(false)
-export const showEmailModal = ref(false)
-export const showDogModal = ref(false)
-export const emailCopied = ref(false)
-export const currentDogImageIndex = ref(0)
-export const wipAnimating = ref(false)
-export const dogImages = [
+export const showDealerOnModal: Ref<boolean> = ref(false)
+export const showTechModal: Ref<boolean> = ref(false)
+export const showCovidProjectModal: Ref<boolean> = ref(false)
+export const showLeBitModal: Ref<boolean> = ref(false)
+export const showResumeModal: Ref<boolean> = ref(false)
+export const showEmailModal: Ref<boolean> = ref(false)
+export const showDogModal: Ref<boolean> = ref(false)
+export const emailCopied: Ref<boolean> = ref(false)
+export const currentDogImageIndex: Ref<number> = ref(0)
+export const wipAnimating: Ref<boolean> = ref(false)
+
+export const dogImages: string[] = [
   '/assets/images/bean/bean.jpeg',
   '/assets/images/bean/IMG_2045.jpeg',
   '/assets/images/bean/IMG_6290.jpeg',
   '/assets/images/bean/IMG_7747.jpeg'
 ]
 
-export const currentDogImage = computed(() => dogImages[currentDogImageIndex.value])
+export const currentDogImage: ComputedRef<string> = computed(() => dogImages[currentDogImageIndex.value])
 
-export const copyEmailToClipboard = () => {
+export const copyEmailToClipboard = (): void => {
   const email = 'ryanburketv@gmail.com'
   navigator.clipboard.writeText(email).then(() => {
     emailCopied.value = true
@@ -29,7 +30,7 @@ export const copyEmailToClipboard = () => {
   })
 }
 
-export const downloadResume = () => {
+export const downloadResume = (): void => {
   const link = document.createElement('a')
   link.href = '/assets/resume/RyanBurkeResume.pdf'
   link.download = 'RyanBurkeResume.pdf'
@@ -38,14 +39,14 @@ export const downloadResume = () => {
   document.body.removeChild(link)
 }
 
-export const triggerWipAnimation = () => {
+export const triggerWipAnimation = (): void => {
   wipAnimating.value = true
   setTimeout(() => {
     wipAnimating.value = false
   }, 1500)
 }
 
-export const handleDogImageKeyboard = (event) => {
+export const handleDogImageKeyboard = (event: KeyboardEvent): void => {
   if (!showDogModal.value) return
   
   if (event.key === 'ArrowLeft') {
