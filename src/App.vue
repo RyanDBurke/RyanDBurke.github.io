@@ -147,7 +147,6 @@
       skills="Python | PyQt | PostgreSQL"
       modal-class="lebit-modal"
       @close="showLeBitModal = false"
-      @mousemove="handleLeBitMouseMove"
     >
       <template #icon>
         <div class="project-icon-link" title="Still a work in progress" @click="triggerWipAnimation">
@@ -156,14 +155,6 @@
       </template>
       An in-progress project to build a 8-bit themed desktop app for sport fantasy teams
     </ProjectModal>
-
-    <img
-      v-if="showLeBitModal"
-      src="/assets/images/bball-cursor.png"
-      class="bball-cursor"
-      :style="{ left: bballCursorX + 'px', top: bballCursorY + 'px' }"
-      alt=""
-    />
 
     <footer>
       <p>&copy; 2026 Ryan Burke</p>
@@ -196,9 +187,6 @@ import {
   displayedName,
   showCursor,
   startNameAnimation,
-  bballCursorX,
-  bballCursorY,
-  handleLeBitMouseMove
 } from './appSetup'
 
 onMounted(() => {

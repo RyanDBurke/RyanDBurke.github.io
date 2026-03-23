@@ -14,14 +14,6 @@ export const wipAnimating = ref(false)
 export const displayedName = ref('')
 export const showCursor = ref(true)
 
-export const bballCursorX = ref(0)
-export const bballCursorY = ref(0)
-
-export const handleLeBitMouseMove = (event: MouseEvent): void => {
-  bballCursorX.value = event.clientX
-  bballCursorY.value = event.clientY
-}
-
 export const startNameAnimation = (): void => {
   const typo = 'Ryn Brk'
   const full = 'Ryan Burke'

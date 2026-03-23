@@ -243,6 +243,7 @@ main {
 
 .tech {
   background-image: url('/assets/images/tech.png');
+  background-size: 60%;
 }
 
 .tech::after {
@@ -486,14 +487,9 @@ main {
   background-color: var(--color-lebit);
 }
 
-.bball-cursor {
-  position: fixed;
-  pointer-events: none;
-  z-index: 3000;
-  width: 72px;
-  height: auto;
-  transform: translate(-50%, -50%);
-  transition: left 0.15s ease-out, top 0.15s ease-out;
+.modal-overlay:has(.lebit-modal),
+.modal-overlay:has(.lebit-modal) * {
+  cursor: url('/assets/images/bball-cursor-small.png') 16 16, auto;
 }
 
 /* ==========================================================================
@@ -691,12 +687,6 @@ main {
     justify-content: center;
   }
 
-  .bball-cursor {
-    left: 50% !important;
-    top: 50% !important;
-    animation: bballFloat 15s ease-in-out infinite;
-    transition: none;
-  }
 }
 
 /* ==========================================================================
@@ -750,16 +740,4 @@ footer               { animation-delay: 1.6s; }
 .wip-animating {
   animation: wipPulse 1.5s ease-in-out;
   z-index: 9999;
-}
-
-@keyframes bballFloat {
-  0%   { transform: translate(-50%, -50%); }
-  12%  { transform: translate(15vw, -20vh); }
-  25%  { transform: translate(-20vw, 15vh); }
-  37%  { transform: translate(20vw, 20vh); }
-  50%  { transform: translate(-15vw, -15vh); }
-  62%  { transform: translate(10vw, 25vh); }
-  75%  { transform: translate(-20vw, -5vh); }
-  87%  { transform: translate(5vw, -20vh); }
-  100% { transform: translate(-50%, -50%); }
 }
