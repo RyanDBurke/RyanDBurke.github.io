@@ -76,7 +76,7 @@
     <main>
       <div class="square tile-base dealeron" @click="showDealerOnModal = true">
         <span class="tile-label">DealerOn</span>
-        <span class="tile-subtitle">Software Engineer</span>
+        <span class="tile-subtitle">Senior Software Engineer</span>
       </div>
       <div class="square tile-base tech" @click="showTechModal = true">
         <span class="tile-label">University of Maryland, IT</span>
@@ -95,7 +95,7 @@
     <ProjectModal
       :is-open="showDealerOnModal"
       title="DealerOn"
-      subtitle="Software Engineer"
+      subtitle="Senior Software Engineer"
       skills=".NET | C# | Azure | SQL Server | RabbitMq | Redis | Copilot"
       modal-class="dealeron-modal"
       @close="showDealerOnModal = false"
