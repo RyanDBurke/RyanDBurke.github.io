@@ -76,7 +76,7 @@ export const copyEmailToClipboard = (): void => {
   })
 }
 
-export const downloadResume = (): void => {
+export const openResume = (): void => {
   window.open('/assets/resume/RyanBurkeResume.pdf')
 }
 

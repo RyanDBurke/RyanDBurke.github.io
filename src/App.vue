@@ -25,7 +25,7 @@
         <button class="modal-close-btn" @click="showResumeModal = false" title="Close">✕</button>
         <div class="modal-text-content">
           <div class="resume-header">
-            <img src="/assets/images/resume.png" alt="Ryan Burke Resume" class="resume-image" @click="downloadResume" />
+            <img src="/assets/images/resume.png" alt="Ryan Burke Resume" class="resume-image" @click="openResume" />
           </div>
         </div>
       </div>
@@ -180,7 +180,7 @@ import {
   dogImages,
   currentDogImage,
   copyEmailToClipboard,
-  downloadResume,
+  openResume,
   wipAnimating,
   triggerWipAnimation,
   handleDogImageKeyboard,
