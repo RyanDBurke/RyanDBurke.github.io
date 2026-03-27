@@ -65,7 +65,7 @@
       <header>
         <h1>{{ displayedName }}<span v-if="showCursor" class="typing-cursor">|</span></h1>
         <h3>
-        software engineer who likes building cool things for cool people.
+        senior software engineer who likes building cool things for cool people
         </h3>
       </header>
     

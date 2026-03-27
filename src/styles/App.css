@@ -235,6 +235,7 @@ main {
 
 .dealeron {
   background-image: url('/assets/images/dealeron.png');
+  background-size: 40%;
 }
 
 .dealeron::after {
@@ -243,7 +244,7 @@ main {
 
 .tech {
   background-image: url('/assets/images/tech.png');
-  background-size: 60%;
+  background-size: 40%;
 }
 
 .tech::after {
@@ -252,7 +253,7 @@ main {
 
 .covid-project {
   background-image: url('/assets/images/covid-project.png');
-  background-size: 30%;
+  background-size: 25%;
 }
 
 .covid-project::after {
@@ -261,6 +262,7 @@ main {
 
 .lebit {
   background-image: url('/assets/images/LeBit-300px.png');
+  background-size: 60%;
 }
 
 .lebit::after {
