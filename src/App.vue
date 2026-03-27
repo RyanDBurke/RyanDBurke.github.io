@@ -137,7 +137,7 @@
           <img src="/assets/images/github-icon.jpg" alt="GitHub" class="project-github-icon" />
         </a>
       </template>
-      A basic seed-search alignment tool to compare read-variants to the nCov-19 virus genome using Burrows-Wheeler transform, suffix arrays, the FM-Index, and core dynamic programming principles. Kinda cool.
+      A seed-search alignment tool to compare read-variants to the nCov-19 virus genome using Burrows-Wheeler transform, suffix arrays, the FM-Index, and core dynamic programming principles. Kinda cool.
     </ProjectModal>
 
     <ProjectModal
