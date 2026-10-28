@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+// The old home page lives in App.vue; swap it back in here to restore it
+import Landing from './Landing.vue'
 
-const app = createApp(App)
+const app = createApp(Landing)
 
 app.mount('#app')
